@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myforEach(f){
+            let arr=["apple", "banana", "mango"];
+
+            for(let i=0;i<arr.length;i++){
+                f(arr[i],i);
+            }
+        }
+
+        myforEach(function(item,i){
+            alert("요소"+item+"인덱스"+i);
+        });
+
+        myforEach(a); // 함수이름을 작성해서 넘겨줌
+                     // 익명함수로 넘겨줌
+
+        function a(item, index){
+            alert(item+index)
+        }
+    </script>
+</body>
+</html>
