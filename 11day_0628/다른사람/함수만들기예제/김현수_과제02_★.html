@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 작성자 : 김현수
+        // 기능 : 두 수 중에서 큰 수를 반환
+        // 입력 : 두 수
+        // 반환 : 두 수 중에서 큰 수
+
+        function returnMax(num1, num2) {
+
+            let max_num;
+
+            if (num1 > num2) {
+                console.log("num1>num2 : " + num1   + " " + num2);
+                max_num = num1;
+                return max_num;
+            } else if (num2 > num1) {
+                console.log("num2>, num2 : " + num1   + " " + num2);
+                max_num = num2;
+
+                console.log("max_num" + max_num);
+                return max_num;
+            } else {
+                alert("동일한 수를 입력하셨습니다. 수를 다시 입력하세요");
+
+                console.log("num1= num2 : " + num1   + " " + num2);
+
+
+                let input_num1_re = parseInt(prompt("번호를 입력하세요", "1"));
+                let input_num2_re = parseInt(prompt("번호를 입력하세요", "2"));
+
+                console.log("  new  num1= num2 : " + num1   + " " + num2);
+
+                returnMax(input_num1_re, input_num2_re);
+
+
+            }
+ 
+           
+        }
+
+        input_num1 = parseInt(prompt("번호를 입력하세요", "1"));
+        input_num2 = parseInt(prompt("번호를 입력하세요", "2"));
+
+        let return_result = returnMax(input_num1, input_num2);
+        console.log("return_result = " + return_result);
+        
+        
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

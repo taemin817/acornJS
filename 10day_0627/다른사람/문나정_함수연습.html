@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function flightInfo(arr){
+            let time;
+            if(arr=="오사카"){
+                time="08:00-09:50 / 12:10-14:00 / 15:40-17:20";
+    
+            }
+            else if(arr=="도쿄"){
+                time="07:45-10:15 / 12:55-15:25 / 15:00-17:30";
+                
+            }
+            else if(arr=="후쿠오카"){
+                time="10:05-11:30 / 14:45-16:10 / 18:25-19:50 ";
+            }
+            else if(arr=="싱가포르"){
+                time="19:00-00:25";
+            }
+            else{
+                time="해당하는 비행 노선의 정보가 없습니다."
+            }
+            return time;
+        }
+
+        let arr = prompt("도착지를 입력하세요","오사카, 도쿄, 후쿠오카, 싱가포르")
+        let info = flightInfo(arr);
+        alert("인천-"+arr+": "+info);
+    </script>
+</body>
+</html>

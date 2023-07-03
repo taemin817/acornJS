@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니</title>
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
+    
+    <style>
+        *{
+           
+            font-family: 'Noto Sans KR', sans-serif;
+            padding:0px;
+            margin:0px;
+        }
+        .logo{
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 30px;
+            width: 115px;
+            display: block;
+            margin: auto;
+            margin-top: 70px;
+            margin-bottom: 50px;
+            color: rgb(94, 105, 155);
+            text-decoration: none;
+        }
+        table{
+            width: 1000px;
+            margin: auto;
+            border: 1px solid rgb(212, 212, 212);
+        }
+        thead{
+            height: 40px;
+            background-color: rgb(94, 105, 155);
+            color: white;
+            font-size: 12px;
+        }
+        .cart_check{
+            margin-top: 30px;
+        }
+        .product_info_title{
+            width: 400px;
+        }
+        .product_price_title{
+            width: 150px;
+        }
+        .product_amount_title{
+            width: 100px;
+        }
+        .product_sum_title{
+            width: 150px;
+        }
+        .product_delicery_title{
+            width: 200px;
+        }
+        .product_info{
+            width: 80px;
+            display: flex;
+            margin: 10px 20px 10px 20px
+        }
+        tbody{
+            text-align: center;
+        }
+        .book_img{
+            width: 80px;
+            height: 120px;
+            background-image: url(../image/book.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .book_name{
+            width: 280px;
+            text-align: left;
+        }
+        .cart_check td{
+            height: 70px;
+        }
+        .buttons{
+            width: 510px;
+            margin: auto;
+            margin-top: 30px;
+        }
+        button{
+            border-radius: 0px;
+            border: 0px;
+            font-size: 15px;
+            width: 160px;
+            height: 50px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .gift_btn{
+            border: 1px solid rgb(197, 197, 197);
+        }
+        .nomem_btn{
+            background-color: rgb(112, 112, 112);
+            color: white;
+        }
+        .mem_btn{
+            background-color: rgb(94, 105, 155);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="logo_area" >
+        <h1>
+                <a class="logo" href="bookhome.html">지구문고</a>
+        </h1>
+    </div>
+
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2" class="product_info_title">상품정보</th>
+                    <th class="product_price_title">판매가</th>
+                    <th class="product_amount_title">수량</th>
+                    <th class="product_sum_title">합계</th>
+                    <th class="product_delicery_title">배송일정</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="product_info">
+                        <div class="book_img"></div>
+                    </td>
+                    <td class="book_name">[국내도서] 풀꽃</td>
+                    <td>10,000원</td>
+                    <td> 
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </td>
+                    <td>10,000원</td>
+                    <td>오늘(30일, 수)</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="cart_check">
+            <thead>
+                <tr>
+                    <th>상품금액</th>
+                    <th>배송비</th>
+                    <th>결제 예정금액</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10,000원</td>
+                    <td>0원</td>
+                    <td>10,000원</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="buttons">
+            <button class="gift_btn">선물하기</button>
+            <button class="nomem_btn">비회원주문</button>
+            <a href="login.html"><button class="mem_btn">회원주문</button></a> 
+        </div>
+    </main>
+</body>
+</html>

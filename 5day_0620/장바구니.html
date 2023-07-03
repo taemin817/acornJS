@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            margin-top: 100px;
+            margin-left: 100px;
+            width:1000px
+        }
+        .home{
+            position: relative;
+            display: flex;
+        }
+        .homelogo{
+            height: 40px;
+            width: 40px;
+            background-image: url(https://cdn.onlinewebfonts.com/svg/img_281704.png);
+            background-size: cover;
+        }
+        .gohome{
+            position: absolute;
+            left: 60px;
+            top: 40px;
+            font-size: 20px;
+        }
+        .cartlist{
+            position: relative;
+            display: flex;
+            margin-top: 200px;
+            margin-left: 300px;
+        }
+        .cartlogo{
+            height: 60px;
+            width: 60px;
+            background-image: url(https://purepng.com/public/uploads/medium/purepng.com-shopping-cartshoppingcarttrolleycarriagebuggysupermarkets-1421526532379mew9h.png);
+            background-size: cover;
+            position: absolute;
+            top:-25px;
+            left:430px;
+        }
+        caption{
+            font-size: 28px;
+            font-weight: bold;
+        }
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            width: 170px;
+            height: 60px;
+            border: 1px solid black;
+            text-align: center;
+            font-size: 18px;
+        }
+        .delete{
+            color: gray;
+        }
+        tr:nth-child(1) td{
+            font-weight: bold;
+            background-color: lightgreen;
+        }
+        .do-order{
+            font-weight: bold;
+            color: white;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="home">
+            <div class="homelogo"></div>
+            <div class="gohome">홈으로</div>
+        </div>
+        <div class="cartlist">
+            <div class="cartlogo"></div>
+            <table>
+                <caption>CART LIST</caption>
+                <tr>
+                    <td>주문날짜</td>
+                    <td>제품명</td>
+                    <td>단가</td>
+                    <td>수량</td>
+                    <td>금액</td>
+                    <td>삭제</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="delete">삭제</td>
+                </tr>
+                <tr>
+                    <td colspan="5"></td>
+                    <td class="do-order">주문하기</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

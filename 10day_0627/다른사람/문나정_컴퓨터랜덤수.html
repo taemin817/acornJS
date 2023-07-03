@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let comRandom  = Math.floor(Math.random()*(100-1)+1);
+
+        let victory;
+
+        let num;
+
+        while(true){
+            let com1 = Math.floor(Math.random()*(100-1)+1);
+            let com2 = Math.floor(Math.random()*(100-1)+1);
+            let com3 = Math.floor(Math.random()*(100-1)+1);
+
+            if(comRandom == com1)
+            {
+                victory = "computer1";
+                num = com1;
+                break;
+            }
+            else if(comRandom == com2){
+                victory = "computer2";
+                num = com2;
+                break;
+            }
+            else if(comRandom == com3){
+                victory = "computer3";
+                num = com3;
+                break;
+            }    
+        }
+        alert("맞춘 컴퓨터: "+victory+"  컴퓨터 랜덤수: "+comRandom+" ,"+victory+"의 수: "+num);
+    </script>
+</body>
+</html>

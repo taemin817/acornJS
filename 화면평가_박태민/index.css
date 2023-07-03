@@ -1,0 +1,94 @@
+
+header{
+    height: 100px;
+    background-color: rgb(245, 248, 248);
+    position: relative;
+}
+/*타이틀 영역*/
+.title{
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+/*검색바 영역*/
+.search{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    height: 30px;
+}
+.searchbar{
+    height: 35px;
+    width: 200px;
+    position: relative;
+}
+.search-icon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top:5px;
+    right: 5px;
+}
+/*메뉴 영역*/
+ul{
+    list-style: none;
+    display: flex;
+}
+nav{
+    height: 40px;
+    padding: 20px;
+    background-color: rgb(232, 243, 243);
+    position: relative;
+}
+nav>ul{
+    position: absolute;
+    right: 20px;
+}
+.login-txt{
+    padding-right: 10px;
+}
+.home-txt{
+    padding-left: 10px;
+}
+/*과정소개 영역*/
+section{
+    height: 600px;
+    margin-top: 50px;
+}
+.program{
+    justify-content: center;
+    align-items: center;
+}
+.introduce{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    border: 0.5px solid rgb(255,241,241);
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+}
+.pro-eng{
+    width: 130px;
+    padding: 10px;
+    color: red;
+    background-color: beige;
+    border-radius: 10px 10px 0px 0px;
+    position: absolute;
+    top:0px;
+    right: 15px;
+}
+.pro-img{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+/*풋터영역*/
+footer{
+    padding: 20px;
+    background-color: rgb(233,239,239);
+    display: flex;
+}
+.footer-item{
+    width: 33%;
+}

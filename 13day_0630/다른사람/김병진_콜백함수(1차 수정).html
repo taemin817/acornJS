@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //매개변수로 함수를 받을 수 있다. -> 콜백함수
+      function hello(f) {
+        // alert("1초 후에 실행해줄게");
+        f();
+      }
+      function messageKo() {
+        // alert("안녕");
+      }
+      function meaaageEng() {
+        // alert("hi");
+      }
+      hello(messageKo);
+      hello(meaaageEng);
+
+      //setInterval 갤러리의 이미지가 1초간격으로 변경
+      //setTimeout(함수명,1000);
+      //1초 있다가 함수 실행해줘
+      test(bFunc);
+
+      //콜백함수 연습
+      function test(f) {
+        let num = prompt("실행횟수 설정");
+        for (let i = 0; i < num; i++) {
+          f(i);
+        }
+      }
+      function bFunc(i) {
+        document.write(i + "회 실행<br>");
+      }
+      function aFunc() {
+        console.log("1초 지남<br>");
+      }
+
+      //1초 뒤 실행1
+      setTimeout(aFunc, 1000);
+
+      //익명으로 함수를 만든다
+      setTimeout(function () {
+        console.log("2초 지남<br>");
+      }, 2000);
+
+      //화살표함수
+      setTimeout(() => console.log("3초 지남<br>"), 3000);
+    </script>
+  </body>
+</html>

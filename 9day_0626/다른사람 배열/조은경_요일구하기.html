@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        document.write("오늘은 무슨 요일일까요?")
+        let year = [];
+        let month;
+        let day;
+
+        month = prompt("월을 입력하세요") ;
+        day = prompt("일을 입력하세요") ;
+
+        
+        for(let i=1;i<=12;i++){
+            year[i-1]=[];       //  year[0] = [] ;
+            if(i==1){
+                for(let j=1; j<=31 ; j++){
+                    let rest = j%7;   // 0  1   2   3   4  5   6 
+                    let Intrest = parseInt(rest);
+                    switch(Intrest){
+                            case 1: year[i-1][j-1] = "일"; break;
+                            case 2: year[i-1][j-1] = "월"; break;
+                            case 3: year[i-1][j-1] = "화"; break;
+                            case 4: year[i-1][j-1] = "수"; break;
+                            case 5: year[i-1][j-1] = "목"; break;
+                            case 6: year[i-1][j-1] = "금"; break;
+                            case 0: year[i-1][j-1] = "토"; break;
+                        }     
+                 }
+            }else if(i==2){
+                for(let j=1; j<=28 ; j++){
+                    let rest = j%7;   // 0  1   2   3   4  5   6 
+                    let Intrest = parseInt(rest);
+                    switch(Intrest){
+                            case 1: year[i-1][j-1] = "수"; break;
+                            case 2: year[i-1][j-1] = "목"; break;
+                            case 3: year[i-1][j-1] = "금"; break;
+                            case 4: year[i-1][j-1] = "토"; break;
+                            case 5: year[i-1][j-1] = "일"; break;
+                            case 6: year[i-1][j-1] = "월"; break;
+                            case 0: year[i-1][j-1] = "화"; break;
+                        }     
+                 }
+            }
+            else if(i==3){
+                for(let j=1; j<=31 ; j++){
+                    let rest = j%7;   // 0  1   2   3   4  5   6 
+                    let Intrest = parseInt(rest);
+                    switch(Intrest){
+                            case 1: year[i-1][j-1] = "수"; break;
+                            case 2: year[i-1][j-1] = "목"; break;
+                            case 3: year[i-1][j-1] = "금"; break;
+                            case 4: year[i-1][j-1] = "토"; break;
+                            case 5: year[i-1][j-1] = "일"; break;
+                            case 6: year[i-1][j-1] = "월"; break;
+                            case 0: year[i-1][j-1] = "화"; break;
+                        }     
+                 }
+            }else if(i==4){
+                for(let j=1; j<=30 ; j++){
+                    let rest = j%7;   // 0  1   2   3   4  5   6 
+                    let Intrest = parseInt(rest);
+                    switch(Intrest){
+                            case 1: year[i-1][j-1] = "토"; break;
+                            case 2: year[i-1][j-1] = "일"; break;
+                            case 3: year[i-1][j-1] = "월"; break;
+                            case 4: year[i-1][j-1] = "화"; break;
+                            case 5: year[i-1][j-1] = "수"; break;
+                            case 6: year[i-1][j-1] = "목"; break;
+                            case 0: year[i-1][j-1] = "금"; break;
+                        }     
+                 }
+            }else if(i==5){
+                for(let j=1; j<=31 ; j++){
+                    let rest = j%7;   // 0  1   2   3   4  5   6 
+                    let Intrest = parseInt(rest);
+                    switch(Intrest){
+                            case 1: year[i-1][j-1] = "월"; break;
+                            case 2: year[i-1][j-1] = "화"; break;
+                            case 3: year[i-1][j-1] = "수"; break;
+                            case 4: year[i-1][j-1] = "목"; break;
+                            case 5: year[i-1][j-1] = "금"; break;
+                            case 6: year[i-1][j-1] = "토"; break;
+                            case 0: year[i-1][j-1] = "일"; break;
+                        }     
+                 }
+            }else if(i==6){
+                for(let j=1; j<=30 ; j++){
+                    let rest = j%7;   // 0  1   2   3   4  5   6 
+                    let Intrest = parseInt(rest);
+                    switch(Intrest){
+                            case 1: year[i-1][j-1] = "목"; break;
+                            case 2: year[i-1][j-1] = "금"; break;
+                            case 3: year[i-1][j-1] = "토"; break;
+                            case 4: year[i-1][j-1] = "일"; break;
+                            case 5: year[i-1][j-1] = "월"; break;
+                            case 6: year[i-1][j-1] = "화"; break;
+                            case 0: year[i-1][j-1] = "수"; break;
+                        }     
+                 }
+            }else if(i==7){
+                for(let j=1; j<=31 ; j++){
+                    let rest = j%7;   // 0  1   2   3   4  5   6 
+                    let Intrest = parseInt(rest);
+                    switch(Intrest){
+                            case 1: year[i-1][j-1] = "토"; break;
+                            case 2: year[i-1][j-1] = "일"; break;
+                            case 3: year[i-1][j-1] = "월"; break;
+                            case 4: year[i-1][j-1] = "화"; break;
+                            case 5: year[i-1][j-1] = "수"; break;
+                            case 6: year[i-1][j-1] = "목"; break;
+                            case 0: year[i-1][j-1] = "금"; break;
+                        }       
+                 }
+            }else if(i==8){
+                for(let j=1; j<=31 ; j++){
+                    let rest = j%7;   // 0  1   2   3   4  5   6 
+                    let Intrest = parseInt(rest);
+                    switch(Intrest){
+                            case 1: year[i-1][j-1] = "화"; break;
+                            case 2: year[i-1][j-1] = "수"; break;
+                            case 3: year[i-1][j-1] = "목"; break;
+                            case 4: year[i-1][j-1] = "금"; break;
+                            case 5: year[i-1][j-1] = "토"; break;
+                            case 6: year[i-1][j-1] = "일"; break;
+                            case 0: year[i-1][j-1] = "월"; break;
+                        }       
+                 }
+            }else if(i==9){
+                for(let j=1; j<=30 ; j++){
+                    let rest = j%7;   // 0  1   2   3   4  5   6 
+                    let Intrest = parseInt(rest);
+                    switch(Intrest){
+                            case 1: year[i-1][j-1] = "금"; break;
+                            case 2: year[i-1][j-1] = "토"; break;
+                            case 3: year[i-1][j-1] = "일"; break;
+                            case 4: year[i-1][j-1] = "월"; break;
+                            case 5: year[i-1][j-1] = "화"; break;
+                            case 6: year[i-1][j-1] = "수"; break;
+                            case 0: year[i-1][j-1] = "목"; break;
+                        }       
+                 }
+            }else if(i==10){
+                for(let j=1; j<=31 ; j++){
+                    let rest = j%7;   // 0  1   2   3   4  5   6 
+                    let Intrest = parseInt(rest);
+                    switch(Intrest){
+                            case 1: year[i-1][j-1] = "일"; break;
+                            case 2: year[i-1][j-1] = "월"; break;
+                            case 3: year[i-1][j-1] = "화"; break;
+                            case 4: year[i-1][j-1] = "수"; break;
+                            case 5: year[i-1][j-1] = "목"; break;
+                            case 6: year[i-1][j-1] = "금"; break;
+                            case 0: year[i-1][j-1] = "토"; break;
+                        }       
+                 }
+            }
+            else if(i==11){
+                for(let j=1; j<=30 ; j++){
+                    let rest = j%7;   // 0  1   2   3   4  5   6 
+                    let Intrest = parseInt(rest);
+                    switch(Intrest){
+                            case 1: year[i-1][j-1] = "수"; break;
+                            case 2: year[i-1][j-1] = "목"; break;
+                            case 3: year[i-1][j-1] = "금"; break;
+                            case 4: year[i-1][j-1] = "토"; break;
+                            case 5: year[i-1][j-1] = "일"; break;
+                            case 6: year[i-1][j-1] = "월"; break;
+                            case 0: year[i-1][j-1] = "화"; break;
+                        }       
+                 }
+            }else{
+                for(let j=1; j<=31 ; j++){
+                    let rest = j%7;   // 0  1   2   3   4  5   6 
+                    let Intrest = parseInt(rest);
+                    switch(Intrest){
+                            case 1: year[i-1][j-1] = "금"; break;
+                            case 2: year[i-1][j-1] = "토"; break;
+                            case 3: year[i-1][j-1] = "일"; break;
+                            case 4: year[i-1][j-1] = "월"; break;
+                            case 5: year[i-1][j-1] = "화"; break;
+                            case 6: year[i-1][j-1] = "수"; break;
+                            case 0: year[i-1][j-1] = "목"; break;
+                        }       
+                 }
+            }
+        
+           
+        }
+
+        document.write("입력한 날짜 : ",month,"월 ",day,"일  ");
+        document.write(year[month-1][day-1],"요일")
+
+
+
+
+
+
+               
+           
+
+        
+
+        
+
+
+
+        
+      
+        
+    </script>
+</body>
+</html>

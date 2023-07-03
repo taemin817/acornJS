@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./imgs/boy.png" onclick="change()" id="trans">
+    <script>
+        let flag=true;
+        function change(){
+            // alert("good");
+
+            // 이미지선택
+            // src속성 변경
+
+            let image = document.getElementById("trans");
+            if(flag==true){
+                image.src="./imgs/girl.png";
+                flag=false;
+            }else{
+                image.src="./imgs/boy.png";
+                flag=true;
+            }
+        }
+    </script>
+</body>
+</html>

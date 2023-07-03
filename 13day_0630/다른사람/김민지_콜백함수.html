@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function movie(f){
+            f();
+        }
+
+        function movie1(){
+            alert("범죄도시3");
+        }
+
+        function movie2(){
+            alert("인어공주");
+        }
+
+        movie(movie1);
+        movie(movie2);
+
+
+
+        function late(){
+            alert("1초후");
+        }
+        setTimeout(late, 1000);
+        
+
+        setTimeout(function(){
+            alert("2초후");
+        }, 2000);
+
+
+        setTimeout(()=>alert("3초후"),3000);
+
+
+
+    </script>
+
+</body>
+</html>

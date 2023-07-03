@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //입력: 입력재료 반환값: 요리이미지url
+        //function 게란후라이만들기(소금 계란 식용유){
+        //     doc.wr("요리과정");
+        ///    return 요리.jpg; 
+        
+        function takoyaki(파우더, 물, 달걀,문어){
+            alert("파우더 "+파우더+" + 물 "+물+" + 달걀 "+달걀+"를 넣고 섞어 반죽을 한다.");
+            alert("타코야끼 팬에 식용유를 바른다.");
+            alert("팬에 반죽을 반정도 부어준다.");
+            alert("한 알에 문어 "+문어+" + 덴가스와 옥수수콘을 적당히 넣어준다. ");
+            alert("반죽을 넣어주고, 기다린다.");
+            alert("굴려가며 익혀준다.");
+            alert("익은 타코야끼를 접시에 담아 가쓰오부시, 마요네즈, 타코야끼 소스를 뿌린다.");
+            return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW01Mf1pGJOiv9J_mUGM1vsJfdwBv1hDQXgg&usqp=CAU";
+        }
+        let 파우더= "200g";
+        let 물 = "600ml";
+        let 달걀 = "1개";
+        let 문어 = "1개"
+
+        let result = takoyaki(파우더, 물, 달걀,문어);
+
+        document.write("<img src="+result+"; width=400px; height=400px;>");
+
+
+      
+    </script>
+</body>
+</html>

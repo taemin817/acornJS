@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+
+    <div id="movie">
+        <p>범죄도시</p>
+        <p>인어공주</p>
+        <p>인디아나존스</p>
+        <p>스즈메의 문단속</p>
+    </div>
+
+    <script>
+        let movie = document.getElementById("movie");
+        let pE1 = movie.firstElementChild;
+        let pE2 = pE1.nextElementSibling;
+        let pE3 = pE2.nextElementSibling;
+        let pE4 = movie.lastElementChild;
+        
+        let movie1=pE1.innerHTML;
+        let movie2=pE2.innerHTML;
+        let movie3=pE3.innerHTML;
+        let movie4=pE4.innerHTML;
+
+        alert(movie1);
+        alert(movie2);
+        alert(movie3);
+        alert(movie4);
+
+    </script>
+</body>
+</html>

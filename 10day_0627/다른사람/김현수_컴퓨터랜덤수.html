@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        cnt = 0;
+
+        while (cnt<1) {
+            computer_random_num = Math.floor(Math.random() * 99) + 1;
+
+            cum1_num = Math.floor(Math.random() * 99) + 1;
+            cum2_num = Math.floor(Math.random() * 99) + 1;
+            cum3_num = Math.floor(Math.random() * 99) + 1;
+
+            
+            if(computer_random_num == cum1_num){
+                cnt ++;
+            }
+
+            else if(computer_random_num == cum2_num){
+                cnt ++;
+            }
+
+            else if(computer_random_num == cum3_num){
+                cnt ++;
+            }
+
+            if(cnt==2 || cnt==3){
+                alert("당첨자가 2명 이상입니다.");
+                break;
+            }
+
+            if (computer_random_num == cum1_num || computer_random_num == cum2_num || computer_random_num == cum3_num) {
+                document.write(computer_random_num);
+                document.write("<br>")
+                if (computer_random_num==cum1_num){
+                    document.write("cum1이 정답입니다.");
+                } else if (computer_random_num==cum2_num) {
+                    document.write("cum2이 정답입니다.");
+                } else {
+                    document.write("cun3이 정답입니다.");
+                }
+                
+                break;  
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

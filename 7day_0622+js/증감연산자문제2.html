@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=10,b=10;
+        let result1,result2;
+
+        --a;
+        a--;
+        result1 = a-- + b++;
+        result2 = ++a + --b;
+        
+        console.log(result1); // 7+11=18
+        console.log(result2); // 8+10=18
+    </script>
+</body>
+</html>

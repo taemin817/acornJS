@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mypage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    
+    <style>
+        *{
+            font-family: 'Nanum Myeongjo', serif;
+            font-family: 'Noto Sans KR', sans-serif;
+            padding:0px;
+            margin:0px;
+        }
+        .logo{
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 30px;
+            width: 115px;
+            display: block;
+            margin: auto;
+            margin-top: 70px;
+            margin-bottom: 50px;
+            color: rgb(94, 105, 155);
+            text-decoration: none;
+        }
+        .profile_img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 0.5px solid rgb(230, 230, 230);
+            margin: auto;
+            background-image: url(../image/profile.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .profile_img:hover{
+            box-shadow:  0px 0px 10px 0px rgb(185, 185, 185);
+            /* 테두리    좌우이동  위아래이동  흐림  그림자 커짐*/
+        }
+        .profile_text{
+            width: 300px;
+            margin: auto;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .name{
+            font-weight: bold;
+        }
+        .level{
+            font-size: 14px;
+            margin-top: 12px;
+        }
+        .comment_box{
+            width: 300px;
+            height: 50px;
+            background-color: rgb(177, 184, 214);
+            margin: auto;
+            border-radius: 50px;
+        }
+        .comment{
+            margin-top: 20px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="logo_area" >
+        <h1>
+                <a class="logo" href="bookhome.html">지구문고</a>
+        </h1>     
+    </div>
+
+
+    <div class="my_wrap">
+        <div class="profile_img"></div>
+        <div class="profile_text">
+            <p class="name">*독서왕*</p>
+            <p class="level">level 5</p>
+            <div class="comment_box"><p class="comment">독서는 마음의 양식^*^</p></div>
+        </div>        
+    </div>
+</body>
+</html>

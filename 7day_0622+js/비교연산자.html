@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>비교연산자(참, 거짓 반환)</h2>
+    <script>
+        let su1=10;
+        let su2=3;
+
+        console.log(su1 > su2); // true
+        console.log(su1 >= su2); // true
+        console.log(su1 < su2); // false
+        console.log(su1 <= su2); // false
+        console.log(su1 == su2); // false
+        console.log(su1 != su2); // true
+    </script>
+    <h2>논리연산자 그리고(&&), 또는(||), 부정(!)</h2>
+    <p>and(&&) : 조건을 모두 만족할 때 참</p>
+    <p>or(||) : 조건을 하나만 만족해도 참</p>
+    <p>! : 부정. 참->거짓, 거짓->참</p>
+    <script>
+        let kor=80;
+        let eng=95;
+
+        console.log(kor>=90 && eng>=90); // false(둘 다 만족해야 true, 참거짓 식별 먼저 가능한 친구가 먼저오는게 좋다)
+        console.log(kor>=90 || eng>=90); // true(둘 중 하나 만족해야 true)
+        console.log(!(kor>=90)); // !false=true 
+    </script>
+</body>
+</html>

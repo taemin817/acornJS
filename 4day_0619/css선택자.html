@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CSS란</h1>
+    <p>
+        HTML이 웹문서의 구조를 담당한다면
+        CSS는 글꼴 생상 여백같은 스타일을 추가하여 보기좋게 꾸며주는 역할을 담당한다
+    </p>
+
+    <h2>적용방법</h2>
+    <ul>
+        <li>내부스타일 : style태그를 삽입</li>
+        <li>외부스타일
+            <link rel="stylesheet" href="sample.css">
+        </li>
+    </ul>
+
+    <h2>선택자</h2>
+    <ul>
+        <li>전체선택자      * </li>
+        <li>태그선택자      tag</li>
+        <li>클래스선택자    . 중복허용</li>
+        <li>아이디선택자    # 단 한개!</li>
+        <li>자손선택자      space bar(공백), li .orange -> li태그의 어디에있든 orange클래스를 가진 요소 선택.</li>
+        <li>자식선택자      > </li>
+        <li>인접형제선택자  +</li>
+        <li>인접형제선택자  ~</li>
+        <li>일치선택자      li.orange -> li태그 이면서 orange클래스를 가진 요소를 선택.</li>
+        <li>가상클래스선택자 :hover :active :focus</li>
+        <li>가상요소선택자  ::before  ::after</li>
+    </ul>
+</body>
+</html>

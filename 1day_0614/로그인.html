@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /*
+         태그 선택자
+         클래스 선택자 : 특정 클래스를 가진 요소(태그)를 선택함, 중복가능
+         선택방법 : .클래스이름
+         margin 1 2   1=상하  2=좌우
+         */
+            .wrap{
+                width: 400px;
+                padding: 20px;
+                border: 1px solid black;
+            }
+            .img_wrap{
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                margin: 0px auto;
+                
+            }
+            .info_wrap{
+                width: 300px;
+                padding: 20px;
+                margin: 0px auto;
+                margin-top: 20px;
+                border: 1px solid black;
+                background-position: center;
+                background-size: cover;
+            }
+            img{
+                width: 200px;
+                height: 200px;
+            }
+            input{
+                width: 97%;
+                height: 30px;
+                margin-top: 5px;
+            }
+            button{
+                width: 100%;
+                height: 40px;
+                margin-top: 10px;
+                border: 0px;
+                background-color: antiquewhite;
+                border-radius: 5px;
+                /*radius, 모서리를 둥글게 해줌*/
+            }
+            button:active{
+                background-color: rebeccapurple;
+            }
+    </style>
+</head>
+<body>
+    <!-- 공간을 만드는 태그 -->
+
+    <!-- 로그인 전체 영역 -->
+    <div class="wrap">
+        <!-- 로그인 이미지 영역 -->
+        <div class="img_wrap">
+            <img src="./arf1.jpg">
+        </div>
+        <!-- 로그인 정보 영역 -->
+        <div class="info_wrap">
+            <input type="text" placeholder="ID">
+            <input type="password" placeholder="PW">
+            <button>로그인</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .slogan{
+        border: 1px solid black;
+        width: 600px;
+        margin: 50px auto;
+        text-align: center;
+        color: red;
+        font-size: 30px;
+        font-weight: bold;
+        font-style: italic;
+    }
+    .logo{border: 5px dashed navy;
+        width: 300;
+        height: 170px;
+        margin: 10px auto;
+    }
+    .content{
+        padding-left: 20px;
+        color: black;
+        font-size: 13px;
+        text-align: left;
+        font-style: normal;
+    }
+    .Info{
+        width: 400px;
+        margin: 0 auto;
+        padding-left: 20px;
+        color: black;
+        font-size: 13px;
+        text-align: left;
+        font-style: normal;
+    }
+    input{
+        width: 400px;
+        margin: 10px auto;
+    }
+
+    img{
+        width: 300;
+        height: 170px;
+    }
+</style>
+<body>
+        <div class="slogan">The most fastest racing in the world
+            <div class="logo">
+                <img src="./logo-F1.png">
+            </div>
+            <div class="content">
+                국제자동차연맹 FIA에서 주관하고 FOM이 상업적 주관을 하는 국제 자동차 프로 레이싱 대회이다.<br>
+                정식 명칭은 FIA Formula One World Championship. 약칭으로 Formula 1, F1을 사용한다.<br>
+                <hr>
+                <div class="Info">
+                <h2>차량 정보 입력</h2>
+                    <input type="text" placeholder="원하는 차량 넘버를 1~99 사이에서 입력하세요.">
+                    <input type="text" placeholder="좋아하는 드라이버를 선택하세요." list="choice">
+                    <datalist id="choice">
+                        <option value="막스 베르스타펜"></option>
+                        <option value="세르히오 페레즈"></option>
+                        <option value="샤를 르끌레"></option>
+                        <option value="카를로스 사인츠"></option>
+                        <option value="루이스 해밀턴"></option>
+                        <option value="조지 러셀"></option>
+                        <option value="랜도 노리스"></option>
+                        <option value="오스카 피아스트리"></option>
+                        <option value="랜스 스트롤"></option>
+                        <option value="페르난도 알론소"></option>
+                        <option value="에스테반 오콘"></option>
+                        <option value="피에르 가슬리"></option>
+                        <option value="발테리 보타스"></option>
+                        <option value="저우관유"></option>
+                        <option value="닉 드브리스"></option>
+                        <option value="츠노다 유키"></option>
+                        <option value="로건 사전트"></option>
+                        <option value="알렉산더 알본"></option>
+                        <option value="니코 휠켄베르크"></option>
+                        <option value="케빈 마그누센"></option>
+                    </datalist>
+                <h2>써킷 선택</h2>
+                    <input type="text" placeholder="주행하려는 써킷을 선택하세요." list="choice">
+                    <datalist id="choice">
+                        <option value="영암"></option>
+                        <option value="스파-프랑코샹"></option>
+                        <option value="헝가로링"></option>
+                        <option value="레드불링"></option>
+                        <option value="스즈카"></option>
+                        <option value="몬짜"></option>
+                        <option value="카탈루냐"></option>
+                        <option value="실버스톤"></option>
+                    </datalist>
+                    <P>*써킷은 추후 업데이트될 예정입니다.</P>
+                </div>
+                <button class="go">주행하기</button>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user;
+        let com;
+        
+        let re = true;
+
+        while(re) {
+
+            user = prompt("가위(0)바위(1)보(2)를 입력해주세요");
+            com = Math.floor(Math.random() * 3);
+
+
+            
+            if (user == 0 && com == 1) {
+                document.write("user-가위",'<br>');
+                document.write("com-바위",'<br>');
+                document.write("사용자 패배");
+                re = false;
+
+            }
+
+            else if (user == 0 && com == 2) {
+                document.write("user-가위",'<br>');
+                document.write("com-보",'<br>');
+                document.write("사용자 승리");
+                re = false;
+
+            }
+
+            else if (user == 1 && com == 0) {
+                document.write("user-바위",'<br>');
+                document.write("com-가위",'<br>');
+                document.write("사용자 승리");
+                re = false;
+
+            }
+
+            else if (user == 1 && com == 2) {
+                document.write("user-바위",'<br>');
+                document.write("com-보",'<br>');
+                document.write("사용자 패배");
+                re = false;
+
+            }
+
+            else if (user == 2 && com == 0) {
+                document.write("user-보",'<br>');
+                document.write("com-가위",'<br>');
+                document.write("사용자 패배");
+                re = false;
+
+            }
+
+            else if (user == 2 && com == 1) {
+                document.write("user-보",'<br>');
+                document.write("com-바위",'<br>');
+                document.write("사용자 승리");
+                re = false;
+            }
+            else if (user == com) {
+                alert("무승부입니다. 다시 선택해 주세요.");
+                re = true;
+            }
+            else{
+                alert("잘못 입력했습니다. 다시 입력해 주세요.");
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

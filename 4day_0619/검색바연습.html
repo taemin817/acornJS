@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .searchbar{
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 300px;
+            height: 60px;
+            background-color: greenyellow;
+            display: flex;
+            position: relative;
+        }
+        .void{
+            outline: 0px;
+            border: 0px;
+            border-radius: 5px;
+            height: 40px;
+            width: 240px;
+            position: absolute;
+            left: 7px;
+            top: 9px;
+            font-size: 30px;
+        }
+        .glass{
+            height: 35px;
+            width: 35px;
+            background-image: url("https://cdn.icon-icons.com/icons2/1744/PNG/512/3643762-find-glass-magnifying-search-zoom_113420.png");
+            background-size: cover;
+            background-position: cover;
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="searchbar">
+        <input type="text" class="void" placeholder="검색해!" onfocus="this.placeholder=''" onblur="this.placeholder='검색해!'">
+        <div class="glass"  onclick="window.location.href='https://www.naver.com'"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        singerArr=[
+            ["세븐틴","아이브","Agust D","볼빨간 사춘기","허각","박재정","던","임재현","백현","NCT 도재정"],
+            ["세븐틴","아이브","LE SSERAFIM","Agust D","박재정","비투비","허각","볼빨간사춘기","aespa","임재현"],
+            ["세븐틴","LE SSERAFIM","aespa","방탄소년단","Agust D","허각","박재정","임재현","비투비","V.O.S"],
+            ["세븐틴","방탄소년단","aespa","(여자)아이들","LE SSERAFIM","허각","비투비","임재현","지아","V.O.S"]    
+        ]
+
+        alert("멜론 5월 주간인기상 TOP 10!!")
+        let inputWeek = parseInt(prompt("확인하고 싶은 주차를 입력하세요",""));
+        let inputRanking = parseInt(prompt("확인하고 싶은 순위를 입력하세요!",""));
+
+        let week;
+        let ranking;
+
+        let singer;
+
+        for(let i=0; i<4; i++){
+            for(let j=0; j<10; j++){
+                if(singerArr[i][j]==singerArr[inputWeek-1][inputRanking-1]){
+                    singer = singerArr[i][j];
+                }
+            }
+        }
+        alert("5월 "+inputWeek+"주차 멜론 주간인기상 TOP"+inputRanking+": "+singer);
+
+
+    </script>
+</body>
+</html>

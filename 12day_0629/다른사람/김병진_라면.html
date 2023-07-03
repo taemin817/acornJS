@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let sel;
+      let meat;
+      let seasoning;
+      let stuff = [
+        {
+          name: "쇼유라멘",
+          meat: 100,
+          seasoning: "진간장 2숫갈",
+          Image:
+            "https://mblogthumb-phinf.pstatic.net/MjAxODA1MThfMjYx/MDAxNTI2NjUxNTIwODEx.SaZAwCTGWOkvUn4LyDrSc5BseCOOiAbBazxBh6q1cMQg.qtCzRwHin4p5gQgs5jMA0VmEhtDFz6KUy1nj2H-SaHMg.JPEG.ihs63/%EC%B0%A8%EC%8A%88.jpg?type=w800",
+        },
+        {
+          name: "삼겹살라멘",
+          meat: 100,
+          seasoning: "라면스프",
+          Image:
+            "https://cdn.allets.com/old/data/file/FOOD/XIMYXTnveSDZ63LKcvZ0.gif",
+        },
+      ];
+
+      sel = prompt("어떤 라면을 좋아하세요?  1: 쇼유라멘  2: 삼겹살라면");
+      sel = parseInt(sel);
+      if (sel == 1) {
+        sel -= sel;
+        document.write(
+          "<img src='" + stuff[0].Image + "'style='height: 400px;'/>"
+        );
+        document.write("<h2>쇼유라면 만들기<h2>");
+      } else if (sel == 2) {
+        sel -= sel;
+        document.write(
+          "<img src='" + stuff[1].Image + "'style='height: 400px;'/>"
+        );
+        document.write("<h2>삼겹살라면 만들기<h2>");
+      }
+
+      meat = prompt("고기양 선택  1: 기본  2: 많이");
+      if (meat == 2) {
+        stuff[sel].meat = 300;
+      }
+
+      seasoning = prompt("간은 어느정도  1: 기본  2: 짭짤");
+      if (seasoning == 2) {
+        if (sel == 0) {
+          stuff[sel].seasoning = "라면스프 반개 + 진간장 2숫갈";
+        } else if (sel == 1) {
+          stuff[sel].seasoning = "라면스프 + 치킨스톡 1스푼";
+        }
+      }
+
+      cooking(stuff[sel]);
+
+      function cooking(cook) {
+        document.write("1. 파기름을 내줍니다.<br>");
+        document.write(
+          "2. 냄비에 고기" + cook.meat + "g 을 넣고 볶아줍니다.<br>"
+        );
+        document.write(
+          "3. " + cook.seasoning + "을(를) 넣고 튀기듯이 볶아주세요<br>"
+        );
+        document.write("4. 물 두컵, 맛소금 약간<br>");
+        document.write("5. 물 끓으면 라면, 파 후추 고명 얹으면 완성<br>");
+      }
+    </script>
+  </body>
+</html>

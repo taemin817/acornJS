@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        tbody{
+            border: 1px solid black;
+        }
+        td{ height: 30px;
+            border: 1px solid black;
+        }
+        td:nth-child(1) {
+            font-style: bold;
+            text-align: center;
+            background-color: aqua;
+            padding: 4px;
+        }
+        td:nth-child(2) {
+            width: 400px;
+
+        }
+        input{
+            width: 70px;
+            height: 18px;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        button{
+            margin-left: 2px;
+        }
+        .pwlength{
+            margin-top: 15px;
+            margin-left: 3px;
+            margin-bottom: 23px;
+        }
+        select{
+            height: 22px;
+            margin-left: 5px;
+        }
+        tr:nth-child(7) td{
+            background-color: white;
+        }
+ 
+    </style>
+</head>
+<body>
+    <table>
+        <caption>회원가입</caption>
+        <tbody>
+            <tr>
+                <td>이름</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <input type="text" class="id">
+                    <button>중복확인</button>
+                </td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password">
+                <div class="pwlength">※ 비밀번호는 4자리 이상이어야 한다.</div></td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td class="mailbox">이메일</td>
+                <td>
+                    <input type="text">@<input type="text">
+                    <select>
+                        <option>선택하세요</option>
+                    </select>
+                    <button>이메일중복확인</button>
+                </td>
+            </tr>
+            <tr>
+                <td>학년/반</td>
+                <td>
+                    <select>
+                    <option>선택하세요</option>
+                    </select> 학년
+                    <select>
+                    <option>선택하세요</option>
+                    </select> 반
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button>가입</button><button>취소</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

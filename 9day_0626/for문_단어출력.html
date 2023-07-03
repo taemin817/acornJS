@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let word1 = "apple";
+        let word2 = "banana";
+        let word3 = "cat";
+        let word4 = "dog";
+        let word5 = "elephant";
+        let word6 = "flower";
+        let word7 = "guitar";
+
+        console.log(word1);
+        console.log(word2);
+        console.log(word3);
+        console.log(word4);
+        console.log(word5);
+        console.log(word6);
+        console.log(word7);
+
+        // 7개 변수에 접근할 때는 반복문 사용불가
+
+        let week1 = ["apple", "banana", "cat", "dog", "elephant", "flower", "guitar"];
+        // []: 배열선언의 의미
+
+        console.log(week1[0]); // [] : 배열요소에 접근하는 연산자, 인덱스를 입력. 정수만 가능(=변수 가능)
+        console.log(week1[1]);
+        console.log(week1[2]);
+        console.log(week1[3]);
+        console.log(week1[4]);
+        console.log(week1[5]);
+        console.log(week1[6]);
+
+        // 7번 반복
+
+        for(let i=0; i<7; i++){     // i : 반복을 제어할 변수이자 인덱스로 사용
+            console.log(week1[i]);
+        }
+    </script>
+</body>
+</html>

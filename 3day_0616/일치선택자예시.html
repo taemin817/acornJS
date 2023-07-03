@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li.orange{
+            color: orangered;
+        }
+        .a li{
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li class="orange">c</li>
+        <li>d</li>
+        <p class="orange">e</p>
+    </ul>
+
+    <ul class="a">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>
+            <ul>
+                <li>inner a</li>
+                <li>inner b</li>
+                <li>inner c</li>
+                <li>inner d</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

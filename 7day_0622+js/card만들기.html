@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2023년</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+ 
+<link rel="shortcut icon" href="https://freepngimg.com/download/christmas/26196-6-christmas-stocking.png"> 
+<style>
+* {
+font-family: 'Poor Story', cursive;
+}
+body {
+background-color: green
+}
+
+.envelope {
+background-image: url('https://pngimg.com/uploads/envelope/envelope_PNG18366.png');
+background-size: cover;
+background-position: center;
+width: 200px;
+height: 200px;
+margin: 200px  auto  0px  auto ;
+cursor: pointer;
+}
+
+.envelope-msg {
+color: white;
+text-align: center;
+}
+
+.letter-close {
+display: block;
+}
+ 
+.letter-open {
+display: none;
+}
+
+.rabbit {
+width: 200px;
+height: 200px;
+background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqimR0lrdr2Eh7JSan7l4alWWxAckuZqLFxA&usqp=CAU');
+background-size: cover;
+background-position: center;
+background-color: white;
+margin: 100px auto 0px auto;
+border-radius: 100px;
+border: 5px solid white;
+box-shadow: 0px 0px 10px 0px white;
+}
+
+h1 {
+text-align: center;
+color: white;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+.messagebox {
+width: 400px;
+margin: auto;
+font-size: 20px;
+line-height: 30px;
+background-color: ivory;
+color: brown;
+padding: 30px;
+box-shadow: 0px 0px 10px 0px white;
+}
+
+.from {
+text-align: right;
+margin-top: 20px;
+margin-bottom: 0px;
+} 
+
+</style>
+
+
+<script>
+function open_letter() {   
+//document.getElementsByClassName("letter-close")[0].style.display = 'none';
+//document.getElementsByClassName("letter-open")[0].style.display = 'block';
+ 
+document.getElementById("letter-close").style.display = 'none';
+document.getElementById("letter-open").style.display = 'block';
+ 
+} 
+</script>
+
+
+</head> 
+
+        <div class="letter-close" id="letter-close">
+            <div class="envelope" onclick="open_letter()"></div>
+            <h2 class="envelope-msg">편지를 열어봐!</h2>
+        </div>
+
+        <div class="letter-open"  id="letter-open">
+            <div class="rabbit"></div>
+            <h1>제목</h1>
+            <div class="messagebox">
+                내용    <br />
+                  내용   <br />
+                  내용  <br />
+                 내용   <br />
+                    내용   <br />
+                   내용  .  <br />
+                <p class="from">  ...가 </p>
+            </div>
+         </div>   
+
+
+</body>
+</html>

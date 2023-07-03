@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1.
+      //작성자 :
+      //기능 :  짝수인지 판단하는 기능
+      //입력 :  수
+      //반환 :  true(짝수), false(짝수X)
+      //1;
+      function evenNumber(num) {
+        return num % 2 == 0 ? alert("짝수") : alert("짝수X");
+      }
+      evenNumber(5);
+
+      //2;
+      function evenNumber(num) {
+        if (num % 2 == 0) {
+          return alert("짝수");
+        } else {
+          alert("홀수");
+        }
+      }
+      evenNumber(5);
+
+      //2.
+      //작성자 :
+      //기능 :  두 수 중에서 큰 수를 반환하는 기능
+      //입력 :  두 수
+      //반환 :  두 수 중에서 큰 수
+      //   1;
+      function bigNumber(a, b) {
+        return a > b ? alert(a) : a < b ? alert(b) : alert("Same");
+      }
+      bigNumber(5, 5);
+
+      2;
+      function bigNumber(a, b) {
+        if (a > b) {
+          return alert(a);
+        } else {
+          return b > a ? alert(b) : alert("same");
+        }
+      }
+      bigNumber(10, 50);
+
+      3;
+      function bigNumber(a, b) {
+        if (a > b) {
+          return alert(a);
+        } else if (b > a) {
+          return alert(b);
+        } else {
+          alert("Same");
+        }
+      }
+      bigNumber(10, 20);
+    </script>
+  </body>
+</html>

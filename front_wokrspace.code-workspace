@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../front_wokrspace"
+		},
+		{
+			"name": "project1",
+			"path": "../../GitHub/project1/project1"
+		},
+		{
+			"name": "taemin",
+			"path": "../front_ws/taemin"
+		}
+	],
+	"settings": {}
+}

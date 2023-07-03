@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>7.  국어, 영어점수 입력 받아  모두 90점 이상이면 장학금 지급 출력</p>
+
+    <script>
+        let kor=prompt("국어점수");
+        let eng=prompt("영어점수");
+        let math=prompt("수학점수");
+        let money
+
+        if(kor>=90 && eng>=90 && math>=90){
+            money="장학금지급!";
+        }
+        else{
+            money="어딜감히!";
+        }
+        alert(money);
+    </script>
+
+</body>
+</html>

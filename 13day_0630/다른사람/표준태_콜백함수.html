@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function a(){
+            alert("거북이가");
+        }
+        b(a)
+        function b(c){
+            c();
+        }
+         function aFunc(){
+            alert("거어어어");
+        }
+        
+        setTimeout( aFunc, 1000);
+        //2. 익명으로 함수를 만든다.
+        setTimeout( function(){
+            alert("어어어");
+        },4000);
+
+        setTimeout(() => alert("북"), 6000);
+    </script>
+</body>
+</html>

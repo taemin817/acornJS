@@ -1,0 +1,58 @@
+1. 반복 (  무승부 일동안 : 둘 다 같은 값일 동안 )
+        1.1 사용자가 가위바위보를 합니다.
+        1.2 컴퓨터가 가위바위보를 합니다.
+        1.3 사용자와 컴퓨터의 가위바위보 값을  판단
+             1.3.1  같은값이 아닌 경우  사용자의 승패를 판단              
+                   -   사용자가 가위:  컴퓨터는 보자기
+                   -   사용자가 바위 : 컴퓨터는 가위
+                   -   사용자가  보 :  컴퓨터는  주먹
+             1.3.2  같은값인 경우 그대로 반복을 수행함   
+            
+2.  사용자의 승패 정보를 출력한다.
+3.  종료
+
+
+<script>
+         // 0:가위 ,  1 :바위 , 2 : 보
+        let user; 
+        let computer;
+        let result ;  // 출력결과를 담을 변수  
+        while( true){  //  무조건참 => 탈출조건 
+            user = prompt(" 가위바위 보 입력하세요" , "가위:0  바위:1 보:2");
+                        // 0 1 2
+            computer =  Math.floor(Math.random() *3) ;  // 1보다 작은 임의의 실수형 난수값   0~ 1보다 작은 실수값
+
+            console.log( user);
+            console.log( computer);
+           
+            if( user != computer){  
+                //사용자승패 구하기
+                 if( user==0){  // 가위
+                    if( computer==2)    {
+                        result="승리";
+                    }else{
+                        result="패배";
+                    }
+                 }else if( user==1){
+                    if( computer ==0){
+                       result="승리" ;
+                    }else{
+                        result="패배";
+                    }
+                 }else if( user==2){ //보
+                     if( computer ==1){
+                        result="승리";
+                     }else{
+                        result="패배";
+                     }
+                 }
+
+                //탈출
+                break;
+            }  
+        }
+        
+        //반복종료
+        alert(result);
+
+    </script>

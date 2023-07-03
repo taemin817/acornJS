@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>if문 예제</h2>
+    나이를 입력받아서 성인인지 판단하는 프로그램 작성하기<br>
+    나이를 입력 prompt()
+    나이를 판단 
+    알림창에 정보를 출력 alert()
+
+    <script>
+        let age=prompt("나이를 입력하세요", "숫자만!");
+        let result 
+        if(age>=19 && age<130){
+            result="성인입니다";
+        }
+        else if(age>=130){
+            result="인간이 아닙니다";
+        }
+        else{
+            result="성인이 아닙니다";
+        }
+        alert(result);
+    </script>
+</body>
+</html>

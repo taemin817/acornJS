@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img id = "img">
+
+    <button onclick="show()"> 사진 보이기 </button>
+    <button onclick="hide()"> 사진 가리기 </button>
+
+    <script>
+        function 치밥만들기(치킨, 밥, 양파, 계란, 소스){
+            alert("1. " +치킨+"을 먹기좋은 크기로 잘게 잘라놓는다.");
+            alert("2. " +양파+"를 채썬다");
+            alert("3. "+소스+"를만든다");
+            alert("4. "+계란+"은 스크램블 하여 준비한다. ");
+            alert("5. "+밥+"을 넣고 스크램블을 가장자리에 둘러준다.")
+            alert("6. 치킨을 올린 후 마요네즈를 뿌리면 완성!!")
+            
+
+            let src =("common.jpg");
+            return src; 
+        }
+
+        function show(){
+            let imgShow = document.getElementById("img");
+
+            imgShow.style.display = "block";
+        }
+
+        function hide(){
+            let imgHide = document.getElementById("img");
+            
+            imgHide.style.display = "none";
+        }
+
+
+        let 치킨 = "치킨2조각";
+        let 밥 = "반공기";
+        let 양파 = "1/4개";
+        let 계란 = "2개";
+        let 소스 = "만들어진 소스";
+
+        let food = 치밥만들기(치킨, 밥, 양파, 계란, 소스);
+        let img1 = document.getElementById("img");
+        img1.src = food;
+
+
+    </script>
+
+    
+</body>
+</html>

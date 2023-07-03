@@ -1,0 +1,112 @@
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+header{
+    background-color: orangered;
+    padding: 20px;
+}
+header:hover{
+    background-color: rgb(70, 151, 189);
+}
+.subject2:hover{
+    background-color: rgb(70, 151, 189);
+}
+h1{
+    text-align: center;
+    font-size: 120px;
+    font-weight: bold;
+    color: white;
+}
+main{
+    width: 1600px;
+    margin: auto;
+}
+.driver{
+    margin-top: 30px;
+    display: flex;
+}
+.driver, .car{
+    justify-content: center;
+    align-items: center;
+}
+.lando{
+    padding-right: 10px;
+}
+.oscar{
+    padding-left: 10px;
+}
+.name{
+    font-size: 70px;
+    padding: 20px;
+    display: block;
+    text-align: center;
+}
+.mcl60{
+    margin-top: 30px;
+}
+.car{
+    display: flex;
+}
+.carimg{
+    width: 70%;
+}
+.button{
+    width: 30px;
+}
+.about{
+    padding-left: 200px;
+}
+.mcllogo{
+    width: 250px;
+}
+footer{
+    background-color: orangered;
+    padding-top: 20px;
+    text-align: center;
+}
+.footertop{
+    color: white;
+    font-size: 50px;
+    text-decoration: underline;
+    padding-bottom: 20px;
+}
+.subject{
+    display: flex;
+    width: 100%;
+}
+.subject2{
+    font-size: 20px;
+    color: white;
+    background-color: orangered;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+}
+.subject3{
+    font-size: 20px;
+    height: 50px;
+    width: 800px;
+    line-height: 50px;
+    padding: 10px 20px 10px 20px;
+}
+.win{
+    height: 100px;
+    line-height: 100px;
+}
+.driver-win, .con-win{
+    display: inline-block;
+    font-size: 18px;
+}
+.footertop{
+    padding-bottom: 50px;
+}
+.partners{
+    margin: 15px 50px;
+    color: white;
+    font-size: 19px;
+    display: inline-block;
+}

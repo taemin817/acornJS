@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 보이기/안보이기 토글 버튼 -->
+    <button onclick="toggle()">보이기</button>
+
+    <div id="content">
+        집에 가고싶어어엉ㅇ어엉
+    </div>
+
+    <script>
+
+        let flag=true;   //true, false에 따라 다르게 나오도록 설정하려고
+        function toggle(){
+            let contentE = document.getElementById("content");
+            if(flag==true){  //보여야하는 상황
+            contentE.style.display="block";
+            flag=false;
+        }else{contentE.style.display="none";
+            flag=true;
+        }
+        }
+
+        // 순서
+        // alert("wow")
+        // 숨기고 싶은 대상(태그, 요소, element) 선택하고 변수선언
+        // document.getElementById("id 이름")
+        // 속성변경, style속성변경
+        // alert(contentE);
+    </script>
+</body>
+</html>

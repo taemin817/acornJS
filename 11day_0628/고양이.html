@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let cat={
+            name:"개미",
+            age:2,
+
+            see: function(){
+                alert("본다");
+            },
+            eat: function(){
+                alert("먹는다")
+            }
+        }
+
+        console.log(cat.name);
+        console.log(cat.age);
+
+        // cat의 기능(->객체가 제공하는 기능 : 메서드): 함수로 표현
+        cat.eat();
+        cat.see();
+
+    </script>
+</body>
+</html>

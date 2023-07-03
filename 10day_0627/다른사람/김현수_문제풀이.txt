@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let score = parseInt(prompt("점수를입력하세요","99"));
+        let grade;
+        if(score>=90){
+            grade="A";
+        } 
+        else if (score>=80){
+            grade="B";
+        }
+        else if (score>=70){
+            grade="C";
+        }
+        else if (score>=60){
+            grade="D";
+        } 
+        else {
+            grade="F"
+        }
+
+        alert(grade);
+    
+    </script>
+</body>
+
+
+
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        
+        while (true) {
+
+            let score = parseInt(prompt("점수를 입력하세요", "100"));
+            let grade;
+
+            
+
+            if(score<0){
+                alert("프로그램종료")
+                break;
+            }
+
+            if (score >= 90) {
+                grade = "A";
+            }
+            else if (score >= 80) {
+                grade = "B";
+            }
+            else if (score >= 70) {
+                grade = "C";
+            }
+            else if (score >= 60) {
+                grade = "D";
+            }
+            else {
+                grade = "F"
+            }
+
+
+
+            alert(grade);
+
+        }
+        
+    </script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n=2;
+        for(let i=1; i<10; i++)
+        {
+            document.write(n*i,"<br>");
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        for(let i=2; i<6; i++){
+            for(let j=1; j<10; j++){
+                document.write(i*j,"<br>");
+            }
+            document.write("<br>");
+        }
+    </script>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let n=1;
+
+        do{
+            n++;
+            let i=0;
+            
+            do{
+                i++;
+                document.write(n*i);
+                document.write("<br>");
+            } while(i<9)
+            document.write("<br>");
+        } while (n<9)
+
+    </script>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n=1;
+        
+        while(n<10){
+            let i=1
+            n++;
+            while(i<9){
+                
+                document.write(n*i, "<br>");
+                i++;
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 수 맞추기 게임
+        let secret_num = Math.floor(Math.random()*99)+1;
+        let n=0;
+        while(n<3){
+            let my_num = prompt("1부터 100사이의 수를 선택하세요.", "7");
+            n++;
+
+
+            if(my_num == secret_num){
+                alert("당첨!");
+            } else if (my_num > secret_num){
+                alert("down");
+            } else {
+                alert("up");
+            }
+        }
+
+        document.write(secret_num);
+        
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        cnt = 0;
+
+        while (cnt<1) {
+            computer_random_num = Math.floor(Math.random() * 99) + 1;
+
+            cum1_num = Math.floor(Math.random() * 99) + 1;
+            cum2_num = Math.floor(Math.random() * 99) + 1;
+            cum3_num = Math.floor(Math.random() * 99) + 1;
+
+            
+            if(computer_random_num == cum1_num){
+                cnt ++;
+            }
+
+            else if(computer_random_num == cum2_num){
+                cnt ++;
+            }
+
+            else if(computer_random_num == cum3_num){
+                cnt ++;
+            }
+
+            if (computer_random_num == cum1_num || computer_random_num == cum2_num || computer_random_num == cum3_num) {
+                document.write(computer_random_num);
+                document.write("<br>")
+                if (computer_random_num==cum1_num){
+                    document.write("cum1이 정답입니다.");
+                } else if (computer_random_num==cum2_num) {
+                    document.write("cum2이 정답입니다.");
+                } else {
+                    document.write("cun3이 정답입니다.");
+                }
+                
+                break;  
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

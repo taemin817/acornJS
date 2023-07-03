@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            height: 100px;
+            background-color: blue;
+            color: white;
+        }
+        .nav{
+            height: 60px;
+            background-color: gray;
+        }
+        .section{
+            height: 500px;
+            background-color: yellow;
+        }
+        .footer{
+            height: 100px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">머리말<br>
+        <button onclick="addheader()">스타일 추가</button>
+        <button onclick="rmheader()">스타일 제거</button>
+    </div>
+    <div id="nav">메뉴<br>
+        <button onmouseover="addnav()">스타일 추가</button>
+        <button onmouseout="rmnav()">스타일 제거</button>
+    </div>
+    <div id="section">본문<br>
+        <button onclick="addsection()">스타일 추가</button>
+        <button onclick="rmsection()">스타일 제거</button>
+    </div>
+    <div id="footer">꼬리말<br>
+        <button onmouseover="addfooter()">스타일 추가</button>
+        <button onmouseout="rmfooter()">스타일 제거</button>
+    </div>
+
+    <script>
+        let hdbtn=document.getElementById("header");
+        function addheader(){
+            hdbtn.classList.add("header");
+        }
+        function rmheader(){
+            hdbtn.classList.remove("header");
+        }
+        let navbtn=document.getElementById("nav");
+        function addnav(){
+            navbtn.classList.add("nav");
+        }
+        function rmnav(){
+            navbtn.classList.remove("nav");
+        }
+        let secbtn=document.getElementById("section");
+        function addsection(){
+            secbtn.classList.add("section");
+        }
+        function rmsection(){
+            secbtn.classList.remove("section");
+        }
+        let ftbtn=document.getElementById("footer");
+        function addfooter(){
+            ftbtn.classList.add("footer");
+        }
+        function rmfooter(){
+            ftbtn.classList.remove("footer");
+        }
+    </script>
+</body>
+</html>

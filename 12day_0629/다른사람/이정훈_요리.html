@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img{
+            width:600px;
+            height:600px;
+            display: none;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 1000;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <p> 알리오올리오 만들기</p>
+
+    <button onclick = "img_toggle()" >이미지</button>
+    <div >
+        <img src = https://recipe1.ezmember.co.kr/cache/recipe/2015/12/15/53e7641b268ce44f6b79421c636239e11.jpg id = pasta class = img>
+    </div>
+
+
+    <script>
+
+        // 알리오올리오 만들기
+
+        let flag = true;
+        function pasta_recipe(a,b,c,d,e,f,g,h){
+            document.write("1. 손을 씻습니다.<br>");
+            document.write("2. 냄비에 " +a +"와 "+c+"을 넣고 끓입니다.<br>");
+            document.write("3." +g+"과 "+e +"를 원하는 만큼을 슬라이스해줍니다.<br>");
+            document.write("4. 물이 끓으면 "+b+"을 넣고 7~8분 정도 익힙니다.<br>");
+            document.write("5. 면이 익는 동안 팬에 "+h+"을 둘러줍니다.<br>");
+            document.write("6. 마늘과 페퍼론치노를 넣고 마늘이 살짝 갈색이 돌때까지 볶아줍니다.<br>");
+            document.write("7. 면을 넣고 불을 약불로 줄이고 면수를 조금씩 넣으며 기름과 면수가 잘 섞이게 해줍니다.<br>");
+            document.write("8. 잘 섞인 면 위에 "+d+"과 "+f+"을 넣고 접시에 담아줍니다.<br>");
+            document.write("9. 맛있게 먹습니다.<br>");
+        }
+
+        function img_toggle(){
+            let img = document.getElementById("pasta")
+            if( flag == true){
+                img.style.display="block";
+                flag = false;
+            }else{
+                img.style.display="none";
+                flag = true;
+            }
+        }
+        
+        // 재료
+
+        let ing ={
+            a : "물 1L",
+            b : "스파게티면 200g",
+            c : "소금 1스푼",
+            d : "파슬리 1/6스푼",
+            e : "페퍼론치노 3개",
+            f : "파마산치즈 1/2스푼",
+            g : "마늘 10쪽",
+            h : "올리브 오일 3~4스푼",
+        }
+        /*
+        let water = "물 1L";
+        let pasta = "스파게티면 200g";
+        let salt = "소금 1스푼";
+        let parsley = "파슬리 1/6스푼";
+        let pepper = "페퍼론치노 3개";
+        let cheese = "파마산치즈 1/2스푼";
+        let garlic = "마늘 10쪽";
+        let oli = "올리브 오일 3~4스푼";
+        */
+        
+        let pasta_recipe_toggle = pasta_recipe(ing.a,ing.b,ing.c,ing.d,ing.e,ing.f,ing.g,ing.h);
+
+
+    </script>
+</body>
+</html>

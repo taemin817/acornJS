@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 자바스크립트로 객체를 표현하는 방법 : JSON(JavaScript Objet Notation)
+        let snack={
+            name:"맛동산",
+            price: 4200,
+            weight: 300
+        };
+        console.log(snack);
+
+        // snack="맛동산" -> 객체아님
+        console.log(snack.name);
+        console.log(snack.price);
+        console.log(snack.weight);
+
+
+        function func1(name, age, address){
+            document.write(name, age, address);
+        }
+
+        func1("홍길동 ", 25, " 서울시");
+
+        document.write("<br>");
+
+        function func2(obj){
+            document.write(obj.name, obj.age, obj.address);
+        }
+        let obj={
+            name: "홍길동 ",
+            age: 25,
+            address: " 서울시"
+        }
+        func2(obj);
+    </script>
+</body>
+</html>

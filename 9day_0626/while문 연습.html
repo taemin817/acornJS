@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 안녕 인사 3번
+
+        /*
+        alert("hi");
+        alert("hi");
+        alert("hi");
+        */
+
+        // 반복문으로 변경하려면 (반복을 제어할 수 있는)변수가 필요
+        
+        // 반복문 횟수가 정해져있다면 for
+        for(let i=1; i<=3; i++){
+            alert("hi");         // 초기식->조건식->조건식 만족하면 코드 수행->증감식->조건식->조건식 만족하면 코드 수행->...
+        }
+
+        // 반복문 횟수가 정해지지않았다면 while
+        let n=1;
+        while(n<=3){
+            alert("hi");
+            n++;
+        }
+
+        let n2=1;           
+        while(n2++<=3){     //  n++  n
+            alert("hi")     //   1   2  "hi"
+                            //   2   3  "hi"
+                            //   3   4  "hi"
+                            //   4(false)
+        }
+    </script>
+</body>
+</html>

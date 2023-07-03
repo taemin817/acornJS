@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+         태그 선택자
+         클래스 선택자 : 특정 클래스를 가진 요소(태그)를 선택함, 중복가능
+         선택방법 : .클래스이름
+         margin 1 2   1=상하  2=좌우
+         */
+            .wrap{
+                width: 400px;
+                padding: 20px;
+                border: 1px solid black;
+            }
+            .img_wrap{
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                margin: 0px auto;
+                /*background-color: blue; -> img_wrap의 배경색이 blue로 바뀜*/
+                background-image: url(https://th.bing.com/th?id=OIP._nnrTp9WRaAJqph1GbloPgHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2);
+                background-size: cover;
+                background-position: center;
+            }
+            .info_wrap{
+                width: 300px;
+                padding: 20px;
+                margin: 0px auto;
+                margin-top: 20px;
+                border: 1px solid black;
+            }
+
+            input{
+                width: 97%;
+                height: 30px;
+                margin-top: 5px;
+            }
+            button{
+                width: 100%;
+                height: 40px;
+                margin-top: 10px;
+                border: 0px;
+                background-color: antiquewhite;
+                border-radius: 5px;
+                /*radius, 모서리를 둥글게 해줌*/
+            }
+    </style>
+</head>
+<body>
+    <!-- 공간을 만드는 태그 -->
+
+    <!-- 로그인 전체 영역 -->
+    <div class="wrap">
+        <!-- 로그인 이미지 영역 -->
+        <div class="img_wrap"></div>
+        <!-- 로그인 정보 영역 -->
+        <div class="info_wrap">
+            <input type="text" placeholder="ID">
+            <input type="password" placeholder="PW">
+            <button>로그인</button>
+        </div>
+    
+    </div>
+</body>
+</html>

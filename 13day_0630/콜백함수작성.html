@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            // 고차함수
+            function hello(f){  // 콜백함수 : 매개변수로 함수를 받을 수 있다.
+                alert("1초후 실행");
+                f();
+            }
+
+            function messageKo(){
+                alert("안녕하세요");
+            }
+            function messageEng(){
+                alert("hi");
+            }
+            hello(messageKo);
+            hello(messageEng);
+
+            
+            //setInterval 갤러리의 이미지가 1초간격으로 변경
+            // 1. 함수를 만든다.
+            function aFunc(){
+                alert("test");
+            }
+            // 2. 익명으로 함수를 만든다.
+
+            setTimeout( aFunc , 1000); // =(콜백함수명, 1초*1000) 1초 이후에 콜백함수 실행해줘
+
+            setTimeout( function(){
+                alert("test2");
+            } , 4000);
+
+            // 3. 화살표 함수
+            setTimeout(()=> alert("test3"), 5000);
+        </script>
+</body>
+</html>

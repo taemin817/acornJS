@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ <!-- 1. 수 맞추기 게임
+ 1~100 사이의  수 맞추기 게임
+ up, down 정보 알려주기
+ 3번만에 맞추면 당첨 메세지 출력 -->
+
+ <script>
+    let user;
+    let com;
+    let num;
+    
+    while(true){
+
+        let user=prompt('1~100 사이에서 예상하는 수를 입력하세요');
+        let com=Math.floor(Math.random()*101);
+        
+        if(user>com){
+            alert('down')
+        }else if(user<com){
+            alert('up')
+        }
+    }
+ </script>
+
+</body>
+</html>

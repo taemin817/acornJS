@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.
+        // 작성자 : 문나정
+        // 기능 : 짝수인지 판단하는 기능
+        // 입력 : 수
+        // 반환 : true (짝수), false (홀수)
+
+        // 2.
+        // 작성자 : 문나정
+        // 기능 : 두 수 주에서 큰 수를 반환하는 기능
+        // 입력 : 두 수
+        // 반환 : 두 수 중에서 큰 수
+
+        function evenNum(n){
+            if((n%2)==0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        function maxNum(a, b){
+            if(a>b){
+                return a;
+            }
+            else if(a<b){
+                return b;
+            }
+            else{
+                return 1;
+            }
+        }
+
+        let evenResult = evenNum(4);
+
+        if(evenResult){
+            alert("짝수입니다.");
+        }
+        else{
+            alert("홀수입니다.");
+        }
+
+        let maxResult = maxNum(1,1);
+        if(maxResult==1){
+            alert("두 수가 같습니다.");
+        }
+        else{
+            alert("두 수 중에서 큰 수는 "+maxResult+"입니다.");
+        }
+
+    </script>
+</body>
+</html>

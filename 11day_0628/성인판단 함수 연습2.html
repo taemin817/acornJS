@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // 작성자 : 
+    // 기능 : 성인인지 판단하는 기능 제공
+    // 입력 : 나이
+    // 반환 : true(성인)/false(성인아님)
+
+    function isAdult0(age){
+        if(age>19){
+            return true;
+        }else{
+            return false;}
+     }
+
+    // 함수를 만드는 법
+    // 함수를 사용하는 법
+    // 함수의 반환값을 사용하는 법
+    let age=parseInt(prompt("나이를 입력하세요"));
+    let result = isAdult0(age);
+
+    // 성인이면 물건을 구매할 수 있다
+    if(result==true){
+        alert("물건을 구매할 수 있습니다");
+    }else{
+        alert("안돼, 돌아가");
+    }
+    </script>
+</body>
+</html>

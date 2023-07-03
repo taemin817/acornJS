@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // "stop"이 입력될 때까지 입력한 내용을 그대로 출력하기
+        // 1. while(true) : 무조건 수행하는 반복(탈출조건 명시!)
+            while(true){
+                let name=prompt("말해보세요", "그만하려면 stop을 입력하세요");
+                if(name == "stop" || name=="STOP"){
+                    break; // 반복문 안의 break는 탈출, 자신을 감싸는 반복문 탈출
+                }
+                alert(name);
+            }
+
+            alert("종료합니다")
+    </script>
+</body>
+</html>

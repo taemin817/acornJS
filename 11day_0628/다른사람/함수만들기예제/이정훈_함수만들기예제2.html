@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 2.
+        // 작성자:
+        // 기능 : 두 수 중에서 큰 수를 반환하는 기능
+        // 입력 : 두 수
+        // 반환 : 두 수 중엣 큰수
+
+        function p(i,j){
+            if(i>j){
+                return true;
+            }else if(i<j){
+                return false;
+            }
+            a = parseInt(a);
+            b = parseInt(b);
+        }
+
+        alert("비교할 수를 적어주세요.");
+        let a = prompt("첫번째 수를 적어주세요.");
+        let b = prompt("두번째 수를 적어주세요.");
+
+        let result = p(a,b)
+        if(result == true){
+            alert("더 큰 수는 " + a + "입니다.");
+        }else if(result == false){
+            alert("더 큰 수는 " + b + "입니다.");
+        }else{
+            alert("두 수는 같습니다.")
+        }
+
+
+
+    </script>
+</body>
+</html>

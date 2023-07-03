@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let phoneArry=[
+            {
+                name:"iPhone 14 Pro Max",
+                disp: "17.0cm",
+                weight: "240g",
+                maxVideo: "29 hours",
+                storage: "128GB, 256GB, 512GB, 1TB",
+                manufac:"APPLE",
+                price:{
+                    p_128GB:1750000,
+                    p_256GB:1900000,
+                    p_512GB:2200000,
+                    p_1TB:2500000
+                }
+
+            },{
+                name:"iPhone 14 Pro",
+                disp: "15.5cm",
+                weightg: "206g",
+                maxVideo:"23 hours",
+                storage: "128GB, 256GB, 512GB, 1TB",
+                manufac:"APPLE",
+                price:{
+                    p_128GB:1550000,
+                    p_256GB:1700000,
+                    p_512GB:2000000,
+                    p_1TB:2300000
+                }
+            },{
+                name:"iPhone 14",
+                disp: "17.0cm",
+                weight: "203g",
+                maxVideo:"26 hours",
+                storage: "128GB, 256GB, 512GB",
+                manufac:"APPLE",
+                price:{
+                    p_128GB:1250000,
+                    p_256GB:1400000,
+                    p_512GB:1700000,
+                }
+            },{
+                name:"갤럭시 S23 Ultra",
+                disp: "17.3cm",
+                weight: "233g",
+                maxVideo:"26 hours",
+                storage: "256GB, 512GB, 1TB",
+                manufac:"SAMSUNG",
+                price:{
+                    p_256GB:1599400,
+                    p_512GB:1720400,
+                    p_1TB:1962400
+                }
+            },{
+                name:"갤럭시 S23+",
+                disp: "16.6cm",
+                weight: "195g",
+                maxVideo:"27 hours",
+                storage: "256GB, 512GB",
+                manufac:"SAMSUNG",
+                price:{
+                    p_256GB:1353000,
+                    p_512GB:1474000
+                }
+            },{
+                name:"갤럭시 S23",
+                disp: "15.3cm",
+                weight: "168g",
+                maxVideo:"22 hours",
+                storage: "256GB, 512GB",
+                manufac:"SAMSUNG",
+                price:{
+                    p_256GB:1155000,
+                    p_512GB:1276000
+                }
+            }
+        ];
+        document.write("<<256GB 가격>> <br>");
+        for(let i=0; i<6; i++){
+            document.write(phoneArry[i].manufac+" => "+phoneArry[i].name+" : "+phoneArry[i].price.p_256GB+"<br>");
+        }
+
+    </script>
+</body>
+</html>

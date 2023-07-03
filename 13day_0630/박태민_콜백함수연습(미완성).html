@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 콜백함수
+        function note(a){
+            prompt("죽이고 싶은 사람의 이름을 쓰세요.");
+            a();
+        }
+
+        function death(){
+            alert("40초 후 심장마비로 죽습니다.");
+        }
+        note(death);
+        function done(){
+            alert("죽었습니다.");
+        }
+        setTimeout(done, 40000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="su1" placeholder="수량을 입력하세요">*<input type="text" id="su2" placeholder="단가를 입력하세요">=<input type="text" id="result">
+    <button onclick="calc()">계산</button>
+
+    <script>
+        function calc(){
+
+            // 수량
+            let su1E=document.getElementById("su1");
+            let qty = parseInt(su1E.value);
+
+            // 단가
+            let su2E=document.getElementById("su2");
+            let price = parseInt(su2E.value);
+
+            // 총 주문 금액
+            let resultE = document.getElementById("result")
+            resultE.value=qty*price;
+        }
+    </script>
+</body>
+</html>

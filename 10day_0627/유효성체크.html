@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //  100 점수   =>    100점입니다.
+
+        // 1. 점수 입력받는다 ( 올바른값이 입력될 때까지 반복)
+        // 2. 점수를 출력한다.
+
+        let kor;
+
+        do{
+            kor  = parseInt(prompt("올바른 점수를 입력하세요"));                      
+        } while( kor >100  || kor  <0  ||  isNaN(kor));   // 잘못된 상황일때 
+
+        alert( "당신의 점수=" + kor +"입니다. 수고하셨습니다 !!");
+
+        
+
+    </script>
+
+</body>
+</html>

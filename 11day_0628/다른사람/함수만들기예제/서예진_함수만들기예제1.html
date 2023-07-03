@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+ <script>
+//1
+//작성자 :
+//기능 : 짝수인지 판단하는 기능
+//입력 : 수
+//반환 : true(짝수), false(짝수x)
+
+        function even(num){
+          
+            if(num % 2==0){
+                return  true;
+            }else{
+               return  false;
+            }
+        }
+
+        let num = prompt("수를 입력하세요");
+        let result = even(num);
+
+       if(result==true){
+            alert("짝수입니다.");
+       }else{
+            alert("홀수입니다.");
+       }
+
+
+</script>
+
+</body>
+</html>

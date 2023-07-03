@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*함수정의
+          정의한 코드는 호출해야만 실행된다.*/
+        function check(){
+            //alert("who!")
+            //사용자 아이디 입력했는지 확인
+            //
+            let useridTag = document.getElementById("userid");
+            //alert(useridTag);
+            let userid = useridTag.value;
+                alert(userid);
+            useridTag.value="김민규"
+  
+            //판단
+            if(userid == ""){
+                alert("아이디를 입력하세요");
+            }
+        }
+    </script>
+</head>
+<body>
+    아이디
+    <input type="text" id="userid" value="박태민">
+    <!--check()함수 호출(call)-->
+    <button onclick="check()">클릭</button>
+    <img src="">
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>IF문(분기문)</h2>
+
+    <script>
+        let kor=95;
+        let grade;
+        
+        if(kor>=90){ // 조건1
+            grade="A"; // ""는 ''으로 교체가능, 조건이 만족할 때 수행할 코드
+        }
+        else if(kor>=80){ //조건2
+            grade="B"; // 위의 조건(조건1)이 만족하지 않을 경우 수행할 코드
+        }
+        else if(kor>=70){ //조건3
+            grade="C"; // 위의 조건(조건2)이 만족하지 않을 경우 수행할 코드
+        }
+        else{grade="F"; // 위의 조건이 모두 아닌, 그밖의 모든 경우(조건을 입력하지 않음)
+        }
+        alert(grade);
+    </script>
+</body>
+</html>

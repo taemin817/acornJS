@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font-family:fantasy;}
+        .bg{border: 1px solid black;
+        width: 500px}
+        .order-img-wrap{
+            border: 1px dotted black;
+            width: 350px; height: 350px;
+            margin: 0 auto;
+            background-image: url(https://th.bing.com/th/id/OIP.JST4ZAi6V0GVN83TefEXewHaFC?w=233&h=180&c=7&r=0&o=5&pid=1.7);
+        }
+        .order-name-wrap{
+            width: 420px;
+            margin: 5px auto;
+            border: 1px solid black;
+        }
+        .order-content-wrap{
+            border: 1px solid black;
+            width: 420px;
+            margin: 10px auto;
+        }
+        select{
+            width: 90%;
+            height: 30px;
+        }
+        input{
+           width: 90%;
+           height: 30px;
+        }
+        button{
+            border: 0px black;
+            background-color: aquamarine;
+            border-radius: 6px;
+            width:90%;
+            margin: 5px auto;
+            padding: 5px
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="order-img-wrap"></div>
+        <div class="order-name-wrap">
+            <h1>대관령 황태</h1>
+            <p>겨울 내내 녹았다 얼었다를 반복한 맛 좋은 대관령 황태입니다.</p>
+            <p>가격 : 15,000원/10마리</p>
+        </div>
+        <div class="order-content-wrap">
+            <p>--주문내역--</p>
+            <p>주문자이름</p>
+            <input type="text">
+            <p>수량</p>
+            <select></select>
+            <p>주문금액</p>
+            <input type="text">
+            <p>전화번호</p>
+            <input type="text">
+            <button>order</button>
+        </div>
+    </div>
+</body>
+</html>

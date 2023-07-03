@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let dealer = Math.floor(Math.random()*100)+1;
+        let answer;
+        while(true){
+            let a = Math.floor(Math.random()*100)+1;
+            let b = Math.floor(Math.random()*100)+1;
+            let c = Math.floor(Math.random()*100)+1;
+
+            if(a == dealer || b == dealer || c == dealer){
+                if(a==dealer){
+                    answer = "a";
+                }else if(b==dealer){
+                    answer = "b";
+                }else{
+                    answer = "c";
+                }
+                break;
+            }
+        }
+
+        let user = prompt("a,b,c 중에 고르세요.");
+        if(user == answer){
+            alert("승리");
+        }else{
+            alert("패배");
+        }
+
+    
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>증감연산자 ++, --</h2>
+    <p>연산자는 반드시 연산의 결과가 발생한다. 이항연산자보다 우선순위로 연산</p>
+    <script>
+        let a=10;
+        a=a+1;
+
+        console.log(a);
+
+        a++;
+        console.log(a);
+
+        ++a;
+        console.log(a);
+
+        // 공통점 : 변수의 값을 1 증가 시킴
+        // 차이점 : 연산의 결과가 다름
+        // ++a : 증가된 후의 값을 연산결과로 반환
+        // a++ : 증가되기 전의 값을 연산결과로 반환
+
+        let b=10, c=10;
+        let rtn1, rtn2;
+
+        rtn1 = b++; // 연산의결과 : 10;
+        rtn2 = ++c; // 연산의결과 : 11;
+
+        console.log(b); // 11
+        console.log(c); // 11
+
+        console.log(rtn1);
+        console.log(rtn2);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function machine(beverage){
+            if(beverage == "딸기주스"){
+                alert("딸기주스가 나왔습니다");
+            }else if(beverage == "파워에이드"){
+                alert("파워에이드가 나왔습니다");
+            }else if(beverage == "하늘보리"){
+                alert("하늘보리가 나왔습니다");
+            }else if(beverage == "밀키스"){
+                alert("밀키스가 나왔습니다");
+            }else if(beverage == "게토레이"){
+                alert("게토레이가 나왔습니다");
+            }else{
+                alert("잘못된 이름이 입력되었습니다");
+            }
+        }
+
+        let beverage = prompt("음료를 선택하세요" ,"딸기주스, 파워에이드, 하늘보리, 밀키스, 게토레이");
+        machine(beverage);
+
+    </script>
+
+</body>
+</html>

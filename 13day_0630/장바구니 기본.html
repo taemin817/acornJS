@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 900px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td , th{
+            border: 1px solid black;
+            width: 200px;
+
+        }
+
+        
+    </style>
+       
+    <script>
+
+        // 1 . 주문금액 구하기
+        function calPrice( obj){
+            // alert("dd");
+            let qty = obj.value;
+            
+            let priceTag = obj.parentElement.previousElementSibling;
+            let amtTag = obj.parentElement.nextElementSibling;
+            
+            let price = priceTag.innerHTML; 
+            amtTag.innerHTML = price * qty;
+
+
+        /*    
+        function calcAmt( obj){
+        // 수량 input 태그 정보 받음      
+       let qty  =  obj.value;
+       //수량              
+       let qtyTdTag =   obj.parentElement;                         
+       // 수량input 태그의 부모 찾기 => td까지 옴
+       
+       let priceTdTag = qtyTdTag.previousElementSibling;           
+       // 위에서 찾은 td의  이전형제 찾기 : 단가있는 td
+       
+       let price  =priceTdTag.innerHTML                            
+       // 단가있는td의 내용(금액 )얻기 
+       
+       let amtTdTag = qtyTdTag.nextElementSibling;                 
+       // 수량태그를 기준으로 다음형제 찾기 (  금액td)           
+       
+       amtTdTag.innerHTML  =  qty *  price;                        
+       // 금액td의 내용을 바꾸기 ( 수량*단가)
+
+        }
+        */
+ 
+        
+
+        // 2. 합계금액 갱신
+            totalPrice();
+        } 
+
+        // 3. 총 결제 금액 
+        function totalPrice(){
+            let span= document.querySelector("#total-price");
+            let list = document.querySelector("#list");
+
+
+        
+            let trs = list.querySelectorAll("tbody tr");
+            let total=0;
+            for( let i=0; i<trs.length;  i++){
+              let tr=  trs[i];
+              let priceTd = tr.lastElementChild;
+              let price = parseInt( priceTd.innerHTML);
+
+              total += price;
+           }        
+            span.innerHTML= total;
+         }
+
+
+         // 선택 항목 삭제
+         function deletelist(){
+            let list = document.getElementById("list");
+            let boxs = document.querySelectorAll(".cb");  // 변하지 않음   3 유지
+
+            for ( let i=0; i< boxs.length; i++){
+
+                alert( i + " " +  boxs.length);
+                let checkbox = boxs [i];
+                if ( checkbox.checked){
+                    let tr = checkbox.parentElement.parentElement;
+                    list.removeChild(tr);
+                }
+            }
+            totalPrice();
+
+         }
+    </script>
+</head>
+<body>
+    <div>
+        <table>
+
+            <caption> 카페 </caption>
+
+            <thead>
+            <tr>
+                <th></th>
+                <th>품명</th>
+                <th>단가</th>
+                <th>수량</th>
+                <th>결제금액</th>
+            </tr>
+            
+            </thead>
+
+            <tbody id="list">
+                <tr>
+                    <td><input type="checkbox" class="cb"></td>
+                    <td>아메리카노</td>
+                    <td>4500</td>
+                    <td><input type="text" value="0" onkeyup="calPrice(this)"></td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox" class="cb"></td>
+                    <td>카페라떼</td>
+                    <td>5000</td>
+                    <td><input type="text" value="0" onkeyup="calPrice(this)"></td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox" class="cb"></td>
+                    <td>바닐라라떼</td>
+                    <td>5500</td>
+                    <td><input type="text" value="0" onkeyup="calPrice(this)"></td>
+                    <td>0</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    <div>
+        <p>
+            <button onclick="deletelist()">삭제</button>
+        </p>
+        <p id="total">
+            총 결제 금액 <span id="total-price"> 0</span> 원
+        </p>
+    </div>
+</body>
+</html>

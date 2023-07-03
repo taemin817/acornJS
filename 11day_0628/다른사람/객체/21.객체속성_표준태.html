@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let dino =[
+            {
+                name: "트리케라톱스",
+                length: "7.9~9m",
+                weight: "6~12t",
+                era: "후기 백악기"
+            },{
+                name: "안킬로사우루스",
+                length: "8~11m",
+                weight: "6t",
+                era: "후기 백악기"
+            },{
+                name: "브라키오사우루스",
+                length: "25~28m",
+                weight: "25~29t",
+                era: "후기 쥐라기"
+            },{
+                name: "티라노사우루스",
+                length: "10~13m",
+                weight: "5.4~6.8t",
+                era: "후기 백악기"
+            },{
+                name: "기가노토사우루스",
+                length: "12~15m",
+                weight: " 6~13t",
+                era: "전기 백악기"
+            },{
+                name: "파키케팔로사우루스",
+                length: "4.5m",
+                weight: " 450kg",
+                era: "후기 백악기"
+            },{
+                name: "모사사우르스",
+                length: "15m",
+                weight: " 7tg",
+                era: "후기 백악기"
+            }
+        ];
+     
+        
+        let a =prompt("궁금한 공룡을 선택해주세요\n1.안킬로사우루스\n2.브라키오사우르스\n3.티라노사우루스\n4.기가노토사우르스\n5.파키케팔로사우르스\n6.모사사우르스")
+        let b =prompt("궁금한 항목을 정해주세요\n1.길이\n2.무게\n3.시대")
+        let j;
+       
+        
+        let i=dino[a].name;
+        if(b==1){
+            j=dino[a].length;
+        }else if(b==2){
+            j=dino[a].weight;
+        }else if(b==3){
+            j=dino[a].era;
+        }
+
+      
+        
+       
+     
+        document.write(i+"<br>");
+        document.write(j);
+       
+
+    </script>
+</body>
+</html>

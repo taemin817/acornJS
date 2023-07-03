@@ -1,0 +1,95 @@
+
+header{
+    height: 100px;
+    background-color: rgb(245, 248, 248);
+    position: relative;
+}
+/*타이틀 영역*/
+.title{
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+/*검색바 영역*/
+.search{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    height: 30px;
+}
+.searchbar{
+    height: 35px;
+    width: 200px;
+    position: relative;
+}
+.search-icon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top:5px;
+    right: 5px;
+}
+/*메뉴 영역*/
+ul{
+    list-style: none;
+    display: flex;
+}
+nav{
+    height: 40px;
+    padding: 20px;
+    background-color: rgb(232, 243, 243);
+    position: relative;
+}
+nav>ul{
+    position: absolute;
+    right: 20px;
+}
+.login-txt{
+    padding-right: 10px;
+}
+.home-txt{
+    padding-left: 10px;
+}
+/*로그인 영역*/
+section{
+    height: 600px;
+    margin-top: 50px;
+}
+.log_wrap{
+    width: 400px;
+    padding: 20px;
+    border: 0.5px solid rgb(234, 222, 222);
+    margin: 0 auto;
+}
+.log_img{
+    width: 300px;
+    height: 300px;
+    background-image: url(./images/login_logo.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+}
+.log_info{
+    padding: 10px;
+}
+.log_info>input{
+    width: 98%;
+    height: 40px;
+    margin-top: 5px;
+}
+button{
+    width: 100%;
+    height: 50px;
+    background-color: silver;
+    border: 0px;
+    margin-top: 10px;
+}
+/*풋터 영역*/
+footer{
+    padding: 20px;
+    background-color: rgb(233,239,239);
+    display: flex;
+}
+.footer-item{
+    width: 33%;
+}

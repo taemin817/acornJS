@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function eggSoup(egg, stock, salt, scallion) {
+
+            alert("대파"+scallion+" 어슷썰어주고 그 위 계란" + egg+"를 풀어준다.")
+            alert("준비한 육수"+stock+"를 끓여준다.")
+            alert("육수가 끓어 오르면 풀어둔 계란과 대파를 넣어준다.")
+            alert("젓지 말고 그대로 계란을 익힌다.")
+            alert("계란이 익으면 살짝 저어 주고 소금"+salt+"을 넣고 마무리한다.")
+
+            return "eggSoup.jpg";
+
+        }
+        let egg = " 2개";
+        let stock = " 600ml";
+        let salt = "1/2T"
+        let scallion = "2개"
+
+        let result = eggSoup(egg, stock, salt, scallion);
+        document.write("<img src=" + result + ">")
+
+    </script>
+
+</body>
+
+</html>

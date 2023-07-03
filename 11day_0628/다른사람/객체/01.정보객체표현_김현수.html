@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let books = {
+
+            publisher: "한빛미디어",
+            ISBN: "979-116921-003-4",
+            price: 34000,
+            theme: "IT",
+            content: {
+                자료구조: [리스트, 스택, 큐, 트리],
+                알고리즘: "정렬, 탐색, 우선순위 큐와 힙, 해시 테이블, 그래프, 문자열 탐색",
+                설계기법: "알고리즘 성능 분석, 분할 정복, 동적 계획법, 탐욕 알고리즘, 백트래킹"
+            }
+        }
+
+        document.write(books.content.자료구조);
+    </script>
+</body>
+
+</html>

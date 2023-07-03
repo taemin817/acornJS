@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+for(let i=0; i<3; i++){
+  let score=prompt("점수 입력");
+  let grade;
+  if(score>=90){
+    grade="a";
+  }else if(score>=80){
+    grade="b";
+  }else if(score>=70){
+    grade="c";
+  }else{
+    grade="f";
+  }
+  console.log("당신의 학점은 "+grade+"입니다");
+}
+
+/*
+while(true){
+    let grade;
+    let score=prompt("점수 입력");
+    if(score<0) break;
+    if(score>=90){
+      grade="a";
+    }else if(score>=80){
+      grade="b";
+    }else if(score>=70){
+      grade="c";
+    }else{
+      grade="f";
+    }
+    console.log("당신의 학점은 "+grade+"입니다");
+}
+
+*/
+
+
+let score=prompt("점수 입력");
+let grade;
+while( score >= 0){
+    
+    if(score>=90){
+      grade="a";
+    }else if(score>=80){
+      grade="b";
+    }else if(score>=70){
+      grade="c";
+    }else{
+      grade="f";
+    }
+    console.log("당신의 학점은 "+grade+"입니다");
+
+    score=prompt("점수 입력");
+}
+
+</script>
+
+<!--
+2.1  3번 하기 
+  2  점수가 음수가 입력되기 전까지 반복하기
+-->
+
+</body>
+</html>

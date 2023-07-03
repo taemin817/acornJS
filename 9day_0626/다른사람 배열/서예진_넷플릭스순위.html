@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let content =[
+            ["킹더랜드","이번생도잘부탁해","사냥개들","청담국제고등학교","퀸메이커"],
+            ["뭉쳐야찬다2","익스트랙션2","하트시그널시즌4","나쁜엄마","더글로리"],
+            ["철인왕후","닥터차정숙","미스터션샤인","늑대사냥","스파이더맨"],
+            ["멜로가체질","강릉","익스트랙션","최강야구","아는형님"]
+        ];
+
+            alert("넷플릭스 주간 순위 리스트");
+        let week = parseInt(prompt("몇 주차인지 입력하세요","1주:1, 2주:2, 3주:3, 4주:4"));
+        let day = parseInt(prompt("요일을 입력하세요","월:1, 화:2, 수:3, 목:4, 금:5"));
+
+        let day2;
+
+        switch(day){
+            case 1:
+                day2="월요일";
+                break;
+            case 2:
+                day2="화요일";
+                break;
+            case 3:
+                day2="수요일";
+                break;
+            case 4:    
+                day2="목요일";
+                break;
+            case 5:
+                day2="금요일";
+                break;    
+        }     
+
+        alert("넷플릭스"+week+"주차" + day2 + "1위: "+content[week-1][day-1]+"입니다");
+
+
+
+    </script>
+</body>
+</html>

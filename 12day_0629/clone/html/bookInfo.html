@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀꽃</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    
+    <style>
+        *{           
+            font-family: 'Noto Sans KR', sans-serif;
+            padding:0px;
+            margin:0px;
+        }
+
+        /* header */
+        header{
+            width: 1000px;
+            height: 130px;
+            display: flex;
+            margin: auto;
+            ;
+        }
+        .logo_area{
+            width: 200px;
+            height: 130px;
+        }
+        .logo{
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 30px;
+            display: inline-block;
+            margin-left: 60px;
+            margin-top: 50px;
+            color: rgb(94, 105, 155);
+        }
+        .search_area{
+            width: 600px;
+            height: 130px;
+        }
+        .search_wrap{
+            width: 400px;
+            height: 50px;
+            background-color: white;
+            border: 2px solid rgb(94, 105, 155);
+            border-radius: 3px;
+            margin: auto;
+            margin-top: 40px;
+            padding-left: 10px;
+            display: flex;
+        }
+        .search{
+            width: 350px;
+            height: 30px;
+            margin: auto;
+            border: 0;
+        }
+        .search:focus{
+            outline: none;
+        }
+        .search_btn{
+            width: 30px;
+            height: 30px;
+            background-image: url(../image/search.png);
+            background-position: center;
+            background-size: cover;
+            margin: 10px auto;
+            cursor: pointer;
+        }
+        .servicemenu_area{
+            width: 200px;
+            height: 130px;
+            position: relative;
+        }
+        .servicemenu{
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            
+        }
+        header a{
+            color: black;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        .gard{
+            font-size: 6px;
+            color: rgb(175, 175, 175);
+        }
+
+
+        /* nav */
+        nav{
+            height: 60px;
+            background-color: rgb(94, 105, 155);
+            position:relative;
+            z-index: 2;   
+        }
+        .menu_wrap{
+            width: 1000px;
+            height: 60px;
+            margin: auto;
+            display: flex;
+            list-style: none;
+        }
+        .menu1 a{
+            text-decoration: none;
+            color: white;
+            line-height: 60px;
+        }
+        .menu1{
+            width:100px;
+            height: 200px;
+            margin:0px 20px;
+        }
+        .menu1 li{
+            display: none;
+        }
+        .menu1:hover ul{           
+            width:110px;
+            height: 180px;        
+            background-color: rgb(236, 236, 236);        
+        }
+        .menu1:hover ul li{
+            display: block;
+            padding: 10px;
+            font-size: 15px;
+            text-align: center;
+        }
+
+
+        /* main */
+        main{
+            width: 900px;
+            height: 360px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 50px;
+            border: 0.5px solid rgb(224, 224, 224);
+            display: flex;
+        }
+        .img{
+            width: 220px;
+            height: 350px;
+            background-image: url(../image/book.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .bookinfo{
+            width: 600px;
+            height: 350px;
+            padding: 0px 40px;
+        }
+        .book{
+            width: 600px;
+            height: 310px;
+        }
+        button{
+            border-radius: 5px;
+            border: 0px;
+            background-color: rgb(211, 211, 211);
+            font-size: 15px;
+            color: rgb(0, 0, 0);
+            width: 140px;
+            height: 40px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .cart_btn{
+            background-color: rgb(132, 139, 168);
+            color: white;
+        }
+        .now_btn{
+            background-color: rgb(94, 105, 155);
+            color: white;
+        }
+        .content{
+            line-height: 25px;
+            font-size: 12px;
+            color: gray;
+            margin-top: 10px;
+        }
+        .info{
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .info2{
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        /* footer */
+        .footer_menu{
+            margin-top: 30px;
+            height: 60px;
+            background-color: rgb(235, 235, 235);
+        }
+        .footer_area{
+            width: 1000px;
+            height: 60px;
+            margin: auto;
+        }
+        .footer_menu ul li{
+            font-size: 13px;
+            list-style: none;
+            float: left;
+            line-height: 60px;
+            margin-left: 30px;
+        }
+        .footer_wrap{
+            width: 1000px;
+            height: 230px;
+            margin: auto;
+            display: flex;
+        }
+        .footer_info{
+            width: 420px;
+            padding: 40px;
+        }
+        .footer_logo{
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(94, 105, 155);
+        }
+        .footer_text{
+            font-size: 12px;
+            line-height: 20px;
+            color: gray;
+            margin-top: 20px;
+        }
+        footer a{
+            color: rgb(31, 31, 31);
+        }
+        footer .a_none{
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo_area" >
+            <h1>
+                 <a class="logo" href="bookhome.html">지구문고</a>
+            </h1>
+        </div>
+        <div class="search_area">
+            <div class="search_wrap"> 
+                <input class="search" type="text">
+                <div class="search_btn"> </div>
+            </div>
+        </div>
+        <div class="servicemenu_area">
+            <div class="servicemenu">
+                <a href="login.html">로그인</a>
+                <span class="gard">|</span>
+                <a href="">마이페이지</a>
+                <span class="gard">|</span>
+                <a href="cart.html">장바구니</a>
+            </div>
+        </div>
+        
+    </header>
+    
+    <nav>
+        <ul class="menu_wrap">
+            <li class="menu1"> <a href="">국내도서</a> 
+                <ul>
+                    <li>소설</li>
+                    <li>시/에세이</li>
+                    <li>경영/경제</li>
+                    <li>자기계발</li>
+                </ul>
+            </li>
+            <li class="menu1"> <a href="">외국도서</a> 
+                <ul>
+                    <li>소설</li>
+                    <li>시/에세이</li>
+                    <li>경영/경제</li>
+                    <li>자기계발</li>
+                </ul>
+            </li>
+            <li class="menu1"> <a href="">eBook</a> 
+                <ul>
+                    <li>소설</li>
+                    <li>시/에세이</li>
+                    <li>경영/경제</li>
+                    <li>자기계발</li>
+                </ul>
+            </li>
+            <li class="menu1"> <a href="">웹소설</a> 
+                <ul>
+                    <li>웹소설</li>
+                    <li>웹툰</li>
+                </ul>
+            </li>
+            <li class="menu1"> <a href="">음반</a> 
+                <ul>
+                    <li>음반</li>
+                    <li>DVD</li>
+                    <li>블루레이</li>
+                </ul>
+            </li>
+            <li class="menu1"> <a href="">중고도서</a> 
+                <ul>
+                    <li>중고도서판매</li>
+                    <li>중고도서구매</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="img"></div>
+        <div class="bookinfo">
+            <div class="book">
+                <h2>풀꽃</h2>
+                <p class="info">시/에세이 > 한국시 > 현대시</p>
+                <p class="content">저자: 나태주 <br> 출판: 지혜 <br> 출간 : 2021.04.05</p>
+                <p class="info2">J.H CLASSIC 70권. 나태주 대표 시선집. 25년간 가장 사랑받은 광화문 교보문고 글판은 나태주 시인의 '풀꽃' 시구. "자세히 보아야 예쁘다/ 오래 보아야 사랑스럽다/ 너도 그렇다." 시인은 이 시집 〈풀꽃〉이 '풀꽃' 시의 성공을 기념하고 기뻐하기 위해서 만든 선시집 형태의 책이라고 말한다.</p>
+                <br>
+                <p>10,000원</p>
+            </div>
+            <div class="shop">
+                <a href="cart.html"><button class="cart_btn">장바구니</button></a> 
+                <button class="now_btn">바로구매</button>
+                <button>선물하기</button>
+                <button>보관함담기</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_menu">
+            <div class="footer_area">
+                <ul>
+                    <li> <a class="a_none" href="">회사소개</a> </li>
+                    <li> <a class="a_none" href="">이용약관</a> </li>
+                    <li> <a href="">개인정보처리방침</a> </li>
+                    <li> <a class="a_none" href="">청소년보호정책</a> </li>
+                    <li> <a class="a_none" href="">고객센터</a> </li>
+                    <li> <a class="a_none" href="">협력사</a> </li>
+                    <li> <a class="a_none" href="">제휴제안</a> </li>
+                    <li> <a class="a_none" href="">광고문의</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_wrap">
+            <div class="footer_info">
+                <div class="footer_logo">
+                    지구문고
+                </div>
+                <div>
+                    <p class="footer_text">
+                        ㈜ 교보문고   서울시 종로구 종로 1   대표이사 : 안병현 <br>
+                        사업자등록번호 : 102-81-11670 <br>
+                        대표전화 : 1544-1900 (발신자 부담전화)   팩스 : 0502-987-5711 (지역번호공통) <br>
+                        서울특별시 통신판매업신고번호 : 제 653호 ▶<a href="">사업자정보확인</a>
+                    </p>
+                    <p class="footer_text">COPYRIGHT(C) KYOBO BOOK CENTRE ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+
+            <div class="footer_info">
+                <p class="footer_text">
+                    LG U+ 구매안전서비스   ▶ <a href="">서비스 가입 확인</a> 
+                </p>
+                <p class="footer_text">
+                    고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 LG유플러스의 구매안전서비스를 이용하실 수 있습니다.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

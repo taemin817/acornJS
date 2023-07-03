@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user_num; //입력하는 값
+        let num = 40;
+
+
+        for (let i = 0; i < 3; i++) {
+
+        user_num = prompt("1~100사이의 수를 입력해주세요");
+        
+            if (user_num < num) {
+                alert("입력한 수가 작습니다.");
+            }
+            else if (user_num > num) {
+                alert("입력한 수가 큽니다");
+            }   
+            else if(user_num == num){
+                alert("당첨입니다.");
+                break;
+
+            }   
+        }
+            
+
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

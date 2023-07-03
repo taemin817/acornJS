@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="boneImg()">보이기</button>
+    <div id="content">
+      <img
+        src="https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/4573316021/B.png?922000000"
+      />
+    </div>
+
+    <script>
+      let bone = prompt("1. 기본 2. 특대");
+
+      let flag = true;
+      let contentE = document.getElementById("content");
+      contentE.style.display = "none";
+
+      function boneImg() {
+        if (flag) {
+          contentE.style.display = "block";
+        } else {
+          contentE.style.display = "none";
+        }
+        flag = !flag;
+      }
+
+      let soup = {
+        name: "BoneHangoverSoup",
+        ingredients: {
+          뼈: "뼈" + 12 + "ea",
+          시래기: "시래기" + 2 + "줌",
+          양파: "양파" + 1 + "개",
+          청양고추: "청양고추" + 2 + "개",
+          들깨가루: "들개가루" + 4 + "ts",
+          고춧가루: "고춧가루" + 4 + "ts",
+          된장: "된장" + 1 + "ts",
+          간마늘: "간마늘" + 2 + "ts",
+        },
+        contents: {
+          조리과정1:
+            "뼈를 3시간이상 핏물을 빼주세요.중간중간 물은 갈아주시는게 좋아요!",
+          조리과정2: "끓는물에 뼈를 넣고 한번 데쳐주세요.",
+          조리과정3:
+            "삶은 시래기는 깨끗한 물로 몇번 행궈주세요. 먹기좋은 크기로 썰어주세요.",
+          조리과정4:
+            "이제 시래기는 물기를 짜고 고춧가루4Ts,국간장2Ts,된장1Ts,새우젓2Ts,간마늘2Ts를 넣고 조물조물해주세요.",
+          조리과정5:
+            "익은 뼈와 시래기를 냄비에 덜고 채썬 양파와 청양고추를 넣고 보글보글 끓이세요.",
+        },
+        // image:
+        //   "https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/4573316021/B.png?922000000",
+      };
+      if (bone == 2) {
+        soup.ingredients.뼈 = "뼈" + 20 + "ea";
+      }
+
+      document.write("<h2>" + soup.name + "</h2>");
+      // document.write("<img src=" + soup.image + "'alt='" + soup.name + "<br>");
+      document.write("<br>" + soup.ingredients.시래기 + "<br>");
+      document.write(soup.ingredients.뼈 + "<br>");
+      document.write(soup.ingredients.양파 + "<br>");
+      document.write(soup.ingredients.청양고추 + "<br>");
+      document.write(soup.ingredients.들깨가루 + "<br>");
+      document.write(soup.ingredients.고춧가루 + "<br>");
+      document.write(soup.ingredients.된장 + "<br>");
+      document.write(soup.ingredients.간마늘 + "<br>");
+
+      document.write(soup.contents.조리과정1 + "<br>");
+      document.write(soup.contents.조리과정2 + "<br>");
+      document.write(soup.contents.조리과정3 + "<br>");
+      document.write(soup.contents.조리과정4 + "<br>");
+      document.write(soup.contents.조리과정5 + "<br>");
+    </script>
+  </body>
+</html>

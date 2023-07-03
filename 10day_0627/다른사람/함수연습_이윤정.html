@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function adder(su1, su2) { // 더하는 기능, 입력 정보
+            console.log( su1 + " " + su2);
+            let sum = su1+su2;
+            return sum;
+        }
+
+        function multiple(su3, su4){
+            console.log( su3 + " " + su4);
+            let sum1 = su3*su4;
+            return sum1;
+        }
+
+        function subber(su5, su6){
+            console.log( su5 + " " + su6);
+            let sum2 = su5-su6;
+            return sum2;
+        }
+
+
+        function star() {
+          
+            for(let i=0; i<=5; i++){
+                for(let j=0; j<=3; j++){
+                    document.write("*")
+                }
+
+                document.write("</br>")
+            } 
+           
+        }
+
+
+        let a=10;
+        let b=20;
+
+        let c=30;
+        let d=50;
+
+        let e=70;
+        let f=30;
+
+
+        let result = adder (a, b);
+        alert( result);
+
+
+        let result1 = multiple (c, d);
+        alert( result1);
+
+        let result2 = subber (e, f);
+        alert( result2);
+
+        star();
+
+    </script>
+
+</body>
+</html>

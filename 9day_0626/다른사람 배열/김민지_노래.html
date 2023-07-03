@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let song=[
+            ["Eleven", "Love_dive", "After_Like","I_AM","Royal"],
+            ["Attention", "Hype_boy", "Cookie", "OMG", "Ditto"],
+            ["비밀정원", "다섯번째계절", "Bungee", "살짝설렜어", "Dun_Dun_Dance"],
+            ["개화", "히어로", "아니근데진짜", "맞네", "떼굴떼굴"],
+            ["Black_Mamba", "Next_Level", "Savage", "Girls", "Spicy"]
+        ];
+
+        let singer =parseInt(prompt("가수를 선택하세요", "아이브:0, 뉴진스:1, 오마이걸:2, 루시:3, 에스파:4"));
+        let name = prompt("몇번째 노래인지 선택하세요", "0,1,2,3,4");
+
+        switch(singer){
+            case 0:
+                alert("아이브의 " + song[singer][name] + " 노래 입니다");  
+                break;
+
+            case 1:
+                alert("뉴진스의 " + song[singer][name] + " 노래 입니다");
+                break;
+
+            case 2:
+                alert("오마이걸의 " + song[singer][name] + " 노래 입니다");
+                break;
+
+            case 3:
+                alert("루시의 " + song[singer][name] + " 노래 입니다");
+                break;
+
+            case 4:
+                alert("에스파의 " + song[singer][name] + " 노래 입니다");
+                break;
+        }
+
+
+
+        //전체 노래 콘솔 출력
+        for(let i=0 ; i<5; i++){
+            for(let j=0; j<5; j++){
+                console.log(song[i][j]);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

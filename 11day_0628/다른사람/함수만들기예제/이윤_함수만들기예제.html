@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //1.
+        //작성자 :
+        // 기능 : 짝수인지 판단하는 기능제공
+        // 입력 : 수
+        // 반환 : true ( 짝수), false (짝수x)
+
+        function number0(x){
+         
+            if(x%2==0){
+                return "짝수";
+            }else{
+                return "홀수";
+            }
+        }
+
+        let input_type=prompt("숫자를 입력하세요");
+        let result_type=number0(input_type);
+        alert(result_type);
+
+        
+        //2.
+        //작성자 :
+        // 기능 : 두 수 중에서 큰 수를 반환하는 기능
+        // 입력 : 두 수
+        // 반환 : 두 수 중에서 큰 수
+
+        function big(a1,a2){
+            if (a1>a2){   
+                return a1;
+            }else if(a1<a2){
+                return a2;
+            }else{
+                return "수가 같습니다";
+            }
+        }
+
+        let input_big1 = prompt("첫번째 숫자를 입력하세요");
+        let input_big2 = prompt("두번째 숫자를 입력하세요");
+        let result_big=big(input_big1,input_big2);
+        alert(result_big);
+    
+
+    
+
+            
+
+    </script>
+</body>
+</html>

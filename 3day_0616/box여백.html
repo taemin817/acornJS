@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 80px;
+            border: 1px solid black;
+        }
+        .box1{
+            padding: 50px; /*사방*/
+        }
+        .box2{
+            padding: 10px 50px; /*상하 좌우*/
+        }
+        .box3{
+            padding: 30px 40px 60px 100px; /*상우하좌 순서*/
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>box모델 패딩적용하기</h2>
+    
+    <div class="box box1">Hello padding</div>
+    <div class="box box2">Hello padding</div>
+    <div class="box box3">Hello padding</div>
+
+    <ul>
+        <li>padding : 50px</li>
+        <li>padding : 10px 50px</li>
+        <li>padding : 30px 40px 60px 100px</li> <!--상우하좌 순서-->
+        <li>padding-left : 30px</li>
+        <li>padding-right : 40px</li>
+        <li>padding-top : 60px</li>
+        <li>padding-bottom : 100px</li>
+    </ul>
+</body>
+</html>

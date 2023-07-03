@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.
+        // 작성자 : 
+        // 기능 : 입력된 수를 2로 나눠 나머지가 0이면 짝수, 아니면 짝수 아님을 판단
+        // 입력 : 자연수
+        // 반환 : true(짝수), false(짝수X)
+
+        function even(su){
+            if(num%2==0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        
+        let num=prompt('판단할 자연수를 입력하세요');
+        let result=even(num);
+                // even함수에서 나온 리턴값
+
+        if(result==true){
+            alert('짝수다');
+        }else{
+            alert('짝수가 아니다');
+        }
+    </script>
+</body>
+</html>

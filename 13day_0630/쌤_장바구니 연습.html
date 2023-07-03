@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 900px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td , th{
+            border: 1px solid black;
+            width: 200px;
+
+        }
+
+        
+    </style>
+       
+    <script>
+
+        // 금액,  수량
+        function calPrice( qtyE ){
+            alert(qtyE );
+            // 
+            // 수량
+            let qty = parseInt(qtyE.value);
+           // alert( qty);
+           
+
+            let qtyTd = qtyE.parentElement;
+            let priceTd = qtyTd.previousElementSibling;
+            let amtTd =  qtyTd.nextElementSibling ;            // 단가
+            let price  =  parseInt( priceTd.innerHTML);            
+
+            // 금액
+            let amt = qty* price;
+           // alert( amt);
+            amtTd.innerHTML= amt;
+
+            totalPrice();        
+        }
+
+        function totalPrice(){
+            //alert("dkdkdkdk");
+            // tr배열
+            let trs =document.querySelectorAll("#list tr");
+           /*
+            alert( trs.length);
+            let amtTd1 =trs[0].lastElementChild;
+            let amt1 = praseInt(amtTd1.innerHTML);
+            alert( amt1);
+
+            let amtTd2 = trs[1].lastElementChild;
+            let amt2 = parseInt(amtTd2.innerHTML);
+            alert( amt2);
+
+
+            let amtTd3 = trs[2].lastElementChild;
+            let amt3 = parseInt(amtTd3.innerHTML);
+            alert( amt3);
+            let sum = amt1+amt2+amt3;
+            */
+
+            let sum=0;
+            for( let i=0 ; i< trs.length ;i++){
+                let amtTd =trs[i].lastElementChild;
+                let amt = praseInt(amtTd.innerHTML);    
+                sum= sum + amt;            
+            }
+
+            let totalPrice =document.getElementById("total-price");
+            totalPrice.innerHTML=sum;
+
+ 
+
+
+        }
+
+     
+    </script>
+</head>
+<body>
+    <div>
+        <table>
+
+            <caption> 카페 </caption>
+
+            <thead>
+            <tr>
+                <th>선택</th>
+                <th>제품명</th>
+                <th>단가</th>
+                <th>수량</th>
+                <th>금액</th>
+            </tr>
+            
+            </thead>
+
+            <tbody id="list">
+                <tr>
+                    <td><input type="checkbox" class="cb"></td>
+                    <td>아메리카노</td>
+                    <td>4500</td>
+                    <td><input type="text" value="" onkeyup="calPrice(this)"></td>
+                    <td>1000</td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox" class="cb"></td>
+                    <td>카페라떼</td>
+                    <td>5000</td>
+                    <td><input type="text" value="" onkeyup="calPrice(this)"></td>
+                    <td>2000</td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox" class="cb"></td>
+                    <td>바닐라라떼</td>
+                    <td>5500</td>
+                    <td><input type="text" value="" onkeyup="calPrice(this)"></td>
+                    <td>3000</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    <div>
+        <p>
+            <button onclick="deletelist()">삭제</button>
+        </p>
+        <p id="total">
+            총 결제 금액 <span id="total-price"> 0</span> 원
+        </p>
+
+        <button  onclick="totalPrice()">합계구하기</button>
+    </div>
+</body>
+</html>

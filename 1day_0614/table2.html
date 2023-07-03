@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 1px solid black;
+            height: 300px;
+            width: 200px;
+            padding: 15px;
+            margin: 20px;
+        }
+        td{
+            border: 1px solid black;
+        }
+        /* 자손 선택자 */
+        table thead tr td{
+            background-color: blueviolet;
+            text-align: center;
+        }
+        table tbody tr td{
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td colspan="2">제목1</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>내용1</td>
+                <td>내용1</td>
+            </tr>
+            <tr>
+                <td>내용2</td>
+                <td>내용2</td>
+            </tr>
+            <tr>
+                <td>내용3</td>
+                <td>내용3</td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+</html>

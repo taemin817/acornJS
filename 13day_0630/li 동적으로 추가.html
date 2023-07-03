@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addLi()"> li 추가 </button>
+
+    <!-- ul -->
+    <ul id="list">
+
+    </ul>
+
+    <script>
+
+        function addLi(){
+            // 동적 추가
+            // 1. 부모로 사용할 대상(태그) 선택
+            let ulE = document.getElementById("list");
+
+            let li = document.createElement("li");
+            li.innerHTML="망고";
+
+            ulE.appendChild(li);
+            
+                                            // 익명함수를 사용
+            // li.addEventListener("click", function(){
+            //     let p = this.parentElement;
+            //          // this가 가르키는 것은 li
+            //     p.removeChild(li);
+            // });
+
+                                         // 정의된 함수를 사용
+            li.addEventListener("click", func3);
+
+            function func3(){
+                let p = this.parentElement;
+                p.removeChild(li);
+            }
+        }
+    </script>
+</body>
+</html>

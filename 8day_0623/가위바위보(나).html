@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user;
+        let com;
+        let result; // 출력결과를 담을 변수
+            while(true){ // 무조건 참 -> 탈출조건
+                user = prompt("숫자를 입력하세요", "0 : 가위, 1 : 바위, 2 : 보");
+                com = Math.floor(Math.random()*3);   // random():1보다 작은 임의의 실수
+                                                     // random()*3:3보다 작은 임의의 실수
+                console.log(user);
+                console.log(com);
+
+                if(user!=com){
+                    // user 승패 구하기
+                    if(user==0){ // 가위
+                        if(com==2){
+                            result="승리";
+                        }
+                        else{
+                            result="패배";
+                        }
+                    }
+                    else if(user==1){ // 바위
+                        if(com==0){
+                            result="승리";
+                        }
+                        else{
+                            result="패배";
+                        }
+                    }
+                    else if(user==2){ // 보
+                        if(com==1){
+                            result="승리";
+                        }
+                        else{
+                            result="패배";
+                        }
+                    }
+                    // 무승부->탈출
+                    break;
+                }
+            }
+            // 반복종료
+            alert(result);
+    </script>
+</body>
+</html>

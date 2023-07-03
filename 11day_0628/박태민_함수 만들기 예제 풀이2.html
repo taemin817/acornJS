@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 2.
+        // 작성자 : 
+        // 기능 : 두 수 중에서 큰 수를 반환하는 기능
+        // 입력 : 두 수
+        // 반환 : 두 수 중에서 큰 수
+
+        function big(su1, su2){
+            if(su1>su2){
+                return su1;
+            }else if(su2>su1){
+                return su2;
+            }
+        }
+
+        let num1=prompt('비교할 기준 수를 입력');
+        let num2=prompt('비교할 다른 수를 입력');
+        let result=big(num1, num2)
+
+        if(result==num1){
+            alert(num1);
+        }else if(result==num2){
+            alert(num2);
+        }else{alert('같아요~');
+        }
+
+    </script>
+</body>
+</html>

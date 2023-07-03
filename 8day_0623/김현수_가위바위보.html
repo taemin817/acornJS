@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        
+
+        let user = parseInt(prompt("가위 바위 보", "0, 1, 2"));
+        let computer = Math.floor(Math.random()*3);
+
+        while(user==computer){
+            alert("다시내세요!");
+            user = parseInt(prompt("가위 바위 보", "0, 1, 2"));
+            computer = Math.floor(Math.random() * 3);
+            
+        }
+        
+        alert("결과는?");
+
+        if(user==0 && computer ==1){0
+            alert("사용자 승리");
+            console.log(computer.log);
+        } 
+        else if (user==0 && computer == 2){
+            alert("사용자 패배");
+            console.log(computer.log);
+        }
+
+        if(user==1 && computer ==0){
+            alert("사용자 승리");
+            console.log(computer.log);
+        } 
+        else if (user==1 && computer == 2){
+            alert("사용자 패배");
+            console.log(computer.log);
+        }
+
+        if(user==2 && computer ==0){
+            alert("사용자 패배");
+            console.log(computer.log);
+        } 
+        else if (user==2 && computer == 1){
+            alert("사용자 승리");
+            console.log(computer.log);
+        }
+        
+        
+
+
+    </script>
+
+</body>
+
+</html>

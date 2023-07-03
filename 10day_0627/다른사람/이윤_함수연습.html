@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function star(x){
+            for(i=1; i<=x; i++){
+                 document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        function 하루일과(){
+            document.write("알람을 끄고 일어난다 <br>");
+            document.write("아침을 먹는다<br>");
+            document.write("양치질,세수를 한다<br>");
+            document.write("학원을 간다<br>");
+            document.write("점심을 먹는다<br>");
+            document.write("다시 학원으로 돌아온다<br>");
+            document.write("집에 간다<br>");
+            document.write("저녁을 먹는다<br>");
+            document.write("배운 걸 복습한다<br>");
+            document.write("잔다<br>");
+        }
+    
+    
+        function 무지개( cnt ){
+
+            for( let i=1 ;i<=cnt;i++){
+                document.write("빨");
+                document.write("주");
+                document.write("노");
+                document.write("초");
+                document.write("파");
+                document.write("남");
+                document.write("보<br>");
+                }
+         }
+        
+         star(50);
+         하루일과();
+         star(50);
+         무지개(5);
+         star(50);
+
+    </script>
+
+
+</body>
+</html>

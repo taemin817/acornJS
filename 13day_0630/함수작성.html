@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // func2(); 함수 호이스팅 불가능
+
+        hello(); // 함수의 호출이 함수 앞뒤 상관없이 가능한 이유는 호이스팅(끌어올림)하기 때문
+        function hello(){
+            alert("hi");
+        }
+        hello();
+
+        // 함수표현식 함수작성, 함수 호이스팅 불가능
+        let func2 = function(){
+            alert("hi2");
+        }
+        func2();  //선언 이후부터 사용가능
+    </script>
+</body>
+</html>

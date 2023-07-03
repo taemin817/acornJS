@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.top-bar{
+    height: 102px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.logo{
+    width: 28%;
+    height: 102px;
+    position: relative;
+}
+.logo_img{
+    width: 156px;
+    height: 32px;
+    position: absolute;
+    right: 0px;
+    top: 30px;
+}
+.wrap-search-bar{
+    width: 42%;
+    height: 102px;
+    position: relative;
+}
+.search-bar{
+    width: 432px;
+    height: 46px;
+    border: 2px solid red;
+    border-radius: 30px;
+    margin-left: 25px;
+    position: relative;
+    position: absolute;
+    top: 20px;
+}
+input{
+    width: 360px;
+    border: 0px;
+    outline: 0px;
+    position: absolute;
+    top: 15px;
+    left:20px;
+}
+.search_icon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+.outwrap-icon{
+    width: 30%;
+    height: 102px;
+    position: relative;
+}
+ul{
+    list-style: none;
+}
+ul, li{
+    padding: 0px;
+    margin: 0px;
+}
+.wrap-icon{
+    display: flex;
+    position: absolute;
+    top: 20px;
+}
+.menu{
+    text-align: center;
+    margin: 6px;
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    filter:brightness(0%);
+}
+.wrap-icon ul li{
+    padding: 8px;
+}
+.wrap-icon >li{
+    width: 100px;
+}

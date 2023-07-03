@@ -1,0 +1,74 @@
+
+배열(array) vs 객체(object)
+
+비슷한듯 다른 둘의 차이점은 무엇인가? 
+Javascript에 한정해서 배열도 객체타입으로 분류된다.
+왜 굳이 둘다 존재하는 것인가?
+
+배열  -  그냥 여러개
+    0.책장에 책을 정리하고, 나열 되어있는 숫자들처럼 순서를 가짐
+
+    1.구조
+        배열 - item - (index)
+        array[a, b, c, d, e]
+             [0, 1, 2, 3, 4] <- 보이지 않는 순서(index)
+
+    2.특징
+        index를 가짐
+        
+객체  -  한개를 위한 여러개
+    0.사람이 사물을 관찰하고 이해 하듯,
+        고양이를 보았다. 
+        -> 고양이{
+            종:브리티시 쇼트헤어, 눈색:노랑/검정, 색:회색털,
+            나이: 3살, 친화도: 80%, 성격: 온순,
+            즐겨하는 행동: 기분좋을때, 꼬리를감고 스치면서 지나간다.
+        }
+    1.구조
+        객체 - 속성(property) - key & value
+        object{
+            key1: "aaa",
+            key2: "bbb",
+            key3: "ccc",
+         }
+    2.특징
+        index(순서)를 갖지 않음, key를 가짐 
+
+<즉!, 배열과 객체의 가장 큰 차이점은 "순서를 가지는가 안가지는가?"이다>
+
+이 차이점이 프로그래밍을 할 때, 둘중 무엇을 사용할지 결정하게 해준다.
+   
+    배열 장단점
+        - 빠른 검색 속도
+            옆으로 쌓여있는 책을 생각해보자
+            내가 원하는 책을 찾기에 이렇게 편할 수 가 없다.
+            "아래에서부터 3번째" - 컴퓨터는 숫자를 좋아한다.
+
+        - 느린 자료 삽입 삭제
+            책이 책사이에 끼워져 있기에 위에 있는 책을 다 옆으로 옮긴후 원하는 
+            책을 넣어야 한다.
+            
+    객체 장단점
+        - 유연함
+            순서에 얽매이지 않고 특징을 통해 데이터에 접근하기 용이하다.
+            e.g. 헌책방에서 빨간색 표지로 된 책을 찾을 때.
+
+        - 비교적 큰 용량
+            key와 value로 이루어진 속성(property)를 가짐으로 배열과 비교하여
+            용량이 크다.
+
+
+
+책사진
+https://ppss.kr/wp-content/uploads/2020/06/0-28.jpg
+
+고양이사진
+https://blog.kakaocdn.net/dn/b2nGdu/btrs4NyM8m7/MH4kJEUCoEjAkAECOgkNlk/img.png
+https://i.ytimg.com/vi/FrRrX0neNaQ/hqdefault.jpg
+https://image-notepet.akamaized.net/article/201612/fb_28d54c4cec58491545c9aa2e13193335.png
+
+References:
+https://velog.io/@yunkuk/TIL-03objectVSarray
+https://www.zerocho.com/category/JavaScript/post/572c6f759a5f1c4db2481ee3
+
+

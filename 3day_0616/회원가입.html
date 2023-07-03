@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    table{
+        border: 1px solid black;
+        width: 800px;
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+    td{
+        width: 250px;
+        border: 1px solid black;
+        padding-left: 4px;
+    }
+    th{
+        border: 1px solid black;
+        width: 50px;
+        background-color: aquamarine;
+    } 
+    tr:nth-child(7) td{
+        background-color: white;
+        text-align: center;
+    }
+    table input, table select{
+        width: 100px;
+    }
+    .pw{
+        font-size: 12px;
+        color: red;
+    }
+</style>
+</head>
+
+<body>
+    
+    <!-- 회원가입 -->
+
+    <table>
+        <caption>회원가입</caption>
+        <tr>
+            <th>이름</th>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <th>아이디</th>
+            <td><input type="text">
+                <button>아이디중복확인</button>
+            </td>
+        </tr>
+        <tr>
+            <th>비밀번호</th>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <th>비밀번호확인</th>
+            <td class="pw">
+                <input type="text">
+                <p>비밀번호는 4자리 이상이어야 한다.</p>
+            </td>
+        </tr>
+        <tr>
+            <th>이메일</th>
+            <td>
+                <input type="text">@<input type="text">
+                <select>
+                    <option>선택하세요</option>
+                    <option value="">naver.com</option>
+                    <option value="">gmail.com</option>
+                    <option value="">daum.net</option>
+                    <option value="">nate.com</option>
+                </select>
+                <button>이메일중복확인</button>
+            </td>
+        </tr>
+        <tr>
+            <th>학년/반</th>
+            <td>
+                <select>
+                    <option>선택하세요</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                </select>
+                학년
+                <select>
+                    <option>선택하세요</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                </select>
+                반
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button>가입</button>
+                <button>취소</button>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>8.  카드사용금액을 입력받아  50만원이상  "vvip"  30이상이면 "vip"  나머지 "bronze" 출력</p>
+
+    <script>
+        let used=prompt("카드사용금액을 입력하세요")
+        let grade
+        if(used>=500000){
+            grade="vvip"
+        }
+        else if(used>=300000){
+            grade="vip"
+        }
+        else{
+            grade="bronze"
+        }
+        alert(grade);
+    </script>
+
+</body>
+</html>

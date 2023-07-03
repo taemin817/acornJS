@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 작성자 : 김현수
+        // 기능 : 짝수, 홀수 판단
+        // 입력 : 수
+        // 반환 : true(짝수), false(홀수)
+
+        function isEven(num){
+            if(num%2==0){
+                result = true;
+            } else if (num%2==1){
+                result = false;
+            } else {
+                alert("잘못 입력하셨습니다. 다시 입력하세요!")
+            }
+
+            return result; 
+            // true - 짝수
+            // false - 홀수
+        }
+        
+        input_num = parseInt(prompt("수를 입력하세요","6"));
+
+        input_num_result = isEven(input_num);
+
+        if(input_num_result == true){
+            alert("짝수입니다.");
+        } else if (input_num_result == false){
+            alert("홀수입니다.");
+        } else {
+            alert("에러발생!");
+        }
+        
+    </script>
+</body>
+</html>

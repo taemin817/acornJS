@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let snack={
+            name:"빼뺴로",
+            ingredient:[
+                "밀가루", "초콜릿", "코코아매스", "가공유지", "유당", "설탕", "연유", "버터"
+            ],
+            nutrient:{
+                나트륨: 250+"mg",
+                탄수화물: 35+"g",
+                당류: 15 + "g",
+                지방: 12 +"g",
+                트랜스지방: 0.5 +"g",
+                포화지방: 7+"g",
+                콜레스테롤: 5+"mg",
+                단백질: 5+"g"
+            },
+            producer:"롯데제과",
+            weight: 54+"g",
+            kcal: 270+"kcal",
+            expiration_date: "2023-12-12",
+            eat: function(){
+                alert("빼뺴로를 먹는다");
+            }
+        };
+
+        alert(snack.ingredient[5]);
+        alert(snack.nutrient.트랜스지방);
+        snack.eat();
+
+    </script>
+
+</body>
+</html>

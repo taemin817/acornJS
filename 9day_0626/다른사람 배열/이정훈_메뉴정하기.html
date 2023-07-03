@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+let day1 = "계란후라이밥";
+let day2 = "김치찌개";
+let day3 = "된장찌개";
+let day4 = "오므라이스";
+let day5 = "치킨";
+let day6 = "초밥";
+let day7 = "만두";
+let day8 = "칼국수";
+let day9 = "피자";
+let day10 = "토스트";
+let day11 = "갈비탕";
+let day12 = "국수";
+let day13 = "라멘";
+let day14 = "햄버거";
+let day15 = "덮밥";
+let day16 = "비빔밥";
+let day17 = "김치볶음밥";
+let day18 = "설렁탕";
+let day19 = "순대국";
+let day20 = "파스타";
+
+//1차원 배열
+
+let week1 = ["계란후라이밥","김치찌개","된장찌개","오므라이스","치킨"];
+let week2 = ["초밥","만두","칼국수","피자", "토스트"];
+let week3 = ["갈비탕","국수","라멘","햄버거","덮밥"];
+let week4 = ["비빔밥","김치볶음밥","설렁탕","순대국","파스타"];
+
+let a = prompt("주를 선택해주세요.", "예) 1, 2, 3")
+let week = prompt("요일을 선택해주세요.", "예) 월, 화");
+
+switch(a){
+    case "1":
+        switch(week){
+            case "월":
+            alert(week1[0]);
+            break
+            case "화":
+            alert(week1[1]);
+            break
+            case "수":
+            alert(week1[2]);
+            break
+            case "목":
+            alert(week1[3]);
+            break
+            case "금":
+            alert(week1[4]);
+            break
+        }
+    break
+    case "2":
+        switch(week){
+            case "월":
+            alert(week2[0]);
+            break
+            case "화":
+            alert(week2[1]);
+            break
+            case "수":
+            alert(week2[2]);
+            break
+            case "목":
+            alert(week2[3]);
+            break
+            case "금":
+            alert(week2[4]);
+            break
+        }
+    break
+    case "3":
+        switch(week){
+            case "월":
+            alert(week3[0]);
+            break
+            case "화":
+            alert(week3[1]);
+            break
+            case "수":
+            alert(week3[2]);
+            break
+            case "목":
+            alert(week3[3]);
+            break
+            case "금":
+            alert(week3[4]);
+            break
+        }
+    break
+    case "4":
+        switch(week){
+            case "월":
+            alert(week4[0]);
+            break
+            case "화":
+            alert(week4[1]);
+            break
+            case "수":
+            alert(week4[2]);
+            break
+            case "목":
+            alert(week4[3]);
+            break
+            case "금":
+            alert(week4[4]);
+            break
+        }
+    break;
+
+    default:
+        alert("선택이 잘못됐습니다.");
+}
+
+
+//2차원 배열
+
+let month = [ 
+    ["계란후라이밥","김치찌개","된장찌개","오므라이스","치킨"],
+    ["초밥","만두","칼국수","피자", "토스트"],
+    ["갈비탕","국수","라멘","햄버거","덮밥"],
+    ["비빔밥","김치볶음밥","설렁탕","순대국","파스타"]
+]
+
+/*
+let b = prompt("주를 선택해주세요.", "예) 1, 2, 3");
+let week01 = prompt("요일을 선택해주세요.", "예) 월, 화");
+*/
+
+switch(b){
+    case "1":
+        switch(week01){
+            case "월":
+            alert(month[b-1][0]);
+            break
+            case "화":
+            alert(month[b-1][1]);
+            break
+            case "수":
+            alert(month[b-1][2]);
+            break
+            case "목":
+            alert(month[b-1][3]);
+            break
+            case "금":
+            alert(month[b-1][4]);
+            break
+        }
+    break
+    case "2":
+        switch(week01){
+            case "월":
+            alert(month[b-1][0]);
+            break
+            case "화":
+            alert(month[b-1][1]);
+            break
+            case "수":
+            alert(month[b-1][2]);
+            break
+            case "목":
+            alert(month[b-1][3]);
+            break
+            case "금":
+            alert(month[b-1][4]);
+            break
+        }
+    break
+    case "3":
+        switch(week01){
+            case "월":
+            alert(month[b-1][0]);
+            break
+            case "화":
+            alert(month[b-1][1]);
+            break
+            case "수":
+            alert(month[b-1][2]);
+            break
+            case "목":
+            alert(month[b-1][3]);
+            break
+            case "금":
+            alert(month[b-1][4]);
+            break
+        }
+    break
+    case "4":
+        switch(week01){
+            case "월":
+            alert(month[b-1][0]);
+            break
+            case "화":
+            alert(month[b-1][1]);
+            break
+            case "수":
+            alert(month[b-1][2]);
+            break
+            case "목":
+            alert(month[b-1][3]);
+            break
+            case "금":
+            alert(month[b-1][4]);
+            break
+        }
+    break
+    default:
+        alert("잘못입력하셨습니다.")
+
+}
+
+</script>
+    
+</body>
+</html>

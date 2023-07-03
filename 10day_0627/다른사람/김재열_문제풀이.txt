@@ -1,0 +1,120 @@
+ 1. 점수 입력해서 학점 출력
+      //     let point = prompt("점수입력");
+      //     let grade;
+      //     if (point >= 90) {
+      //       grade = "A";
+      //     } else if (point >= 70) {
+      //       grade = "B";
+      //     } else {
+      //       grade = "F";
+      //     }
+      //     alert("학점은 " + grade + "입니다.");
+
+      //   2. 1번 3번반복
+      //   for (let i = 0; i < 3; i++) {
+      //     let point = prompt("점수입력");
+      //     let grade;
+      //     if (point >= 90) {
+      //       grade = "A";
+      //     } else if (point >= 70) {
+      //       grade = "B";
+      //     } else {
+      //       grade = "F";
+      //     }
+      //     alert("학점은 " + grade + "입니다.");
+      //   }
+
+      //   3. 2번 점수가 음수가 입력되기 까지 반복하기
+      //     while (true) {
+      //       let point = prompt("점수입력");
+      //       if (point < 0) {
+      //         break;
+      //       }
+      //       let grade;
+      //       if (point >= 90) {
+      //         grade = "A";
+      //       } else if (point >= 70) {
+      //         grade = "B";
+      //       } else {
+      //         grade = "F";
+      //       }
+      //       alert("학점은 " + grade + "입니다.");
+      //     }
+
+      //   4.구구단 (2단 출력)
+
+      //   for (let i = 1; i < 10; i++) {
+      //     document.write("2*" + i + "&nbsp=&nbsp" + 2 * i + "&nbsp&nbsp");
+      //   }
+
+      //   5.구구단 do while 이용하기
+      //   let i = 1;
+      //   let j = 2;
+      //   while (j < 6) {
+      //     do {
+      //       document.write(
+      //         j + " x " + i + "&nbsp=&nbsp" + j * i + "&nbsp&nbsp" + "<br>"
+      //       );
+      //       i++;
+      //     } while (i < 10);
+      //     i = 1;
+      //     j++;
+      //   }
+
+      //   6.구구단(2~5단 출력 1차원)
+      //   for (let i = 1; i < 10; i++) {
+      //     document.write("2*" + i + "&nbsp=&nbsp" + 2 * i + "&nbsp&nbsp</br>");
+      //   }
+      //   for (let j = 1; j < 10; j++) {
+      //     document.write("3*" + j + "&nbsp=&nbsp" + 3 * j + "&nbsp&nbsp</br>");
+      //   }
+      //   for (let a = 1; a < 10; a++) {
+      //     document.write("4*" + a + "&nbsp=&nbsp" + 4 * a + "&nbsp&nbsp</br>");
+      //   }
+      //   for (let b = 1; b < 10; b++) {
+      //     document.write("5*" + b + "&nbsp=&nbsp" + 5 * b + "&nbsp&nbsp</br>");
+      //   }
+
+      //   7.구구단 (2~5단 출력 2차원)
+
+      //   for (let i = 2; i < 6; i++) {
+      //     for (let j = 1; j < 10; j++) {
+      //       document.write(i + "x" + j + "&nbsp=&nbsp" + i * j + "&nbsp");
+      //     }
+      //     document.write("</br>");
+      //   }
+
+      //  8. 별 한개
+      //   document.write("*");
+
+      //   9.별 일자
+      //   for (let i = 1; i <= 5; i++) {
+      //     document.write("*");
+      //   }
+
+      //  10. 별 배열찍기
+
+      //   for (let i = 1; i <= 5; i++) {
+      //     for (let j = 1; j <= 5; j++) {
+      //       document.write("*");
+      //     }
+      //     document.write("</br>");
+      //   }
+
+      //  11. 별삼각형
+
+      //   for (let i = 1; i < 5; i++) {
+      //     for (let j = 1; j <ㅠ i; j++) {
+      //       document.write("*");
+      //     }
+      //     document.write("*" + "</br>");
+      //   }
+
+      //   12.별 역삼각형
+
+      //   for (let i = 5; i > 0; i--) {
+      //     for (let j = 1; j < i; j++) {
+      //       document.write("*");
+      //     }
+      //     document.write("*" + "</br>");
+      //   }

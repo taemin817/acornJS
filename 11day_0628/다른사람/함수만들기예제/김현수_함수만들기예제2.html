@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 작성자 : 김현수
+        // 기능 : 두 수 중에서 큰 수를 반환
+        // 입력 : 두 수
+        // 반환 : 두 수 중에서 큰 수
+
+        input_num1 = parseInt(prompt("번호를 입력하세요", "1"));
+        input_num2 = parseInt(prompt("번호를 입력하세요", "2"));
+
+        alert(returnMax(input_num1, input_num2));
+
+        
+
+        function returnMax(num1, num2) {
+
+            
+
+            if (num1 > num2) {
+                return num1;
+            } else if (num2 > num1) {
+                return num2;
+            } else {
+                alert("동일한 수를 입력하셨습니다. 수를 다시 입력하세요");
+                input_num1 = parseInt(prompt("번호를 입력하세요", "1"));
+                input_num2 = parseInt(prompt("번호를 입력하세요", "2"));
+
+                returnMax(input_num1, input_num2);
+            }
+
+            
+
+        
+        }
+
+        
+
+    </script>
+</body>
+
+</html>

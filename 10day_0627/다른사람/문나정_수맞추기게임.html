@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let com = Math.floor(Math.random()*(100-1)+1);
+
+        let i=0;
+
+        while(i<3){
+            let usr = parseInt(prompt("숫자를 입력하세요"));
+
+            if(usr > com){
+                alert("Down");
+            }
+            else if(usr < com)
+            {
+                alert("Up");
+            }
+            else{
+                alert("당첨입니다!!");
+                break;
+            }
+            i++;
+            if(i==3){
+                alert("꽝입니다.");
+            }
+
+        }
+    </script>
+</body>
+</html>
