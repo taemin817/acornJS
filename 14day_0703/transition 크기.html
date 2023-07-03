@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .example {
+            width: 100px;
+            height: 100px;
+            background-color: red;            
+            transition: height 1s ease   ;  /*  transition: height 1s ease  1s; */
+         }
+
+        .example:hover {
+            height: 500px;
+        }
+
+
+        
+
+        .example2 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(13, 255, 0);
+
+            transition-property: height;
+            transition-duration:  1s ;
+            transition-timing-function: ease;
+            
+            
+         }
+
+        .example2:hover {
+            height: 500px;
+        }
+
+        
+        /*
+            background-color: 배경색
+            color: 글자색
+            opacity: 투명도
+            width: 너비
+            height: 높이
+            border: 테두리
+            transform: 변환 효과 (예: rotate, scale, translate 등)
+            box-shadow: 그림자 효과
+            font-size: 글꼴 크기
+            padding: 안쪽 여백
+            margin: 바깥쪽 여백
+
+            all 사용해됨 
+            
+
+            transition-property: height;
+            transition-duration : 2s ;   애니메이션지속시간
+            transition-timing-function : ease  ;    // ease, linear, ease-in, ease-out, ease-in-out  애니메이션 진행속도
+            transition-delay :1s  ; 애니메이션을 1초동안 지연시킨다
+
+        */
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="example"></div>
+
+    <p></p>
+
+
+    <div class="example2"></div>
+   
+</body>
+</html>
