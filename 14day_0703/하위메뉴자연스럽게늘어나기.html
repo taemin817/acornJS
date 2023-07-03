@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            padding:0px;
+            margin: 0px;
+        }
+
+        ul{
+            list-style: none;
+        }
+        
+        .menu{
+            display: flex;
+            transition-duration: 0.4s;
+        }
+        /* 상위 메뉴의 기본 크기, 처음크기 */
+        .menu .menu-item{
+             width: 150px;
+             height: 50px;
+             background-color: blue;
+        }
+        .sub-menu{
+            height: 0px;
+            overflow: hidden;
+        }
+
+        /* 상위메뉴가 hover 되었을 때 크기 공간이 늘어나야 함
+           주의 !!이 부분에 높이가 있어야 함            
+        */
+        .menu:hover .menu-item {
+            height: 300px;
+            transition-duration: 0.4s;   /* 300으로 되는데 걸리는 시간을 줌 , 자연스럽게 높이가 커지는 효과가 있음 */
+        }
+
+        /* 하위메뉴의 높이  0  -> 300 으로  크게 한다*/
+        .menu:hover .sub-menu {
+            height: 300px;
+        }
+
+        .visual{
+            height: 400px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul class="menu">
+        <li  class="menu-item">상위메뉴
+            <ul  class="sub-menu">
+                <li>하위메뉴</li>
+                <li>하위메뉴</li>
+                <li>하위메뉴</li>
+                <li>하위메뉴</li>
+            </ul>
+        </li>
+        <li class="menu-item">상위메뉴
+            <ul  class="sub-menu">
+                <li>하위메뉴</li>
+            </ul>
+        </li>
+        <li class="menu-item">상위메뉴
+            <ul  class="sub-menu">
+                <li>하위메뉴</li>
+            </ul>
+        </li>
+        <li class="menu-item">상위메뉴
+            <ul  class="sub-menu">
+                <li>하위메뉴</li>
+            </ul>
+        </li>
+    </ul>
+   <div  class="visual"></div>
+</body>
+</html>
