@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+
+        function myForEach(f){ // f  매개변수, 콜백함수 
+            let arr= ["apple", "banana" , "mango"];
+
+            for( let i=0; i< arr.length ; i++){
+                    f(arr[i], i);
+            }            
+        }
+
+        myForEach(function(item, i){
+             alert("요소" + item + " index" + i);
+        });
+
+        myForEach( a ); // 함수를 작성해서 넘겨줌 
+                        // 1.함수이름을 사용해서 넘겨줌
+                        // 2.익명함수로 넘겨줌 
+
+        function a(item, index){  //a:함수이름, 매개변수 2, 입력정보 2 
+              alert(item + " "  + index);
+        }
+    </script>
+    
+</body>
+</html>

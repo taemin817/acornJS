@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let arr= ["apple", "banana" , "mango"];
+
+        console.log(arr[0]);
+        console.log(arr[1]);
+        console.log(arr[2]);
+
+        console.log("for반복문");
+        for(let i=0; i< arr.length ; i++){
+            console.log( arr[i] + "+i");
+        }
+        
+        console.log(" for반복문");
+        for(let i=0; i<arr.length ; i++){
+            alert(arr[i] + "+i");
+        }
+        
+        console.log(" for반복문");
+         let content = document.querySelector(".content");        
+         let str="";
+        for(let i=0; i< arr.length ; i++){
+             str = str + arr[i] +" "; 
+        }
+        content.innerHTML = str;
+
+        //배열매서드: 배열이 제공하는 기능 
+        //forEach()
+
+       // arr.forEach();   // 배열의 요소를 반복  //반복하면서 수행할 코드를 넘겨줌  =>함수형태로 넘겨줌 
+       // 1. arr.forEach();     
+       // 2. arr.forEach(function(){});      
+       // 3. arr.forEach( function( item, index){
+       //          alert( item+ " " + index);
+       //  });            
+
+      console.log("배열매서드 forEach");
+      arr.forEach( function(item, index){   // 배열의 요소 , 배열의 index
+         console.log(item + " " + index);
+      });
+
+    </script>
+
+
+
+ <div  class="content"></div>
+</body>
+</html>
