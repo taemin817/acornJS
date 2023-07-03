@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        /*
+        문서로드(모든 리소스)가 완료된 시점에 DOM 제어하는 코드 작성
+        보통은 js파일을 따로 빼놓고 html에 링크를 걸어놓는데 문서를 읽는 순서가
+        위에서 아래로 가기 때문에 링크먼저 읽는데 바디가 없기때문에 이 페이지에 있는 코드를 쓴다
+        
+        문서로드가 완료되면 해야할 일을 콜백함수로 작성해서 전달
+        window.addEventListener("load", function(){
+        alert("로드완료");  무명함수사용
+        })
+        */
+
+    window.addEventListener("load", func1); // 콜백함수,  무명함수사용
+
+    function func1(){
+        alert("로드 완료");
+    }
+    </script>
+</head>
+<body>
+    <div class="content">나는 내용이다</div>
+</body>
+</html>

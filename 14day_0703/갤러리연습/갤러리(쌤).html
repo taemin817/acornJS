@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .slide-wrap{
+            width: 300px;
+            position: relative;
+        }
+        .gallery{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;           
+            background-image: url("media/Penguins.png");
+            background-size: cover;
+            background-position: center;           
+        } 
+        .left_btn{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;            
+            border:2px solid brown;     
+            background-color:transparent;    
+            position: absolute;
+            left: 10px;
+            top: 130px;
+        }
+        .right_btn{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;      
+            border:2px solid brown;     
+            background-color:transparent;          
+            position: absolute;   /* top, right, left, bottom => position 변경해야 함*/
+            top: 130px;
+            right: 10px;
+        }
+    </style>
+
+<script>
+       let imgNames=["media/Penguins.png", 
+             "media/Lighthouse.png",
+             "media/Chrysanthemum.png",
+             "media/Desert.png",
+             "media/Hydrangeas.png",
+             "media/Jellyfish.png",
+             "media/Koala.png",
+             "media/Tulips.png"
+        ] ;
+
+        let index=0;   // 이미지배열의 index를 의미 (1 => 두번째 부터 )       
+        function next(){    
+            index++;        
+            if( index >= imgNames.length)
+                index=0;
+            let gallery =document.querySelector(".gallery");                
+                gallery.style.backgroundImage ="url('"+ imgNames[index] +"')";
+                gallery.style.backgroundPosition="center"
+                gallery.style.backgroundSize="cover";
+          }
+
+        function pre(){            
+            index--;           
+            if (index <= 0 ) 
+                index = imgNames.length-1;  
+
+            let gallery =document.querySelector(".gallery");           
+            //gallery.style.backgroundImage =`url('${imgNames[index]}')`; 
+            gallery.style.backgroundImage ="url('"+ imgNames[index] +"')"; 
+            gallery.style.backgroundPosition="center"
+            gallery.style.backgroundSize="cover";   
+         }
+</script>
+</head>
+
+<body>
+        <div class="slide-wrap">
+            <div class="gallery"> </div>       
+            <div class="left_btn" onclick="pre()">p</div>
+            <div class="right_btn" onclick="next()">n</div>
+        </div> 
+</body>
+</html>

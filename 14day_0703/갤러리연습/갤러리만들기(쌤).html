@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .gallery-wrap{
+            width: 500px;
+            height: 500px;
+            border:1px solid black;
+            margin: 0 auto;
+
+            position: relative;
+        }
+        .gallery{
+            width: 500px;
+            height: 500px;
+            border:1px solid black;
+
+            background-image:  url('imgs/1.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+
+        .btn{
+            width:50px;
+            height: 50px;
+            border: 1px solid black;
+        }
+
+        .preBtn{
+            position: absolute;
+            top:220px;
+            left: 0px;;
+        }
+
+        .nextBtn{
+            position: absolute;
+            top:220px;
+            right: 0px;;
+        }
+    </style>
+
+    <script>
+        let imgs= ["imgs/1.jpg" , "imgs/2.jpg"  , "imgs/3.jpg" ,"imgs/4.jpg"];
+        let i=0;
+        function nextImg(){
+            // alert("dkdkfkfkfkfk");            
+             i++;  // 
+             if( i >= imgs.length){
+                i=0;
+             } 
+
+             let gallery  = document.querySelector(".gallery");
+             gallery.innerHTML="";
+             //gallery.style.backgroundImage="url('imgs/img1.jpeg')";     " +   +"
+             gallery.style.backgroundImage="url(' " + imgs[i] +"')";
+             gallery.style.backgroundSize="cover";
+             gallery.style.backgroundPosition="center";
+
+
+        }
+
+        function prevImg(){
+          //  alert("fkfkfkfk");
+           let gallery  = document.querySelector(".gallery");
+            gallery.innerHTML="";
+            i--;
+            if( i < 0 ){
+                i=  imgs.length-1;   // 배열의 가장큰  index 
+            }
+           
+            gallery.style.backgroundImage="url(' " + imgs[i] +"')";
+            gallery.style.backgroundSize="cover";
+            gallery.style.backgroundPosition="center";
+
+        }
+    </script>
+
+
+</head>
+<body>
+
+    <div class="gallery-wrap">
+        <!-- gallery-->
+        <div class="gallery"></div>
+
+        <!-- btn-->
+        <div   class="preBtn  btn" onclick="prevImg()"><<</div>
+        <div   class="nextBtn btn"  onclick="nextImg()">>></div>
+    </div>
+    
+</body>
+</html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
         *{
             padding: 0px;
             margin: 0px;
@@ -13,36 +14,37 @@
             list-style: none;
         }
         nav{
-            background-color: yellowgreen;
+            background-color: blanchedalmond;
         }
         .inner{
-            width: 600px;
+            width: 1200px;
             height: 300px;
             background-color: aqua;
-            margin: 0px auto;
+            margin: 0 auto;
             position: relative;
         }
         .menu{
-            /* border: 1px solid black; */
-            position: absolute;
+           /* border: 1px solid black;*/
+            position: absolute;   /* 내용만큼 자동으로 크기가 줄어듬 */
             right: 0px;
             bottom: 0px;
             display: flex;
         }
-        .menu-content{
+        .menu-content {
             display: none;
-            height: 300px;
-            background-color: red;
         }
         .menu-name{
             padding: 10px 20px 30px 20px;
         }
         .menu-name:hover{
-            background-color: violet;
-            border-radius: 10px 10px 0px 0px;
+            background-color: blueviolet;
+            border-radius: 10px 10px 0px 0px ;   /* 위 좌우 , 아래 좌우 */
         }
         .menu-item:hover .menu-content{
             display: block;
+            height: 300px;
+            background-color: chocolate;
+
             position: fixed;
             left: 0px;
             width: 100%;
@@ -53,18 +55,18 @@
     <nav>
         <div class="inner">
             <ul class="menu">
-                <li class="menu-item">
+                <li  class="menu-item">
                     <div class="menu-name">메뉴1</div>
                     <!--하위메뉴-->
                     <div class="menu-content">
-                        aaaaaaaaaaaaaaaaaaaaaaaaaaaa            
+                        aaaaaaaaaaaaaaaaaaa
                     </div>
                 </li>
-                <li class="menu-item">
+                <li  class="menu-item">
                     <div class="menu-name">메뉴2</div>
                     <!--하위메뉴-->
                     <div class="menu-content">
-                        bbbbbbbbbbbbbbbbbbbbbbbbb
+                        bbbbbbbbbbbbbbbbbbbbbbbb
                     </div>
                 </li>
             </ul>

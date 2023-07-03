@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery-wrap{
+            width: 500px;
+            height: 500px;
+            border: 1px solid;
+            margin: 0 auto;
+            position: relative;
+        }
+        .gallery{
+            width: 500px;
+            height: 500px;
+            background-image: url('imgs/1.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+        .btn{
+            width: 250px;
+            height: 500px;
+            line-height: 500px;
+            text-align: center;
+        }
+        .preBtn{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        .nextBtn{
+            position: absolute;
+            top: 0px;
+            right: -1px;
+        }
+    </style>
+    <script>
+        let imgs=["imgs/1.jpg","imgs/2.jpg","imgs/3.jpg","imgs/4.jpg","imgs/5.jpg",
+        "imgs/6.jpg","imgs/7.jpg","imgs/8.jpg","imgs/9.jpg","imgs/10.jpg"]
+
+        let i=0;
+        function nextImg(){
+            i++;
+            
+            let gallery=document.querySelector(".gallery");
+
+            // gallery.style.backgroundImage="url('imgs/1.jpg')"; 로 확인하고 아랫줄 실행  
+            gallery.style.backgroundImage="url('"+imgs[i]+"')";
+            gallery.style.backgroundSize="cover";
+            gallery.style.backgroundPosition="center";
+
+        if(i>=imgs.length){
+            i=0;
+        }
+        }
+
+        function prevImg(){
+            i--;
+
+            let gallery=document.querySelector(".gallery");
+            // gallery.style.backgroundImage="url('imgs/1.jpg')"; 로 확인하고 아랫줄 실행 
+
+            gallery.style.backgroundImage="url('"+imgs[i]+"')";
+            gallery.style.backgroundSize="cover";
+            gallery.style.backgroundPosition="center";
+
+        if(i<=0){
+            i=imgs.length-1; // 배열의 가장 큰 인덱스
+        }
+        }
+    </script>
+</head>
+<body>
+    <div class="gallery-wrap">
+        <!-- gallery -->
+        <div class="gallery"></div>
+        <div class="preBtn btn" onclick="prevImg()"></div>
+        <div class="nextBtn btn" onclick="nextImg()"></div>
+    </div>
+</body>
+</html>
