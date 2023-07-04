@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let search=['콩두유','과자','수박'];
+
+        // 저장하기 , 한 개로 저장
+
+        // Array를 하나의 문자열로 바꿈
+        let result = JSON.stringify(search);
+
+        console.log(search);
+        console.log(result);
+    
+        // str="['콩두유','과자','수박']"; 문자열로 바뀐 모양
+
+        localStorage.setItem("searchs", result);
+
+        // 사용하기
+        let sSearchs = localStorage.getItem("searchs");
+        console.log(sSearchs);
+
+        // 문자열을 객체로
+        let aSearchs = JSON.parse(sSearchs);
+        console.log(aSearchs);
+    </script>
+</body>
+</html>

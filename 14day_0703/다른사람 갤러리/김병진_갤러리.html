@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .gallery-wrap {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin: 0 auto;
+        position: relative;
+      }
+      .gallery {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        background-image: url("data:image/png;base64,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");
+        background-size: cover;
+      }
+      .btn {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+      }
+      .preBtn {
+        position: absolute;
+        top: 220px;
+        left: 0px;
+      }
+      .nextBtn {
+        position: absolute;
+        top: 220px;
+        right: 0px;
+      }
+    </style>
+    <script>
+      let i = 0;
+      let imgs = [
+        "https://cdn-icons-png.flaticon.com/512/76/76769.png",
+        "https://cdn-icons-png.flaticon.com/512/76/76853.png",
+        "https://cdn-icons-png.flaticon.com/512/3027/3027657.png",
+        "https://cdn-icons-png.flaticon.com/512/4852/4852397.png",
+      ];
+      function nextImg() {
+        i++;
+        if (i >= imgs.length) {
+          i = 0;
+        }
+        let gallery = document.querySelector(".gallery");
+        gallery.innerHTML = "";
+        gallery.style.backgroundImage = "url('" + imgs[i] + "')";
+        gallery.style.backgroundSize = "cover";
+        gallery.style.backgroundPosition = "center";
+      }
+      function prevImg() {
+        i--;
+        if (i < 0) {
+          i = imgs.length - 1; //배열의 가장큰 index
+        }
+        let gallery = document.querySelector(".gallery");
+        gallery.innerHTML = "";
+
+        gallery.style.backgroundImage = "url('" + imgs[i] + "')";
+        gallery.style.backgroundSize = "cover";
+        gallery.style.backgroundPosition = "center";
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <div class="gallery-wrap">
+        <div class="gallery">=</div>
+        <div class="preBtn btn" onclick="prevImg()"><<</div>
+        <div class="nextBtn btn" onclick="nextImg()">>></div>
+      </div>
+    </div>
+  </body>
+</html>

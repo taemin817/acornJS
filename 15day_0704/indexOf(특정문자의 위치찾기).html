@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let items=['우산','양산','비옷'];
+        let search='양산';
+        let resultIndex=items.indexOf(search);
+        alert(resultIndex);
+        let removeItem = items.splice(resultIndex, 1)[0];
+        alert(removeItem+' 삭제됨');
+    </script>
+</body>
+</html>

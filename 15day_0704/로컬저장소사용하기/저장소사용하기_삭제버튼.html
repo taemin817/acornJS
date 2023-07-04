@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h2>데이터목록</h2>
+    <div class="wrap"></div>
+
+    <script>  
+    // 로컬저장소 저장하기, 가져오기 연습
+    let fruits = ['apple', 'banana', 'melon'];
+
+    // 배열확인하기, 로컬저장소에 저장시 배열객체를 문자열로 변환해야 함 
+    console.log(fruits);
+    console.log(JSON.stringify(fruits) ) ;
+ 
+    localStorage.setItem("fruits", JSON.stringify(fruits));
+
+
+    // 로컬저장소에서  키값으로 가져오기
+    let fruitsString = localStorage.getItem("fruits");
+    console.log("읽어온 값" + fruitsString);
+
+    //다시 배열객체로 변환하여 사용함       
+    fruits = JSON.parse( fruitsString);
+    console.log("다시 배열로" + fruits);
+    console.log(fruits);
+
+    let str = "<ul>";
+    fruits.forEach(function( item, i){
+        str+="<li> " + item + " <button>삭제</button></li> ";
+    });
+
+    str+="</ul>";
+
+    let wrap = document.querySelector(".wrap");
+    wrap.innerHTML = str;
+ 
+    // 대상이 있는 요소에 이벤트 추가해야 한다, 자동으로 event객체를 제공받음 !!!!
+    wrap.addEventListener("click", function( ) {
+        console.log(event);     //nodeName:"BUTTON"
+    if (event.target.tagName === "BUTTON") {
+        event.target.parentElement.remove();   // 대상의 부모 찾아서 삭제하기
+        alert("아이템이 삭제되었습니다.");     
+    }
+    });
+    </script>
+    
+</body>
+</html>

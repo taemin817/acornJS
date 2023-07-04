@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .slide{
+            height: 100px;
+        }
+        .slide .slide-item{
+            display: none;
+        }
+    </style>
+    <script>
+        // let msg=["죽어","더워","졸려","살려줘"];
+        let msg=[];
+        let index=-1;
+
+        window.addEventListener("load",function(){
+            let slide_items=document.querySelectorAll(".slide-item"); // 해당 요소(엘리먼트)들을 배열로 반환함
+           for(let i=0;i<slide_items.length;i++){
+            let massage=slide_items[i].innerHTML;
+            msg[i]=massage;
+           }
+            console.log(msg);
+        });
+
+        function changeMsg(){
+            index++; //상단에 index를 -1로 설정해서 배열의 시작인 0부터 시작을 위해 index++로 설정해줌
+            if(index>=msg.length){
+                index=0;
+            }
+            let slide = document.querySelector(".slide");
+            slide.innerHTML = msg[index];
+            // ㄴ slide-item이 display:none;이라 div의 내용 대신 배열로 설정된 애들이 대신 나오도록 해주는...
+        }
+    </script>
+
+</head>
+<body>
+    <div class="gallery wrap">
+        <div class="slide">
+            <div class="slide-item">죽어</div>
+            <div class="slide-item">더워</div>
+            <div class="slide-item">졸려</div>
+            <div class="slide-item">살려줘</div>
+        </div>
+    </div>
+    <button onclick="changeMsg()">클릭</button>
+</body>
+</html>

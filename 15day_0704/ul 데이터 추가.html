@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addItem(){
+            let items=['우산','양산','비옷'];
+
+            let str="<ul>";
+
+                // for를 이용한 입력
+                for(let i=0; i<items.length; i++){
+                    str+="<li>"+items[i]+"</li>";
+                }
+
+                // forEach를 이용한 입력
+                // items.forEach(function(item, i){
+                //     str+="<li>"+item+"</li>";
+                // });
+                str+="</ul>"
+                alert(str);
+                let wrap = document.querySelector(".wrap");
+                wrap.innerHTML=str;
+            }
+    </script>
+</head>
+<body>
+    <div class="wrap"></div>
+    <button onclick="addItem()">데이터추가</button>
+</body>
+</html>

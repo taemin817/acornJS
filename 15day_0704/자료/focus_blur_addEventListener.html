@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text">
+
+
+    <script>
+
+       let input = document.querySelector("input");
+       input.addEventListener("focus", function(){
+           this.style.backgroundColor="blue";
+       });
+
+
+       input.addEventListener("blur", function(){
+        this.style.backgroundColor="white";
+       });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열
+        let idol=['르세라핌','아이브','에스파','아이들',];
+        console.log(idol);
+
+        // 배열의 문자열화
+        let total=JSON.stringify(idol);
+        console.log(total);
+
+        // 로컬스토리지에 키.값 으로 저장
+        localStorage.setItem("woman", total);
+
+        // 로컬스토리지에서 키를 사용해 문자열 불러옴
+        let W_idol = localStorage.getItem("woman");
+        console.log(W_idol);
+
+        // 문자열의 배열화
+        let rep = JSON.parse(W_idol);
+        console.log(rep);
+    </script>
+
+    <script>
+        // 객체
+        let me={
+            name:"박태민",
+            age:"30",
+            location:"서울",
+            job:"none"
+        }
+        console.log(me);
+
+        // 객체의 문자열화
+        let taemin=JSON.stringify(me);
+        console.log(taemin);
+
+        // 로컬스토리지에 키.값 으로 저장
+        localStorage.setItem("man", taemin);
+
+        // 로컬스토리지에서 키를 사용해 문자열 불러옴
+        let park=localStorage.getItem("man");
+        console.log(park);
+
+        // 문자열의 객체화
+        let parktaemin = JSON.parse(park);
+        console.log(parktaemin);
+    </script>
+</body>
+</html>

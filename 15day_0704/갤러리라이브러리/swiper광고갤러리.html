@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+            window.addEventListener("load", function(){
+                new Swiper('.promotion .swiper', {
+                    slidesPerView: 3,
+                    spaceBetween: 100,
+                    centeredSlides: true,
+                    loop: true,
+                    autoplay: {
+                        delay: 800
+                    },
+                    pagination: {
+                        el: '.promotion .swiper-pagination' ,
+                        clickable: true
+                    },
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.promotion .swiper-button-next',
+                        prevEl: '.promotion .swiper-button-prev',
+                    }
+                    });
+        });
+</script>
+
+<style>
+.swiper{
+  width:1000px;
+  height: 300px;
+  margin: 0 atuo;
+} 
+</style>
+</head>
+<body>
+    <section class="notice">
+        <!--광고  슬라이더-->
+         <div class="promotion">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="imgs/1.jpg"></div>              
+                    <div class="swiper-slide"><img src="imgs/2.jpg"></div>              
+                    <div class="swiper-slide"><img src="imgs/3.jpg"></div>              
+                    <div class="swiper-slide"><img src="imgs/4.jpg"></div>              
+                    <div class="swiper-slide"><img src="imgs/5.jpg"></div>              
+                    <div class="swiper-slide"><img src="imgs/6.jpg"></div>              
+                    <div class="swiper-slide"><img src="imgs/7.jpg"></div>              
+                    <div class="swiper-slide"><img src="imgs/8.jpg"></div>              
+                    <div class="swiper-slide"><img src="imgs/9.jpg"></div>              
+                    <div class="swiper-slide"><img src="imgs/10.jpg"></div>              
+                </div>
+                    <div class="swiper-pagination"></div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            </div>
+         </div>
+    </section>
+ <style>
+    /* style 변경가능하다 */
+    .swiper-pagination{
+        color:#ccc;
+    }
+
+    .swiper-button-next{
+        color:#ff0000;
+    }
+    
+   .swiper-pagination-bullet-active{
+    background-color: rgb(0, 0, 0);
+   }
+ </style> 
+
+</body>
+</html>

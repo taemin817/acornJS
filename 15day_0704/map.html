@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*
+        let arr = new Array(4);
+
+        arr[0]=2;
+        arr[0]=4;
+        arr[0]=6;
+        arr[0]=8;
+
+        console.log(arr);
+        */
+
+        let arr2 = [2, 4, 6, 8];
+
+        // 배열을 통해 새로운 배열을 만들때 사용
+        let newArr2 = arr2.map(function(item, index){
+            return item*index;  // item과 index를 곱해서
+        });
+        console.log(newArr2); // 배열로 출력
+
+        let arr3 = [2, 4, 6, 8];
+        let newArr3=[];
+        for(let i=0; i<arr3.length;i++){        // i=0, arr3[0]=2, 2*0 ->newArr3[0] 
+                                                // i=0, arr3[0]=2, 2*0 ->newArr3[1] 
+                                                // i=0, arr3[0]=2, 2*0 ->newArr3[2] 
+                                                // i=0, arr3[0]=2, 2*0 ->newArr3[3] 
+            newArr3[i]=arr3[i]*i;
+        }
+        console.log(newArr2);
+        console.log(newArr3);
+    </script>
+</body>
+</html>

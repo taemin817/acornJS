@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>배열 저장 예제</title>
+</head>
+<body>
+  <h1>배열 저장 예제</h1>
+
+  <input type="text" id="search">
+  <button onclick="saveData()">데이터 저장</button>   
+  <button onclick="deleteData()">데이터 삭제하기</button>
+  <button onclick="showData()">데이터 보여주기</button>
+
+  <div>불러온 데이터</div>
+
+  <div  class="wrap">
+
+
+  </div>
+
+  <script>
+
+
+/*
+
+미션
+ 1. 저장소에서 검색어불러오기
+ 2. 검색시 저장소에 저장 
+ 3. 검색어 삭제시 저장소에서 삭제
+
+*/
+     
+    let storageArray=[]; 
+
+    function saveData() {
+      loadData();   //기존데이터 불러오기     
+      var searchItem = document.getElementById('search').value;    //저장 
+      storageArray.push( searchItem);
+      localStorage.setItem('searchItems', JSON.stringify(storageArray));
+      alert('데이터가 저장되었습니다.');
+    }
+
+
+
+    /* 로컬저장소에 있는 내용 불러오기*/
+    function loadData() {
+       let  existingData = localStorage.getItem('searchItems');       
+       if( existingData != null) {
+           storageArray =JSON.parse(existingData)  ;
+       } 
+       console.log( storageArray); 
+      
+    }
+
+
+
+    function showData(){
+      loadData();
+      let wrap = document.querySelector(".wrap");
+      let str="<ul>";
+      storageArray.forEach( function( item, i){
+            str+= "<li>" + item + "</li>";
+      } );
+      str+="</ul>"
+      wrap.innerHTML=str;
+    }
+
+
+    //
+    function deleteData(){
+        var searchItem = document.getElementById('search').value;     //삭제할 내용
+        loadData(); 
+        //찾아서 삭제하기        
+       let index  =   storageArray.indexOf( searchItem);
+       let deleteItem  = storageArray.splice( index,1)[0];   //  splice 원본배열이 크기가 줄어듬 ,  위치에서 한 개 삭제함 
+
+       // alert( "삭제" +  deleteItem);
+       //바뀐 배열을 다시 저장합니다.
+       localStorage.setItem('searchItems', JSON.stringify(storageArray));
+       alert('데이터가 삭제 되었습니다.');
+
+    }
+  </script>
+</body>
+</html>

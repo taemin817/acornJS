@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // // 이벤트핸들러 
+        // function func1(){
+        //     console.log(event);
+        //     alert('gogo');
+        // }
+
+        // function func2(){
+        //     console.log(event);
+        //     alert('bbb')
+        // }
+        // func2();
+    </script>
+</head>
+<body>
+    <h2>이벤트 객체</h2>
+    <p>
+        이벤트(click, mouseover, mouseout, focus, blur, keyup)가 발생할 때.
+        이벤트 리스너(이벤트 감지) : onclick, onmouseover, onmouseout, onfocus, onblur, onkeyup
+        이벤트 핸들러 : 핸들러함수작성(자동으로 이벤트객체를 전달받음)
+        이벤트 객체 : 이벤트가 발생했을 때 발생한 이벤트에 대한 정보를 담은 객체
+    </p>
+
+    <h2> 이벤트 객체 전달</h2>
+    <p>
+        이벤트를 처리하는 핸들러에게는 자동으로 발생한 이벤트에 대한 정보를 객체type으로, event라는 이름으로 제공함 
+    </p>
+    <!-- <button onclick="func1()">클릭</button> -->
+    <button onclick="func1()">버튼</button>
+    <button id="btn" onclick="func2()">클릭</button>
+
+    <script>
+        let button = document.getElementById("btn");
+        
+        function func1(){
+           console.log("클릭 되었어");
+           console.log("event객체 제공" + event);
+           console.log(event);
+           console.log(event.target.tagName == "BUTTON");       
+           console.log(event.target == button); // true
+       }
+       function func2(){        
+           console.log("클릭 되었어");
+           console.log("event객체 제공" + event);
+           console.log(event);
+           console.log(event.target.tagName == "BUTTON");
+           console.log(event.target == button); // false, target->btn(o), button(x)
+       }
+       /* func2함수는 이벤트핸들러 함수는 아니다*/
+
+       function func3(){
+           console.log("나는 함수");
+           console.log("event객체 제공안됨 " + event) ;
+       }
+       func3();
+  </script>
+</body>
+</html>

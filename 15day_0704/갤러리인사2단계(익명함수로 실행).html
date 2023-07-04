@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let msg=["죽어","더워","졸려","살려줘"];
+        // window.addEventListener("load", function(){}); 문서로드 시 '익명함수' 실행 기본틀
+
+        window.addEventListener("load",function(){
+        let slide_items=document.querySelectorAll(".slide-item"); // 해당 요소(엘리먼트)들을 배열로 반환함
+        alert(slide_items[0].innerHTML);
+        });
+    </script>
+
+</head>
+<body>
+    <div class="gallery wrap">
+        <div class="slide-item">죽어</div>
+        <div class="slide-item">더워</div>
+        <div class="slide-item">졸려</div>
+        <div class="slide-item">살려줘</div>
+    </div>
+</body>
+</html>

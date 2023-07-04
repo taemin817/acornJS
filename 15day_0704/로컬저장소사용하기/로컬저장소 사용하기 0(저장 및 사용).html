@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>로컬 저장소 사용하기</h2>
+
+    <p>로컬 저장소 : 저장하기</p>
+    <script>
+                            //   키   ,   값
+        localStorage.setItem("testkey", "우유");
+    </script>
+
+
+    <p>로컬 저장소 : 사용하기</p>
+    <script>                             // 키
+        let result=localStorage.getItem("testkey");
+        alert(result);
+    </script>
+</body>
+</html>

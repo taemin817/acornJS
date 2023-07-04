@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .next, .prev{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            top:0px;
+            bottom: 0px;
+            margin:auto;
+            background-color: black;
+            color:white;
+            text-align: center;
+            line-height: 60px;
+        }
+        .swiper_container{
+            margin: 0 auto;
+            width:900px;;
+            padding: 30px;            
+            position: relative;
+            border:0.5px solid #ccc;
+        }
+        .slide-wrapper   {
+            width:900px;
+            display: flex;
+        }
+        .slide-wrapper .slide-item{
+            width:300px;
+            height: 300px;
+        }
+        .prev{
+            left: 20px;
+        }
+        .next{
+            right: 20px;
+        }
+    </style>
+
+
+    <script>
+
+        /*
+        이전은 하나씩 감소인데 0인경우 가장 큰 값으로 세팅
+         0 1 2
+         2 0 1
+         1 2 0
+
+
+        이후는 하나씩 증가인데 배열의 크기 넘어서면 0으로 가장 작은 값으로 세팅
+         0 1 2
+         1 2 0     
+         2 0 1
+        */
+
+        let img=["A이미지", "B이미지",  "C이미지"];
+        let indexs=[0,1,2];
+
+        function next(){
+            let slides=document.querySelectorAll(".slide-item");   
+
+            // indexs배열의 각 요소 1증가
+            for(let i=0; i<indexs.length; i++){  
+                if( indexs[i]==2){
+                    indexs[i]=0;
+                }else{
+                    indexs[i]=indexs[i]+1;
+                }
+            }
+            // 각 요소번째 이미지 표시
+            for(let i =0; i< slides.length; i++){
+                slides[i].innerHTML =img[indexs[i]];
+            }
+        }
+
+
+
+        function prev(){
+            let slides=document.querySelectorAll(".slide-item");
+              // indexs배열의 각 요소 1감소       
+            for(let i=0; i<indexs.length; i++){           
+                if( indexs[i]<=0){
+                    indexs[i]=2;
+                }else{
+                    indexs[i]=indexs[i]-1;
+                }
+            }
+             // 각 요소번째 이미지 표시
+            for(let i =0; i< slides.length; i++){
+                slides[i].innerHTML=img[indexs[i]];
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="swiper_container">
+        <!-- 슬라이드-->
+        <div class="slide-wrapper">
+            <div class="slide-item">A이미지</div>
+            <div class="slide-item">B이미지</div>
+            <div class="slide-item">C이미지</div>
+        </div>
+
+        <!-- 이전 이후 버튼-->
+        <div class="prev" onclick="prev()"> << </div>
+        <div class="next" onclick="next()"> >> </div>   
+    </div>
+    
+</body>
+</html>

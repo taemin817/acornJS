@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            height: 5000px;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function(){
+            let btn = document.querySelector(".btn");
+            btn.addEventListener("click",  function(){
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+           })
+        });
+    </script>
+</head>
+<body>
+    <p>
+    </p>
+    <button class="btn">맨위로</button>
+</body>
+</html>
