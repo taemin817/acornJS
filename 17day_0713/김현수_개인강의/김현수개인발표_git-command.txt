@@ -1,0 +1,24 @@
+[step1. repo -> local]
+git clone https://github.com/khs220507/Acorn_MelonProject.git
+
+
+[step2. local -> repo]
+git branch guide
+git checkout guide
+git add .
+git commit -m "message"
+git push --set-upstream origin guide (only once)
+
+-in github-
+Compare & pull request
+Create pull request
+Squash and merge(only main branch!)
+Confirm squash and merge(only main branch!)
+
+[step.3 repo -> local]
+git pull origin main
+
+[step.4 local -> repo]
+git add .
+git commit -m "message"
+git push u origin guide

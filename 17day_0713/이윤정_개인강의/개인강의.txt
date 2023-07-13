@@ -1,0 +1,54 @@
+자바스크립트 CallBack 함수란?
+
+JS에서 함수는 Object라고 한다. 함수는 다른 함수의 인자로 쓰일 수도 있고, 어떤 함수에 의해 리턴될 수도 있다.
+이런 함수를 고차 함수라고 한다. 그럴 때 인자로 넘겨지는 함수를 콜백 함수라고 한다. 
+즉 콜백 함수는
+1. 다른 함수의 인자로써 이용되는 함수 	2. 어떤 이벤트에 의해 호출되어지는 함수이다.
+
+
+
+function printHello(){
+ print('hello');
+}
+//bye!
+function printBye(){
+  print('bye');
+}
+
+//특정 함수를 매개변수로 받아서 3초 뒤에 실행하는 함수
+function sleepAndExecute(sleepTimeSecond, callback){
+  //sleepTimeSecond 초 만큼 대기
+  sleep(sleepTimeSecond);
+  //전달된 callback 실행
+  callback();
+}
+
+//3초 뒤에 hello 출력하기
+sleepAndExecute(3, printHello);
+
+//5초 뒤에 bye 출력하기
+sleepAndExecute(5, printBye);
+
+
+
+
+
+callback함수의 첫 번째 정의인 "다른 함수의 인자로써 이용되는 함수"의 관점에서 바라보자.
+
+ 
+
+sleepAndExecute(3, printHello); 에서는
+
+printHello를 sleepAndExecute의 매개변수(인자)로 전달하므로,
+
+printHello는 callback 함수라고 할 수 있다.
+
+ 
+
+마찬가지로, sleepAndExecute(5, printBye)에서는
+
+printBye를 sleepAndExecute의 매개변수(인자)로 전달하므로,
+
+printBye는 callback 함수라고 할 수도 있다.
+
+ 
