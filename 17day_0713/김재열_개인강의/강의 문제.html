@@ -7,22 +7,34 @@
   </head>
   <body>
     <p>
-      기능 : 두 수 중에서 큰 수를 반환하는 기능과 수가 같을때 same을 반환하는
-      기능
-      <br />
-      입력 : 두 수
-      <br />
-      반환 : 두 수 중에서 큰 수 출력 또는 두 수가 같을 때 same 출력
-      <br />
-      매개변수는 a, b로 지정
-      <br />
-      <br />
-      <br />
-      1번 문제: if문만 이용
-      <br />
-      2번 문제: if문과 삼항연산자만 이용
-      <br />
-      3번 문제: if문을 이용하지 않고 삼항연산자만을 이용
+      function bigNumber(a, b) { <br />
+      if (a > b) {<br />
+      return alert(a);<br />
+      } else if (b > a) {<br />
+      return alert(b);<br />
+      } else {<br />
+      alert("Same");<br />
+      }<br />
+      }<br />
+      bigNumber(10, 20);<br />
     </p>
+    <p>
+      // 2;<br />
+      function bigNumber(a, b) {<br />
+      if (a > b) {<br />
+      return alert(a);<br />
+      } else {<br />
+      return b > a ? alert(b) : alert("same");<br />
+      }<br />
+      }<br />
+      bigNumber(10, 20);<br />
+    </p>
+
+    문제 A, B, C, D 에 들어갈 것은?
+    <br />
+    function bigNumber(a, b) { <br />
+    return a > b (A) alert(a) (B) a < b (C) alert(b) (D) alert("Same");<br />
+    } <br />
+    bigNumber(5, 5);<br />
   </body>
 </html>

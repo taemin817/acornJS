@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .kmenu1{
+
+        height: 40px;
+        width: 80px;
+        padding-top: 10px;
+        box-sizing: border-box;
+        COLOR: #9B8777;
+        text-decoration: none;
+        font-size: 15px;
+        }
+
+        .kmenu2{
+
+        height: 40px;
+        width: 80px;
+        padding-top: 10px;
+        box-sizing: border-box;
+        COLOR: #9B8777;
+        text-decoration: none;
+        font-size: 15px;
+
+        }
+
+        .kmenu3{
+
+        height: 40px;
+        width: 50px;
+        padding-top: 10px;
+        box-sizing: border-box;
+        COLOR: #993B42;
+        text-decoration: none;
+        font-size: 15px;
+        border-bottom: 4px solid #993B42;
+
+        }
+
+        .kmenu4{
+        width: 20px;
+        }
+
+        .kmenu5{
+        width: 15px;
+
+        }
+
+        .kmenu6{
+            width: 15px;
+        }
+
+
+
+
+        
+
+
+
+
+        .kbody{
+            background-color: #F5EEE8;
+            /* border: 1px solid black; */
+            width: 1200px;
+            height: 471px;
+            padding: 0px 680px 0px 680px;
+            padding: 60px;
+            box-sizing: border-box;
+            
+        }
+
+       
+
+        .ktop{
+            position: relative;
+
+            display: flex;
+        }
+
+        .title{
+            font-size: 24px;
+            color: #333333;
+            font-weight: 700;
+
+
+
+        }
+
+        .kcenter{
+            margin-top: 50px;
+    
+        }
+
+        .kcenter1{
+            display: flex;
+        }
+
+        .kcenter2{
+            display: flex;
+        }
+
+        .kcenter3{
+            display: flex;
+        }
+
+        
+
+        .kno{
+
+            width: 500px;
+        }
+
+        .knono{
+            position: absolute;
+            bottom: 0px;
+            right:0px;
+        }
+        .kmenu{
+            display: flex;
+            display: absolute;
+            bottom: 0px;
+            right: 0px;
+            text-align: center;
+            
+        
+        }
+
+
+
+        
+        .kimg3{
+
+            height: 255px;
+            width: 550px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            line-height: 0%;
+            font-weight: bold;
+            position: absolute;
+            animation: slidee 1s;
+            left: 50px;
+
+            background-image: url(https://www.gong-cha.co.kr/view/gongcha/images/brandmain/brand_main_recipe_img5.jpg);
+        }
+
+        @keyframes slidee{
+            from{
+                left: -10px;
+
+            }
+            to{
+                left: 50px
+            }
+        }
+
+
+
+        .kitem3{
+            /* border: 1px solid black; */
+            width: 700px;
+            position: absolute;
+            animation: slide 1s;
+            right: 650px;
+        }
+        @keyframes slide{
+            from{
+                right: 600px;
+
+            }
+            to{
+                right: 650px
+            }
+        }
+
+        
+
+
+        .kconte{
+            /* border: 1px solid black; */
+            width: 50px;
+        }
+
+        .ktea{
+            font-size: 40px;
+            font-weight: bold;
+            color: black;
+        }
+        
+
+        .korigin{
+            /* border: 1px solid black; */
+            font-size: 24px;
+            
+            color: #993B42;
+            font-weight: 700;
+            margin-top: 5px;
+            
+            
+        }
+
+        .kmenuview{
+            border: 1.5px solid #993B42;
+            height: 35px;
+            width: 152px;
+            text-align: center;
+            color: #993B42;
+            padding: 10px 35px 10px 35px;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .tabs{
+            display: flex;
+        }
+
+         
+    </style>
+
+
+
+</head>
+<body>
+    <div class="kbody">
+        <div class="khead">
+            <div class="ktop">
+
+                <div class="title">공차 티 레시피</div>
+                <div class="kno"></div>
+                <div class="knono">
+                    <div class="kmenu">
+                        <a class="kmenu1" href="http://127.0.0.1:5500/19day_0712/%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90.html">오리지널티</a>
+                        <a class="kmenu4"></a>
+                        <a class="kmenu2" href="http://127.0.0.1:5500/19day_0712/%EB%B0%80%ED%81%AC.html">밀크티</a>
+                        <a class="kmenu5"></a>
+                        <a class="kmenu3" href="http://127.0.0.1:5500/19day_0712/%ED%94%84%EB%A3%BB.html">프룻티</a>
+                        <a class="kmenu6"></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        <div class="kcenter">
+        
+            <div class="kcenter3" data-tab-content id="tab3">
+
+                <div class="kimg3"></div>
+
+                <div class="kitem3" >                
+
+                    <div class="ktea"> TEA RECIPE - 티 레시피 </div>
+                    <div class="korigin"> 프룻티 - Fruit Tea </div><br>
+                    <div> 찻잎의 푸름을 간직한 녹차만 골라 최적의 온도 89℃로 우려</div>
+                    <div> 달콤상큼한 과일을 더해 만듭니다. </div> <br><br>
+                    <a href="https://www.gong-cha.co.kr/brand/menu/product.php?c=001003" class="kmenuview"> 메뉴 보러가기 〉</a>
+                    <div></div>
+                </div>
+
+            
+            </div>
+        
+        </div>
+    
+    </div>
+        
+
+    </div>
+</body>
+</html>
