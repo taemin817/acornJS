@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        let arr = ["apple", "banana", "melon", "kiwi", "coconut"];
-        let arr2 = new Array(5);  // 객체생성키워드,  new Array(배열크기);
-        
-        // 1차원 배열, 인덱스를 하나 사용해야 요소(칸-=변수)에 접근한다.
-        // console.log(arr[0]);
+      let arr = ["apple ", "banana ", "melon ", "kiwi ", "coconut "];
+      let arr2 = new Array(5); // 객체생성키워드,  new Array(배열크기);
 
-        // 객체 : 속성+기능
-        // 불러오려면  변수 : 객체.속성,  함수 : 객체.기능이름
+      // 1차원 배열, 인덱스를 하나 사용해야 요소(칸-=변수)에 접근한다.
+      // console.log(arr[0]);
 
-        //forEach()
+      // 객체 : 속성+기능
+      // 불러오려면  변수 : 객체.속성,  함수 : 객체.기능이름
 
-        for(let i=0;i<arr.length;i++){
-            alert(arr[i]+" "+i);
-        }
+      //forEach()
 
-        // arr.forEach(콜백함수);            // 익명이든아니든 상관없다
-        arr.forEach(function(item, index){
-            item, index                     // 배열의요소값, 배열의인덱스
-            alert(item+" "+index);
-        });
+      for (let i = 0; i < arr.length; i++) {
+        document.write(i + arr[i]);
+      }
 
-        arr.forEach(func1);
-        function func1(a,b){
-            alert(a+" "+b);
-        }
-</script>
-</body>
+      // arr.forEach(콜백함수);            // 익명이든아니든 상관없다
+      arr.forEach(function (item, index) {
+        item, index; // 배열의요소값, 배열의인덱스
+        document.write(index + item);
+      });
+
+      arr.forEach(func1);
+      function func1(a, b) {
+        documente.write(a + " " + b);
+      }
+    </script>
+  </body>
 </html>
