@@ -1,0 +1,98 @@
+*flexbox란?
+
+유연한 박스 모델을 사용해서 요소들을 정렬하고 배치하는 기법
+웹사이트는 기본적으로 위에서 아래로 쌓이는 수직 구성이지만 flexbox를 사용하면 수평으로도 배치가 가능
+
+
+*flexbox를 사용하는 방법
+
+flexbox는 부모요소인 container와 자식요소인 item으로 나뉘는데 일반적으로 flexbox의 방향축은 가로가 메인
+메인축 방향으로 위치를 정할 때는 justify-content 속성을 추가
+교차축 방향으로 위치를 정할 때는 align-items 속성을 추가
+
+*justify-content의 속성 (메인축 위치 조정)
+
+flex-start : item을 container의 시작점으로 정렬 (기본값)
+flex-end : item을 container의 끝점으로 정렬
+center : item을 container의 가운데로 정렬
+space-between : item 사이에 동일한 간격을 두게 정렬
+space-around : item 주위에 동일한 간격을 두게 정렬
+
+*align-items의 속성 (교차축 위치 조정)
+
+stretch : container에 교차축을 채우기 위해 item을 늘림 (기본값)
+flex-start : item을 container의 시작점으로 정렬
+flex-end : item을 container의 끝점으로 정렬
+center : item을 container의 가운데로 정렬
+baseline : item을 container의 문자 기준선(시작 위치)에 정렬
+
+*flex-wrap의 속성 (너비가 작아지지 않고 여러 줄에 걸쳐서 item 배치)
+
+nowrap : 모든 item을 한 줄에 정렬하지만 item이 많아지면 item의 너비가 작아짐 (기본값)
+wrap : item의 크기를 유지하며 여러 줄에 걸쳐서 정렬
+wrap-reverse : item의 크기를 유지하며 여러 줄에 걸쳐서 반대로 정렬
+
+*align-content의 속성 (교차축의 정렬방법, item이 2줄 이상이고 여백이 있을 때만 사용 가능)
+
+center : 윗줄, 아랫줄 공백 없이 가운데에 item 정렬
+flex-start : 윗줄, 아랫줄 공백 없이 위에서부터 item 정렬
+space-between : 윗줄, 아랫줄 공백이 있고 item 사이의 간격이 동일해지게 정렬
+space-around : 윗줄, 아랫줄 공백이 있고 item 주위의 간격이 동일해지게 정렬
+
+참고자료 : https://developer.mozilla.org/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+
+*문제
+
+flexbox를 사용해서 두 개의 박스를 배치했습니다.
+
+1. 첫 번째 박스 -> 300px의 너비, 200px의 높이, 빨간 배경색
+2. 두 번째 박스 -> 200px의 너비, 300px의 높이, 파란 배경색
+3. 두 개의 박스를 수평으로 나란히 배치
+
+.container {
+  display: flex;
+  flex-wrap: 이곳에 들어갈 속성은 무엇일까요? (1.nowrap  2.wrap  3.wrap-reverse)
+}
+
+.box {
+  width: 300px;
+  height: 200px;
+}
+
+.one {
+  background-color: red;
+}
+
+.two {
+  width: 200px;
+  height: 300px;
+  background-color: blue;
+}
+
+<div class="container">
+  <div class="box one"></div>
+  <div class="box two"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+정답 : 1. nowrap
+
+
+
+
+
+
+

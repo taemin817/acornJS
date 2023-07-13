@@ -1,0 +1,135 @@
+Java Script 변수 선언
+
+
+
+1.변수 선언이란?
+- 변수를 선언한다는 것은 변수의 값을 저장하는 공간을 생성한다는 의미이다.
+- 변수명은 그 공간의 이름을 뜻하는 것이다.
+
+
+
+2. 변수 선언의 종류
+1) var
+2) let
+3) const
+
+
+
+3. 변수 선언 종류의 차이점
+1) 중복선언
+- 가능 : var
+
+	var a = 1;
+	console.log(a); // a =1
+	var a = 2;
+	console.log(a); // a =2
+
+- 불가능 : let, const
+
+	let a = 1;
+	console.log(a); // a =1
+	let a = 2; // 에러 발생
+
+	const a = 1;
+	console.log(a); // a =1
+	const a = 2; // 에러 발생
+	
+2) 재할당 
+- 가능 : var, let
+	
+	var a = 1;
+	console.log(a); // a =1
+	a = 2;
+	console.log(a); // a =2
+
+	let a = 1;
+	console.log(a); // a =1
+	a = 2; 
+	console.log(a); // a =2
+	
+- 불가능 : const(상수)
+	
+	const a = 1;
+	console.log(a); // a =1
+	a = 2; // 에러 발생
+	
+
+3) 변수 스코프 유효범위
+- 스코프 : 유효한 참조 범위(변수의 참조할 수 있는 영역을 뜻함)
+- var(함수 레벨 스코프) : 	함수 내부에서 선언된 변수는 함수 내부에서만 사용가능한 지역변수이다.
+			그 외에 변수들은 전역변수이다.
+			for,if 구문에서 쓰이는 변수들도 전역변수로 사용된다.
+
+	function test(){
+		var a = 1;
+		console.log(a); 
+	}
+	test(); // a=1
+	console.log(a); // 에러, 변수 a 참조 불가
+
+	for(var a = 1; a < 3; a++){
+		console.log(a); // a=1, a=2
+	}
+	console.log(a); // a=2, a는 전역변수
+
+-let, const(블록 레벨 스코프) : 코드 블럭에서 선언된 변수들은 그 코드 블럭에서만 사용가능한 지역변수이다.
+
+	function test(){
+		let a = 1;
+		console.log(a); 
+	}
+	test(); // a=1
+	console.log(a); // 에러, 변수 a 참조 불가
+
+	for(let a = 1; a < 3; a++){
+		console.log(a); // a=1, a=2
+	}
+	console.log(a); // 에러, 변수 a 참조 불가
+
+4) 변수 호이스팅 방식
+- 호이스팅 : 선언이 먼저 메모리에 저장되는 것으로 선언 전에 변수를 참조해도 선언이 파일의 맨 위로 끌어 올려진 것 같은 현상을 의미한다.
+- var : 변수 선언 후 undefined로 초기화
+
+	
+	console.log(a); // undefined
+	var a = 1;
+	console.log(a); // a =1
+
+- let, const : 	변수 선언 후 초기화를 하지 않으면 변수 선언만 호이스팅 되므로 참조 에러가 발생
+		초기화는 코드 실행 과정에서 변수 선언문을 만났을 때 수행된다.
+
+	console.log(a); // 참조 에러, 단 변수는 선언 되긴 했다.
+	let a = 1;
+	console.log(a); // a =1
+
+
+
+4. 변수 사용 순위
+1) const : 상수 값으로 저장할 때 사용
+2) let : 변수 값으로 저장할 때 사용
+3) var : 굳이 사용할 이유는 없다.
+
+
+
+
+
+
+
+
+
+
+5. 문제
+1) 결과 값은 ?
+
+	console.log(a);  //
+	var a = 1;
+	console.log(a);  //
+
+	
+	console.log(i);  //
+	let i = 5;
+	console.log(i);  //
+
+
+
+
