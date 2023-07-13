@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .wrap{
+            width: 1000px;
+            height: 300px;
+            border:1px solid black;
+            position: relative;
+            margin: 0 auto;
+        }
+        .img1{
+
+            position: absolute;
+            left: 0px;
+        }
+
+        .img2{
+            position: absolute;
+            right: 0px;
+        }
+
+        .wrap:hover .img1{
+            left:300px;
+            transition: 1s;
+        }
+
+        .wrap:hover .img2{
+            right:300px;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div  class="wrap">
+         <div  class="img1">이미지1</div>
+         <div  class="img2">이미지2</div>
+
+    </div>
+</body>
+</html>

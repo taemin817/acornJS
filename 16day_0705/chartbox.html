@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        ul{ list-style: none;}
+        .chart{
+            width: 300px;
+            margin: 0  auto;
+            
+        }
+
+        .chart > li {
+            border: 0.5px solid rgb(227, 214, 214);
+            height: 60px;
+            display: flex;
+            text-align: center;
+          
+        }
+
+        .chart > li .rank{
+            width: 20%;
+            border: 0.5px solid rgb(227, 214, 214);
+            display: flex;
+            align-items: center;
+        }
+
+        .chart > li .content{
+            width: 80%;
+            
+            display: flex;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .chart > li .thum{
+            width: 30%;          
+            border: 0.5px solid rgb(227, 214, 214);
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: none;
+             
+        }
+
+        .chart > li .title{
+            width: 70%;
+           
+             
+        } 
+      
+      
+    </style>
+
+    <script>
+        function showThum(){
+              let li  = document.querySelector(".chart > li ");
+              let img = document.querySelector(" .chart > li .thum");
+              let title = document.querySelector(" .chart > li .title");
+              li.style.height="100px";
+              img.style.display="block";     
+              title.innerHTML=" <h3>뉴진스 </h3>아름다운곡";      
+        }
+        function hideThum(){
+              let li  = document.querySelector(".chart > li ");
+              let img = document.querySelector(" .chart > li .thum");
+              let title = document.querySelector(" .chart > li .title");
+              li.style.height="60px";
+              img.style.display="none";  
+              title.innerHTML=" 아름다운곡";               
+        }
+    </script>
+</head>
+<body>
+
+    <ul  class="chart">
+        <li>
+            <div class="rank">순위 :1</div>
+            <div class="content"   onmouseover="showThum()"   onmouseout="hideThum()">
+                <div class="thum">이미지</div>
+                <div class="title">아름다운 곡  </div>
+            </div>
+        </li>
+    </ul>
+    
+</body>
+</html>

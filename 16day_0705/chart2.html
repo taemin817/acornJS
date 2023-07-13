@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        ul{ list-style: none;}
+        .chart{
+            width: 300px;
+            margin: 0  auto;
+            
+        }
+
+        .chart > li {
+            border: 0.5px solid rgb(227, 214, 214);
+            height: 60px;
+            display: flex;
+            text-align: center;
+          
+        }
+
+        .chart > li .rank{
+            width: 20%;
+            border: 0.5px solid rgb(227, 214, 214);
+            display: flex;
+            align-items: center;
+        }
+
+        .chart > li .content{
+            width: 80%;
+            
+            display: flex;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .chart > li .thum{
+            width: 30%;          
+            border: 0.5px solid rgb(227, 214, 214);
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: none;
+             
+        }
+
+        .chart > li .title{
+            width: 70%;
+
+            white-space: nowrap;  /*텍스트 줄바꿈 하지 않음 */         
+            overflow: hidden;
+            text-overflow: ellipsis;  /* 잘린내용이 보이지 않음*/   
+
+           
+             
+        } 
+
+        .chart2,  .chart3{
+            display: none;
+        }
+      
+      
+    </style>
+
+    <script>
+        function showThum(obj){
+           
+              let li  = obj.parentElement;
+              let img = obj.firstElementChild;
+              let title =  img.nextElementSibling;
+
+              li.style.height="100px";
+              img.style.display="block";     
+              title.innerHTML=" <h3>뉴진스 </h3>아름다운곡아름다운곡아름다운곡아름다운곡아름다운곡";      
+        }
+        function hideThum(obj){
+              let li  = obj.parentElement;
+              let img = obj.firstElementChild;
+              let title =  img.nextElementSibling;
+              li.style.height="60px";
+              img.style.display="none";  
+              title.innerHTML=" 아름다운곡 아름다운곡아름다운곡아름다운곡아름다운곡아름다운곡";               
+        }
+
+
+        function chart1(){
+            let charts =document.querySelectorAll(".chart");
+
+            charts[0].style.display="block";
+            charts[1].style.display="none";
+            charts[2].style.display="none";
+
+        }
+
+        function chart2(){
+            let charts =document.querySelectorAll(".chart");
+
+            charts[0].style.display="none";
+            charts[1].style.display="block";
+            charts[2].style.display="none";
+
+        }
+        function chart3(){
+            let charts =document.querySelectorAll(".chart");
+
+            charts[0].style.display="none";
+            charts[1].style.display="none";
+            charts[2].style.display="block";
+
+        }
+    </script>
+</head>
+<body>
+
+    <div>
+        <button onclick="chart1()"> 1chart</button>
+        <button onclick="chart2()">2 chart</button>
+        <button onclick="chart3()">3 chart</button>
+    </div>
+
+    <ul  class="chart chart1">
+        <li>
+            <div class="rank">순위 :1</div>
+            <div class="content"   onmouseover="showThum(this)"   onmouseout="hideThum(this)">
+                <div class="thum">이미지</div>
+                <div class="title">아름다운 곡 곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡 </div>
+            </div>
+        </li>
+        <li>
+            <div class="rank">순위 :1</div>
+            <div class="content"   onmouseover="showThum(this)"   onmouseout="hideThum(this)">
+                <div class="thum">이미지</div>
+                <div class="title">아름다운 곡 곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡 </div>
+            </div>
+        </li>
+        <li>
+            <div class="rank">순위 :1</div>
+            <div class="content"   onmouseover="showThum(this)"   onmouseout="hideThum(this)">
+                <div class="thum">이미지</div>
+                <div class="title">아름다운 곡 곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡 </div>
+            </div>
+        </li>
+        
+    </ul>
+
+    <ul  class="chart chart2">
+        <li>
+            <div class="rank">class 1</div>
+            <div class="content"   onmouseover="showThum(this)"   onmouseout="hideThum(this)">
+                <div class="thum">이미지</div>
+                <div class="title">웃긴곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡 </div>
+            </div>
+        </li>
+        <li>
+            <div class="rank">class 2</div>
+            <div class="content"   onmouseover="showThum(this)"   onmouseout="hideThum(this)">
+                <div class="thum">이미지</div>
+                <div class="title">웃긴곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡 </div>
+            </div>
+        </li>
+        <li>
+            <div class="rank">class 3</div>
+            <div class="content"   onmouseover="showThum(this)"   onmouseout="hideThum(this)">
+                <div class="thum">이미지</div>
+                <div class="title">웃긴곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡곡 </div>
+            </div>
+        </li>
+        
+    </ul>
+
+
+
+    <ul  class="chart  chart3">
+        <li>
+            <div class="rank">pop:1</div>
+            <div class="content"   onmouseover="showThum(this)"   onmouseout="hideThum(this)">
+                <div class="thum">이미지</div>
+                <div class="title">재미 있는곡곡곡곡곡곡곡곡곡곡 </div>
+            </div>
+        </li>
+        <li>
+            <div class="rank">pop:1</div>
+            <div class="content"   onmouseover="showThum(this)"   onmouseout="hideThum(this)">
+                <div class="thum">이미지</div>
+                <div class="title">재미 있는곡곡곡곡곡곡곡곡곡곡 </div>
+            </div>
+        </li>
+        <li>
+            <div class="rank">pop:1</div>
+            <div class="content"   onmouseover="showThum(this)"   onmouseout="hideThum(this)">
+                <div class="thum">이미지</div>
+                <div class="title">재미 있는곡곡곡곡곡곡곡곡곡곡 </div>
+            </div>
+        </li>
+        
+    </ul>
+    
+</body>
+</html>

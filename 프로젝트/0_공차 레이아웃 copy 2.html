@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공차</title>
+    <link rel="icon" href="https://www.gong-cha.co.kr/view/gongcha/images/common/logo.png">
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+           
+        }
+        /*
+        .header{
+            width: 1200px;
+            height: 110px;
+        }
+        */
+        .section1{
+            width: 2560px;
+            height: 850px;
+            float: left;
+           position: relative;
+            text-align: center;
+            
+        }
+
+        .yj_slide{
+            display: flex;
+            overflow: hidden;
+           
+        }
+        .yj_slide-item{
+          list-style: none;
+          float: left;
+          transition: 5s;
+          
+        }
+        .yj_slide-item img{
+            width: 2560px;
+        }
+        
+        .yj_btn_prev{
+            background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/prev.png");
+            width: 27px;
+            height: 53px;
+            position: absolute;
+            left: 680px;
+            top: 398px;
+           
+        }
+
+        .yj_btn_next{
+            background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/next.png");
+            position: absolute;
+            width: 27px;
+            height: 53px;
+            top: 398px;
+            right: 680px;
+        }
+        .btn_brandstory{
+            width: 230px;
+            height: 50px;
+            position: absolute;
+            right: 50%;
+            bottom: 110px;
+            text-align: center;
+            border: 1px solid #cf3e58;
+            background-color: #cf3e58;
+            margin: 0 -600px 0 0;;
+            
+        }
+        .btn_brandstory span{
+            color: #fff;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 48px;
+           
+            
+        }
+        .btn2_brandstory{
+            background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/btn_arr_w.png");
+            width: 5px;
+            height: 10px;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 21px;
+            right: 55px;
+            
+        }
+ /*
+        .section2{
+            width: 1900px;
+            height: 500px;
+        }
+        .section3{
+            width: 1200px;
+            height: 471px;
+            
+            패딩 좌우 680씩
+            배경 2560*471
+            
+        }
+        .footer{
+            width: 1370px;
+            height: 166px;
+        }
+*/
+
+            .hide{
+                display: none;
+}
+
+    </style>
+    <script>
+
+        let  liimgs = ["https://www.gong-cha.co.kr/uploads/board/20230626/3G6ceq2zDpyhkNdJ_20230626.jpg","https://www.gong-cha.co.kr/uploads/board/20230627/326NpvCeAJF9dT7y_20230627.jpg","https://www.gong-cha.co.kr/uploads/board/20230502/0nGiMx8vBpUXFkJh_20230502.jpg","https://www.gong-cha.co.kr/uploads/board/20230112/pqL7s1dwA0QYTRgM_20230112.jpg"];
+
+      
+        let  as = ["https://www.gong-cha.co.kr/brand/menu/new.php","https://www.gong-cha.co.kr/brand/board/view.php?b=event&n=45995&status=end&page=1","http://www.gong-cha.co.kr/brand/menu/product.php?c=001002","#"];
+
+
+        let i=0;
+        
+        function yj_btn_next(){
+            i++;
+            if(i>=liimgs.length){
+                i=0;
+            }
+
+         let slide = document.querySelector('.yj_slide-item');
+         let  img =   slide.querySelector("img");
+         let link  =  document.querySelector(".btn_brandstory");
+
+
+         let nextImg =liimgs[i] ; 
+         let nextlink = as[i];
+         
+         img.src=nextImg;
+         link.href=nextlink;
+         alert(i)
+
+         if( i==3){
+           let detailSapn  =  document.querySelector('.btn_brandstory');
+           alert(detailSapn);
+           detailSapn.classList.add("hide");
+         }
+
+
+
+
+        }
+
+        function yj_btn_prev(){
+            
+            i--;
+            if(i<0){
+                i=liimgs.length-1;
+            }
+            let slide = document.querySelector('.yj_slide-item');
+            let img = slide.querySelector("img");
+            let prevImg = liimgs[i] ; 
+            img.src=prevImg;
+           
+        }
+
+        
+
+    </script>
+    
+</head>
+<body>
+
+    <!--<div class="header"></div>-->
+
+        <div class="section1">
+
+            <div class="yj_slide-wrap">
+                <ul class="yj_slide">
+                    <li class="yj_slide-item"><img src="https://www.gong-cha.co.kr/uploads/board/20230626/3G6ceq2zDpyhkNdJ_20230626.jpg">
+                        <a href="https://www.gong-cha.co.kr/brand/menu/new.php" class="btn_brandstory"><span class="brandstory2">자세히 보기<span class="btn2_brandstory"></span></span></a>
+                    </li>                    
+                </ul>
+    
+            </div>
+
+            <a href="javascript:yj_btn_prev()" class="yj_btn_prev" ></a>
+            <a href="javascript:yj_btn_next()" class="yj_btn_next" ></a>
+
+          
+
+        </div>
+       
+      
+        <!--
+        <div class="section2"></div>
+        <div class="section3"></div>
+        <div class="footer"></div>
+        -->
+</body>
+</html>
