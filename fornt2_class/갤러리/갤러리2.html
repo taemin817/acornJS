@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <style>
+        .swiper {
+        width:  600px;
+        height: 50px;
+        }
+    </style>
+
+    <script>
+       //!! 주의사항 문서로드완료된 시점에 사용가능함
+      //   window.addEventListener("load", function(){}); 
+         window.addEventListener("load" , function(){
+
+            const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: true ,
+            autoplay:{
+                  delay:3000
+            } ,
+            speed:1000       
+            }
+            );
+
+
+         });
+    </script>
+</head>
+<body>    
+
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">기온: 영하2도</div>
+          <div class="swiper-slide">따뜻하게 입으세요</div>
+          <div class="swiper-slide">빙판길주의</div>        
+        </div>        
+      </div>
+
+
+
+</body>
+</html>

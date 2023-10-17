@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+.container {
+  display: flex;
+}
+nav {
+  flex: 1;
+  background-color: #ddd;
+}
+main {
+  flex: 5;
+}
+header {
+  background-color: teal;
+  color: #fff;
+  height: 100px;
+}
+section {
+  display: flex;
+}
+
+section article,
+section aside {
+  height: calc(100vh - 200px);  /* contents 내용이 충분하지 않을 때  사용하면됨*/
+}
+
+section article {
+  flex: 4;
+  background-color: pink;
+}
+section aside {
+  flex: 1;
+  background-color: yellow;
+}
+
+footer {
+  background-color: gray;
+  color: #fff;
+  height: 100px;
+}

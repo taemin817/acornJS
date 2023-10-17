@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+   <!--  gsap cdn 자바스크립트 추가 -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    
+    <script >
+    window.addEventListener("load", function(){
+        
+        let fade_ins  = document.querySelectorAll(".fade_in");   
+        fade_ins.forEach( function(  fade_in , index){
+        //   alert(fade_in);
+            gsap.to( fade_in, 1, {     // 애니메이션 지연속도
+                delay: (index +1) *.7 ,    // 
+                opacity:1
+            });        
+        });
+        
+    }); 
+    
+   </script>
+   <style>
+
+    .fade_in{
+        opacity: 0;
+    }
+   </style>
+</head>
+<body>
+    
+
+    <div class="fade_in"  >
+        <img src="../images/badage1.jpg">
+    </div> 
+
+    <div class="fade_in">
+        <img src="../images/badage1.jpg">
+    </div> 
+    <div class="fade_in">
+        <img src="../images/badage1.jpg">
+    </div> 
+   
+</body>
+</html>

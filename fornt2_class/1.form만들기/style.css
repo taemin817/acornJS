@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+*{
+    box-sizing: border-box; /*전체에 박스사이징*/
+    outline: none; /*focus 했을때 테두리 🟠안 나오게 */
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:14px;
+    background-color: #f5f6f7;
+    color : #222;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+.container{
+    width: 460px;
+    /* border: 1px solid red; */
+    margin: auto; /*중앙 정렬*/
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+.logo{
+    display: block;
+    margin: 50px auto;
+}
+.field{ 
+    margin :5px 0; 
+    /* color: blue; */
+}
+b{
+    display: block; /*수직 정렬하기 */
+    margin-bottom: 5px;
+}
+/*input 중 radio 외에 모든 속성 선택 */
+input:not(input[type=radio]), select{
+    border: 1px solid #dadada;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+/* input[type=button], input[type=submit]{
+    background-color: #2db400;
+    color:#fff
+} */
+.green{
+    background-color: #2db400;
+    color: aliceblue;
+    cursor: pointer;
+}
+input:focus, select:focus{
+    border: 1px solid #2db400;
+}
+.birth {
+    display: flex;
+}
+.birthY, .birthM{
+    margin-right: 10px;
+}
+.wrap{ /*전화번호입력, 인증번호받기 위치*/
+    display: flex;
+}
+.field.gender div{
+    border: 1px solid #dadada;
+    padding: 15px 5px;
+    background-color: #fff;
+}
+.placehold-text{
+    display: block; /*span을 블록요소로*/
+    position:relative;
+    border: 1px solid red;
+}
+.placehold-text:after{ 
+    border: 1px solid red;
+    content : "@naver.com";
+    position : absolute; /*before은 inline 요소이기 때문에 span으로 감싸줌 */
+    right : 20px;
+    top : 13px;
+}
+.genderS{ 
+    margin: 0 5px;
+}
+.member-footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.member-footer div a:hover{
+    text-decoration: underline;
+    color:#2db400
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        // gsap 라이브러리
+        // lodash 라이브러리
+
+        window.addEventListener("load", function(){
+           const  badages  = document.querySelector( 'header .badages');
+         //  window.addEventListener("scroll" , 콜백함수  );  
+        //  window.addEventListener("scroll" ,  _.throttle() );  
+        //   window.addEventListener("scroll" , _.throttle(  콜백함수 , 시간) );         
+       
+
+           window.addEventListener("scroll" , _.throttle(function (){       
+
+               if( window.scrollY > 1000){
+                    console.log(  window.scrollY);     
+                    gsap.to( badages,  0.6, { opacity : 1});             /* 0.6 =>  transition*/
+                   
+               }else{                    
+                    
+                     gsap.to( badages,  0.6, { opacity : 0 });
+               }
+
+           } , 1000) ); 
+
+        });
+    </script>
+
+    <style>
+        
+
+        body{         
+            height: 3000px;
+        }
+
+        header{  
+           width: 100%;           
+           position: fixed;
+           top: 0px;
+           background-color: aqua;
+           
+        }
+
+        header .badages{
+            position:absolute;
+            right:10px;
+            top:200px;
+            cursor: pointer;
+        }
+        header .badages .badage{          
+            border-radius:10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+         헤더
+         <div class="badages">
+            <div class="badage">
+                <img src="../images/badage1.jpg" alt>
+            </div>
+            <div class="badage">
+                <img src="../images/badage2.jpg" alt>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

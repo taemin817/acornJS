@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 그림자 효과</title>
+    <style>
+        div{
+            text-align: center;
+            line-height: 170px; /*줄간격*/
+            transition: 1s;
+        }
+        h2{
+            font-size: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+        }
+        .text-box1:hover{
+            text-shadow: 3px 6px 10px #8e3;
+        }
+        .text-box2{
+            text-shadow: 5px 10px 13px hotpink, -5px -10px 13px greenyellow;
+        }
+        .text-box3{
+            text-shadow: 10px 10px 20px hotpink, 20px 20px 30px blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="text-box1">
+        <h2>WEB PUBLISHER</h2>
+    </div>
+
+    <div class="text-box2">
+        <h2>FULL STACK</h2>
+    </div>
+
+    <div class="text-box3">
+        <h2>WEB MASTER</h2>
+    </div>
+</body>
+</html>

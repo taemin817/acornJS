@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    //함수를 리턴하는 경우
+
+      function funcF(){
+          return function (){
+                 alert("hi");
+           }
+      }
+
+      function func(){
+         alert("hi2");
+      }
+    // 지연 실행
+    //setTimeout(funcF, 1000); 
+    setTimeout(funcF(), 1000);
+    setTimeout(func, 1000);  // 함수, 시간
+                // 호출했으니 일단 실행, but 반환값은 없으니 setTimeout이 실행되진않음
+    setTimeout(func(), 1000);  // 함수, 시간
+    </script>
+</body>
+</html>

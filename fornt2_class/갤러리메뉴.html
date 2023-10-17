@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+     
+    </style>
+
+    <script>
+
+        window.addEventListener("load", function(){
+            //작성코드
+            let slides = document.querySelectorAll(".slide-wrap .gallery .slide");
+            let contents=[];  //배열
+            slides.forEach( function( slide , index){
+                 contents[index]= slide.innerHTML;
+            });
+           
+            let index=-1;
+            function nextSlide(){
+                index++;
+                if( index >= contents.length)
+                 index=0;
+
+                let gallery = document.querySelector(".gallery");
+
+              //  alert( contents[index]);
+                gallery.innerHTML = contents[index];
+
+                //애니메이션 효과 
+                gallery.animate( {
+                    transform: [
+                    'translateX(100%)',    //시작
+                    'translateX(0px)'      //도착
+                    ]
+                 },
+                 {
+                     duration:1000               // 위의효과가 1초간 지속되도록
+                 }); 
+            }
+
+             setInterval(  nextSlide , 3000);
+
+        });
+
+    </script>
+
+    <style>
+
+        ul{
+            list-style: none;
+        }
+         .slide-wrap{
+            width:1200px;
+        }
+
+        .gallery{
+            width:100%;
+            height: 500px;
+            border:1px solid black;
+        }
+        .gallery .slide {
+            display: none; 
+        }
+
+          *{
+            padding:0px;
+            margin:0px;
+          }
+
+          .gallery .slide{
+             width:100%;
+             height: 500px;
+          }
+
+          .wrap {
+            width:80%;
+            display: flex;
+            border:1px solid black;
+            margin:0px auto;
+          }
+          .wrap .left{
+            width:60%;
+            height: 500px;
+            border:1px solid black;
+          }
+
+          .wrap .left  div{
+            width: 400px;
+            height: 500px;
+            margin: 0px auto;
+            border:0px solid black;
+            background-color: aqua;
+          }
+
+          .wrap  .right{
+            width:40%;
+            height: 500px;
+            border:1px solid black;
+            background-color: red;           
+          }
+
+ 
+          
+
+    </style>
+
+
+</head>
+<body>
+    
+
+    <div class="slide-wrap">
+        <div class="gallery"> 
+             <!-- 슬라이드 내용  .. 여러개 나올 슬라이드-->
+            <div class="slide">  
+                <div class="wrap">
+                    <div class="left">  
+                        <div>
+                            좌측내용
+                            <h1>당신의 콘마켓</h1>
+                            <h2>언제나 당신곁에...</h2>
+                        </div>           
+                   </div>
+
+                    <div class="right"> 
+                        <div>우측내용
+                             이미지
+                        </div>                       
+                   </div>
+               </div>
+           </div>  <!-- slide-->
+           
+           
+           <div class="slide">  
+            <div class="wrap">
+                <div class="left">  
+                    <div>
+                        좌측내용
+                        <h1>당신의 콘마켓</h1>
+                        <h2>언제나 당신곁에...</h2>
+                    </div>           
+               </div>
+
+                <div class="right"> 
+                    <div>우측내용
+                         이미지
+                    </div>                       
+               </div>
+           </div>
+       </div>  <!-- slide-->   
+
+
+     </div>    <!-- grallery-->
+  </div>     <!-- slide-wrap-->             
+                               
+       
+      
+ 
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS tooltips </title>
+    <style>
+        .tooltip{
+            position: relative;
+            cursor: pointer;
+        }
+        .tooltip-content{
+            visibility: hidden;
+            /* display: none; */
+            background-color: green;
+            width: 400px;
+            padding: 10px;
+            margin: 10px 0;
+            color: aliceblue;
+            font-weight: 800;
+            text-align: center;
+        }
+        .tooltip:hover .tooltip-content{ /*바깥쪽div에 hover했을 때 안 쪽div가 보인다.*/
+            visibility: visible; 
+            /* display: block; */
+        }
+    </style>
+</head>
+<body>
+    <h1>툴팁 효과 visibility</h1>
+    <p> 하단 부분 : visibility속성은 화면에서 감추기만 할 뿐 <br>
+        원래 요소가 있는 공간은 그대로 차지하지만, <br>
+        display:none; 은 아예 공간조차 차지하지 않습니다. <br>
+        (display:block;)
+    </p>
+
+    <div class="tooltip">
+        <span>여기에 마우스를 올려보세요!</span>
+        <div class="tooltip-content">
+            <p>마우스를 올려야 나타나는 툴팁</p>
+        </div>
+    </div>
+</body>
+</html>

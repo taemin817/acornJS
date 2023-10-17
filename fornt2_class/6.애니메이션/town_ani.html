@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: lightblue;
+            /* animation: sky linear 20s infinite; */
+            overflow: hidden;
+        }
+        section{
+            width: 1000px;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -70%);
+        }
+        .sky{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .sun{
+            position: absolute;
+            top:-150px;
+            left:50%;
+            margin-left: -100px;
+            transform-origin: center 500px;
+            animation: sun linear 20s infinite;
+        }
+        h1{
+            width: 1000px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font: 92px/1 "Poiret one";
+            color: aliceblue;
+            text-align: center;
+            transform: translate(-50%, 150%);
+        }
+        .wheel{ /*대관람차*/
+            position: absolute;
+            top:210px;
+            left: 520px;
+            animation: wheel linear 15s infinite;
+        }
+        .cloud2{
+        position: absolute;
+        top: -30px;
+        left: 10%;
+        animation: flow linear 20s infinite;
+        }
+        section .town .day{ /*마을1*/
+        position: absolute;
+        bottom: 0;
+        left: 150px;
+        animation: day linear 20s infinite;
+        }
+        section .town .night{ /*마을2*/
+        position: absolute;
+        bottom: 0;
+        left: 150px;
+        }
+        @keyframes day { /*마을1 숨김*/
+        0%{opacity: 0;}
+        25%{opacity: 1;}
+        50%{opacity: 1;}
+        75%{opacity: 0;}
+        100%{opacity: 0;}
+        }
+        @keyframes flow { /*구름*/
+        0%{left:0%; opacity:0;}
+        10%{opacity:1;}
+        80%{opacity: 1;}
+        100%{left:90%; opacity: 0;}
+        }
+        @keyframes wheel {
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+        @keyframes sky {
+            0%{background-color: pink;}
+            25%{background-color: lightblue;}
+            50%{background-color: rgb(100, 144, 159);}
+            75%{background-color: rgb(60, 60, 115);}
+            100%{background-color: rgb(130, 98, 160);}
+        }
+        @keyframes  sun{
+            0%{opacity:0; transform: rotate(-90deg);}
+            25%{opacity:1; transform: rotate(-30deg);}
+            50%{opacity:1; transform: rotate(30deg);}
+            75%{opacity:0; transform: rotate(90deg);}
+            100%{opacity:0; transform: rotate(-90deg);}
+        }
+    </style>
+</head>
+<body>
+    <h1 class="day"> Have a Nice Day!!</h1>
+    <section>
+        <article class="sky">
+            <img src="../images/sun.png"
+             width="200" class="sun">
+            <img src="../images/cloud.png" class="cloud" width="150">
+            <img src="../images/cloud2.png" class="cloud2" width="100">
+            <div class="town">
+                <img src="../images/town_night.png" width="600px" class="night">
+                <img src="../images/town_day.png" width="600px" class="day">
+                <img src="../images/great_wheel2.png"
+                 width="110px" class="wheel">
+            </div>
+        </article>
+    </section>
+</body>
+</html>

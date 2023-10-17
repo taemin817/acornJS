@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{  /*CSS작성시에 비슷한속성끼리 묶어놓기*/
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: aquamarine;
+            font-size: 30px;
+            line-height: 200px;
+            text-align: center;
+            margin: 50px auto;
+            animation: anima 3s alternate infinite ease-in-out;
+            /* 
+            🔴animation: 키프레임이름 시간 속성값들;
+
+            한 줄로 속성값 입력이 권장사항
+            alternate: 갔다가 왔다가
+            infinite: 무한반복
+            */
+        }
+        @keyframes anima {
+            from{ /*시작*/
+                transform: translate(0,0);
+            }
+            to{ /*끝*/
+                transform: translate(400px,300px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box">animation</div>
+    </div>
+</body>
+</html>

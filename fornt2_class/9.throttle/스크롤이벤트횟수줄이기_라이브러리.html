@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       <style>
+        div{
+            height: 2000px;
+        }
+    </style>   
+    <script> 
+        
+
+        //일정 시간 동안의 이벤트 실행을 막고, 일정시간이 지날 때마다 한번씩 출력한다.
+        //이벤트의 실제 반복 주기와 상관없이 임의로 설정한 일정 시간 간격으로 콜백 함수를 실행한다
+
+        // scroll이벤트가 발생하면 특정코드를 수행하겠다는 의미     
+        // scroll이벤트가 일정 간격으로 수행될 수 있도록 한다
+        window.addEventListener("scroll" , _.throttle( function(){
+            console.log(window.scrollY);                
+        } , 3000));
+    
+    </script>
+
+     
+</head>
+<body>    
+    <div>
+
+    </div>
+</body>
+</html>

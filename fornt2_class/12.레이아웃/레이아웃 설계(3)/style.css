@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+.container {
+  display: flex;
+}
+nav {
+  flex: 1;
+  background-color: #ddd;
+}
+main {
+  flex: 5;
+}
+header {
+  background-color: yellowgreen;
+  height: 100px;
+}
+.inner {
+  display: flex;
+}
+.inner section {
+  flex: 4;
+}
+.inner aside {
+  flex: 1;
+  background-color: #ddd;
+}
+.inner section article {
+  background-color: #ccc;
+  height: calc(100vh - 200px);
+}
+footer {
+  background-color: gray;
+  height: 100px;
+}

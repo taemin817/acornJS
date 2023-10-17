@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="search.php" method="post">
+        <input type="search" title="검색">
+        <input type="submit" value="검색">
+    </form> <br><br>
+    <!--  
+        action : form태그 안의 내용들을 처리해 줄 서버 상의 프로그램 지정        
+        method 사용자가 입력한 내용들을 서버 쪽 프로그램으로 어떻게 넘겨줄지 지정
+        get 방식 : 주소 표시줄에 사용자가 입력한 내용이 그대로 드러남. 256byte~4096byte
+        post 방식 : 길이 제한 받지 않고 사용자가 입력한 내용 드러나지 않는다.
+     -->
+
+     <!--태그 안에 폼 넣기.
+        label로 텍스트(아이디,비밀비밀)와 input을 🟠연결해준다.-->
+    <label for=""> 아이디 <input type="text"> </label> <br> 
+    <label for=""> 비밀번호 <input type="password"></label> <br><br>
+
+    <!--태그와 폼요소 따로 쓰고 연결하기.
+        label로 텍스트(아이디,비밀비밀)와 input을 연결해준다.
+        label for🟠와 input의 id🟠값을 같게 해준다.
+        -->
+    <label for="user-id"> 아이디 </label>
+    <input type="text" id="user-id" name="user-id"placeholder="이름을 입력하세요."> <br>
+    <label for="user-pw"> 비밀번호</label>
+    <input type="password" id="user-pw" name="user-pw" placeholder="비밀번호를 입력하세요."> <br><br>
+
+    이메일 <input type="email" placeholder="aaaaa@naver.com"> <br>
+    주소 <input type="addr" placeholder="주소를 입력해주세요."> <br>
+    휴대폰번호 <input type="phone" placeholder="010-1234-5678" size="13" 
+    maxlength="13" autocomplete="off">
+    <!-- 145쪽
+        size : 텍스트 필드의 길이를 지정 (인풋창 사이즈)
+        maxlength : 필드에 입력할 수 있는 최대 문자 개수 지정 (최대 입력 자리수)
+        autocomplete (입력)자동완성
+        placeholder : 입력창에 나타나는 텍스트 
+    -->
+
+    <h5><mark>radio 버튼 만들기.</mark></h5>
+    <p>성별을 선택해주세요.</p>
+    <label for="male"> <input type="radio" name="gender" id="male" value="s_1" checked> 남성 </label>
+    <label for="female"> <input type="radio" name="gender" id="female" value="s_2"> 여성 </label>
+
+    <!-- radio버튼 택1 할 수 있도록 🔴name을 같은 이름으로 지정한다.
+        🔴value : 선택한 체크박스나 라디오버튼을
+        서버에게 알려줄 때 넘겨줄 값을 지정한다.
+        이 값은 영문이나 숫자여야 하며 🔴필수 속성이다.
+        checked : 항목은 처음에 아무것도 선택되지 않는 상태로 화면에 표시되는데,
+        여러 항목 중에 기본으로 선택해 놓고 싶은 항목 체크. 속성값이 없다.
+     -->
+
+     <!--checkbox는 여러개 선택
+        label의 for와 input의 id값을 맞춰주고 선택부분마다 다른 값을 준다.
+        -->
+     <h5><mark>체크박스 만들기.</mark></h5>
+     <p>이동수단을 선택해주세요.</p>
+     <label for="vehicle1"><input type="checkbox" id="vehicle1" value="v_1"> 자동차</label>
+     <label for="vehicle2"><input type="checkbox" id="vehicle2" value="v_2"> 비행기</label> 
+     <label for="vehicle3"><input type="checkbox" id="vehicle3" value="v_3"> 기차</label>
+
+     <h5><mark>드롭다운 만들기.</mark></h5>
+     <label for="path"> 가입경로</label>
+     <select name="" id="path">
+        <option value="">블로그</option>
+        <option value="">검색</option>
+        <option value="">SNS</option>
+        <option value="">지인추천</option>
+        <option value="">기타</option>
+     </select>
+
+     <h5><mark>숫자 입력하는 number 속성</mark></h5>
+     <label for=""> <input type="number" min="0" max="30" value="10"> 
+        최대 30까지 선택해주세요.</label>
+    
+    <h5><mark>슬라이드 막대 range 속성</mark></h5>
+    <label for=""><input type="range" min="0" max="50" value="20"> 
+        최대 50까지 선택해주세요. </label>
+
+    <br><br>
+    <fieldset>
+        <legend>제목을 나타낸다.</legend>
+    </fieldset>
+    
+    메모 
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+<hr>
+    <h5><mark>컬러 선택</mark></h5>
+    <p>색상을 선택해주세요.</p>
+    <input type="color">
+
+    <h5><mark>날짜 선택</mark></h5>
+    <p>날짜를 선택해주세요.</p>
+    <input type="date"> <br>
+    <p>날짜와 시간 선택</p> <!--예약-->
+    <input type="datetime-local">
+    <p>시간 선택</p>
+    <input type="time">
+    <p>주 선택</p>
+    <input type="week">
+
+    <h5><mark>파일 선택 첨부</mark></h5>
+    <input type="file">
+
+    <!--hidden : 폼 제출 시 사용자가 변경해서는 안 되는 데이터 함께 보낼 때 유용-->
+    <h5><mark>숨겨진 입력필드 hidden</mark></h5>
+    <input type="hidden">
+
+    <!--전체 100에서 60초 진행
+        vlaue : 작업 진행 상태를 나타냄.
+        max : 얼마나 많은 작업을 해야하는지 표현. 0보다 커야 한다.
+    -->
+    <progress value="50" max="100"></progress>
+
+</body>
+</html>

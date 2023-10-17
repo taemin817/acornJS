@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+
+        //문서로드 완료
+        window.addEventListener("load", function(){
+           const  badages  = document.querySelector( 'header .badages');
+           window.addEventListener("scroll" ,   function(){   
+            console.log( scrollY);
+            if( window.scrollY >1000){
+                badages.style.opacity=1;                           
+            
+            }else{
+                badages.style.opacity=0;
+                
+            }
+        });
+    
+    });
+    </script>
+
+    <style>
+        
+
+        body{         
+            height: 3000px;
+        }
+
+        header{  
+           width: 100%;           
+           position: fixed;
+           
+           top: 0px;
+         
+        }
+
+        header .badages{
+            position:absolute;
+            right:10px;
+            top:200px;
+            cursor: pointer;
+            transition: .6s;
+            
+            /*  처음에 투명하게 */         
+            opacity: 0;
+            
+       }
+        
+        header .badages .badage{          
+            border-radius:10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+         헤더
+
+        <div class="badages">
+            <div class="badage">
+                <img src="../images/badage1.jpg" alt>
+            </div>
+            <div class="badage">
+                <img src="../images/badage2.jpg" alt>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

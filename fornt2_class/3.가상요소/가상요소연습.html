@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소 연습</title>
+    <style>
+        ul li{
+            margin: 15px;
+        }
+        .new::after{
+            content: "NEW!!";
+            background-color: red;
+            color: aliceblue;
+            font-size: 10px;
+            padding: 2px 4px;
+            margin: 0 10px;
+        }
+        .popu::before{
+            content: "주문폭주!!";
+            background-color: green;
+            font-size: 14px;
+            color: aliceblue;
+            padding: 2px 4px;
+            margin-right: 10px;
+            border-radius: 5px; /*둥글게*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>제품 목록</h1>
+        <ul>
+            <li class="popu">제품 A</li>
+            <li>제품 B</li>
+            <li>제품 C</li>
+            <li class="new">제품 D</li>
+            <li>제품 E</li>
+        </ul>
+    </div>
+</body>
+</html>

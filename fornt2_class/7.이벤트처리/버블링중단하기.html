@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onclick="alert(`버블링 : body.`)">
+  <div>
+    <button onclick="alert('stop 으로 인해 여기서 끝'); event.stopPropagation();">클릭해 주세요.</button>
+    이건 어때
+  </div>
+  </body>
+</html>

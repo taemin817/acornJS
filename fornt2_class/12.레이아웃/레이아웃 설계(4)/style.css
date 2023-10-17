@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+.container {}
+header {
+  background-color: pink;
+  height: 100px;
+}
+section {
+  display: flex;
+}
+
+nav,
+section article,
+section aside {
+  height: calc(100vh - 200px);
+  /* height: auto;   기본임  */
+}
+
+nav {
+  background-color: #eee;
+  flex: 1;   
+   
+}
+section article {
+  background-color: #ddd;
+  flex: 4;
+}
+section aside {
+  background-color: #ccc;
+   flex: 1;   
+   
+}
+footer {
+  background-color: gray;
+  height: 100px;
+}

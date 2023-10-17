@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+.container {}
+header {
+  background-color: yellowgreen;
+  color: #fff;
+  text-align: center;
+  height: 150px;   /* 헤더의 높이*/
+}
+section {
+  display: flex;
+}
+article,
+aside,
+nav {
+  height: calc(100vh - 300px)   /* calc()함수로 높이 계산하기   header,  footer 높이  뺀다 */
+}
+article {
+  flex: 3;
+  background-color: #eee;
+}
+aside {
+  flex: 1;
+  background-color: #ddd;
+}
+nav {
+  flex: 1;
+  background-color: #ccc;
+}
+footer {
+  background-color: gray;
+  color: #fff;
+  height: 150px;    /* 풋터의 높이*/
+  text-align: center;
+}

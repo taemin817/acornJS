@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 객체 전달받기</title>
+</head>
+<body>
+<span id="p1">마우스를 올려 보세요</span>
+
+<button onclick="f(event)">클릭하세요</button>
+
+<script>
+	
+function f(e) {
+	alert(e.type); 
+	alert(e.target);
+}
+/*
+document.getElementById("p1").addEventListener("mouseover", function(){
+	alert("hi");
+	alert(e.type); // 매개변수가 없으면 안나옴
+	alert(e.target); // 매개변수가 없으면 안나옴
+});
+*/
+//	화살표 함수
+document.getElementById("p1").addEventListener("mouseover", () => {
+    alert("hi");
+    alert(e.type);
+    alert(e.target);
+});
+</script>
+</body>
+</html>

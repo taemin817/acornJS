@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .box{
+            border: 1px solid;
+            height: 60px;
+            margin-top: 50px;
+            margin-left: 100px;
+            padding: 20px;
+            animation-name: moving;
+            animation-duration: 3s;
+            animation-direction: normal;
+            animation-iteration-count: infinite;
+        }
+        /* animation-iteration-count: 2  */
+
+            /*
+            애니메이션 방향
+            animation-direction : normal;
+            animation-direction : reverse;
+            animation-direction : alternate;
+            animation-direction : alternate-reverse
+            */
+
+            /*애니메이션 반복횟수
+            animation-iteration-count : infinite   무한반복*/
+        @keyframes moving {
+            from{
+                width: 200px;
+                background-color: orange;
+                opacity: 0.5; /*불투명도 0~1까지 */
+                transform: scale(0.5) rotate(15deg);
+            }
+            to{
+                width: 400px;
+                background-color: orange;
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>CSS3 Animation</h3>
+    </div>
+</body>
+</html>

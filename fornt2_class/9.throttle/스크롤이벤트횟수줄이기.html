@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 2000px;
+        }
+    </style>
+   
+    <script>
+       function MyThrottle(callback, ms =1000) {  //기본값 설정
+        let timer = null;
+        return function ( ) {   // 지정된 시간에 한번씩  콘솔에 scrollY값을 출력함  
+            if (timer == null) {
+                timer = setTimeout(() => {
+                callback();
+                timer = null;
+            }, ms);
+            }
+        };
+      }
+    
+        
+        window.addEventListener("scroll",   MyThrottle(  function(){
+            console.log( scrollY);                
+        } , 3000));
+
+    
+    </script>
+
+     
+</head>
+<body>    
+    <div>
+
+    </div>
+</body>
+</html>

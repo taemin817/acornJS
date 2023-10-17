@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+  .wrap{
+    border: 1px solid blue;
+    width: 100px;
+    position: relative;
+  }
+  .line{
+    width: 0px;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+  }
+
+  .wrap:hover .line{
+    width: 100%;
+  }
+  .menu-item{
+    position: relative;
+    width: 100px;
+  }
+  /*  가상요소 사용하기  */
+  .menu-item::after{
+    content:"";/*내용이 없더라도 필수적으로 써야함 "" 이런 식으로*/
+    position:absolute;
+    bottom: 0px;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 2px;
+    background-color: purple;
+    transition: .3s;
+  }
+  .menu-item:hover::after{
+    width: 100%;
+  }
+  </style>
+</head>
+
+<body>
+ <p> 가상요소 사용하기</p>
+  <ul class="menu">
+    <li class="menu-item">메뉴 1</li>
+    <li class="menu-item">메뉴 2</li>
+  </ul>
+
+
+  <p>밑줄 요소를 직접 추가하기 </p>
+    <div class="wrap">메뉴 1<div class="line"></div>
+    </div>
+
+</body>
+
+</html>

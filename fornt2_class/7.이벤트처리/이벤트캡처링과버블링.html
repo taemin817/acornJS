@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body * {
+          margin: 10px;
+          border: 1px solid blue;
+        }
+      </style>
+</head>
+<body> 
+      
+      <form>FORM
+        <div>DIV
+          <p>P</p>
+        </div>
+      </form>
+      
+      <script>
+        /*for(let elem of document.querySelectorAll('*')) {
+          elem.addEventListener("click", function(e){
+               console.log(e);
+               alert("캡처링" + elem.tagName);
+          }, true);
+          elem.addEventListener("click", e => alert(`버블링: ${elem.tagName}`));
+        }
+        */
+           let tags=  document.querySelectorAll('*');
+           for(let i=0; i< tags.length; i++ ) {
+                tags[i].addEventListener("click", function(e){
+                console.log(e);
+                alert("캡처링" + tags[i].tagName);
+          }, true);
+           tags[i].addEventListener("click", e => alert(`버블링: ${tags[i].tagName}`));
+        }
+         
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .swiper {
+        width:  600px;
+        height: 50px;
+     }
+    </style>
+
+    <script>
+        let contents=[ "영하2도" , "따뜻하게입으세요 " , "빙판길주의"];
+        let index=-1;
+
+        function nextSlide(){
+            index++;
+            if(index >= contents.length)    // 0 1 2  0 1 2  0 1 2
+               index=0;
+
+            let gallery = document.querySelector(".slide-wrap .gallery");
+            gallery.innerHTML=contents[index];   
+            
+            
+            //애니메이션효과
+            gallery.animate( {
+                    transform: [
+                    'translateY(100%)',    //시작
+                    'translateY(0px)'      //도착
+                    ]
+                 },
+                 {
+                     duration:1000               // 위의효과가 1초간 지속되도록
+                 });            
+          
+
+
+        }
+
+        //window.addEventListener("load" , function(){});
+        window.addEventListener("load" , function(){
+           // alert("load");
+           // nextSlide();
+            setInterval( nextSlide ,  3000)  ;  // 콜백함수  , 시간         
+        });
+
+
+    </script>
+
+</head>
+<body>
+
+
+    <div class="slide-wrap">
+        <div class="gallery">갤러리화면</div>
+    </div>
+    
+</body>
+</html>

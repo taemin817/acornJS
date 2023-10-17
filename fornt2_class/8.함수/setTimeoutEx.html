@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const timeoutId = setTimeout( () => alert("1초 후에 실행") , 3000);
+         
+
+        function stop(){
+            clearTimeout(timeoutId);
+        }
+    </script>
+
+
+      <button onclick="stop()">클릭</button>
+
+</head>
+<body>
+    
+</body>
+</html>

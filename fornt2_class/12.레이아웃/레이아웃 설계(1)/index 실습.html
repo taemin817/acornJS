@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> 레이아웃 설계(1)</title>
+	<style>
+		header{
+			height: 200px;
+			background-color: coral;
+		}
+		section{
+			display: flex;
+						/* 빼기 연산자 전후로 공백이 있어야함*/
+			height: calc(100vh - 400px); /*viewpoint 높이값(단위 : %) : vh*/
+			background-color: aquamarine;
+		}
+		article{
+			width: 43%;
+			height: calc(100vh - 400px);
+			overflow: hidden;		 /* 초과부분은 숨김 */
+  			text-overflow: ellipsis; /* ... 을 만들기 */
+			white-space: pre-line;	 /* 줄바꿈(enter를 눌러 바꿔준 경우, 요소의 너비 초과시) */
+			text-align: left;
+			background-color: chocolate;
+		}
+		aside{
+			width : 25%;
+			height: calc(100vh - 400px);
+			background-color: violet;
+		}
+		nav{
+			width: 22%;
+			height: calc(100vh - 400px);
+			background-color: skyblue;
+		}
+		footer{
+			height: 200px;
+			background-color: darkslategrey;
+		}
+	</style>
+</head>
+<body>
+
+
+	<!--  footer가 항상 바닥에 있게 하기 !  내용이 많이지는 화면인경우는 높이를 주지 말아야 한다. 내용이 적은 경우의 화면일 경우 적용한다
+	   section :  calc( 100vh  -  200px)     viewport 높이에서 헤더와 풋터의 높이를 뺀다
+	-->
+	<div class="container">
+		<header>Header</header>
+		<section>
+			<article>Article<br/>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem ad ratione ullam porro saepe magnam sunt cum rem explicabo vel tenetur, veritatis nostrum placeat facere in tempore, fugit animi aspernatur? Pariatur consectetur et fuga veritatis quas delectus velit sequi? Eveniet corporis perspiciatis porro odit quasi? Eos animi officiis ea molestiae cumque provident earum debitis voluptatum magnam similique eius saepe ipsum neque illum aliquid deleniti, vitae autem cum minima molestias iste optio sint! Vel a nesciunt voluptates blanditiis. Delectus, autem dignissimos quo modi libero quia doloribus vel sit, et omnis voluptate voluptas esse consectetur vitae quis. Beatae perferendis minima cupiditate tempora illum sed maxime neque! A laborum corrupti aperiam possimus esse blanditiis voluptas facere expedita est eveniet enim alias itaque sint repellendus debitis, obcaecati deleniti? Soluta fugiat est, repellat laborum debitis dicta eveniet vero pariatur animi fugit quisquam perferendis praesentium iusto maiores. Harum dolorum distinctio veniam porro similique expedita tempora laudantium, non dignissimos voluptate eos omnis iste officiis rerum saepe ab ipsum iure ea? Perferendis velit ab asperiores harum cumque ducimus vel incidunt fuga assumenda repudiandae ea, hic voluptatibus dolores soluta esse consequatur itaque porro ipsa nesciunt! Ducimus corrupti expedita molestias odit quisquam non quae quibusdam laboriosam nesciunt ex debitis libero cumque repellendus, provident voluptas qui rerum, explicabo est facilis porro illum corporis amet ullam. Sed temporibus aperiam modi dolorem corrupti repudiandae sit, praesentium consequatur eum hic, quae possimus dicta expedita maxime iusto enim ipsam unde ratione. Nobis accusamus illo accusantium voluptatem! Ullam esse quos, et cum autem vel labore ut cumque enim doloribus in, modi qui corrupti sapiente aut tempore temporibus libero. Perspiciatis, neque nemo minima optio inventore maxime fugit at soluta nisi exercitationem! Corrupti ea eaque molestiae praesentium magni alias laudantium minima quia ad ducimus numquam veritatis neque architecto odio fugit, ipsum quidem tenetur labore voluptates itaque laborum voluptatem aliquam! Porro quia cum quod incidunt illo quo fugit consectetur neque fugiat corrupti, provident modi perspiciatis quaerat, blanditiis veniam! Voluptate, adipisci! Velit sunt repellendus animi. Asperiores autem laboriosam ipsa obcaecati ad porro tenetur dignissimos recusandae consequatur nihil commodi et corrupti quo veritatis, illum voluptas perspiciatis? Harum, porro labore illum alias ipsum atque cumque possimus modi amet! Perferendis id sit ex iste aperiam, aliquam hic maiores temporibus unde dolore commodi saepe eos et totam excepturi veniam, aspernatur blanditiis ipsum consectetur ipsa. Neque repudiandae cum distinctio aut doloribus, sed dignissimos, totam ullam, voluptas explicabo repellendus adipisci nisi reprehenderit voluptatem autem debitis temporibus quod placeat iusto quo. Magnam magni consequuntur placeat sint, facilis, voluptas dolore quam vitae iusto quae delectus incidunt molestiae at. Facere obcaecati delectus iste repudiandae et rerum nulla odio quos! Officiis illum eveniet aliquam possimus dolorum provident architecto velit odio, sed, natus omnis amet quasi rem tempora, unde ex eos sint modi reiciendis soluta animi ullam esse magni? Ducimus praesentium explicabo modi hic nemo, ad consequuntur quaerat blanditiis aliquid quidem magni autem officiis. Laudantium nisi pariatur dolorum labore illum illo molestiae, quibusdam ducimus itaque similique assumenda corrupti, officia incidunt nulla harum quae inventore libero! Pariatur perferendis laboriosam tempore distinctio eaque.
+			</article>
+			<aside>Aside</aside>
+			<nav>Nav</nav>
+		</section>
+		<footer>Footer</footer>
+	</div>
+
+</body>
+</html>

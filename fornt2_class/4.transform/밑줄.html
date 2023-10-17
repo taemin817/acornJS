@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .menu,
+    .wrap {
+      width: 200px;
+      text-align: center;
+    }
+
+    /* HTML 요소에 적용되는 클래스명을 예로 들었습니다. 필요에 따라 변경해주세요. */
+    .menu-item,
+    .wrap {
+      position: relative;
+    }
+
+    .menu-item::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #c00e0e;
+      /* 줄의 색상을 원하는 색상으로 변경해주세요. */
+      transition: all 0.3s ease-in-out;  /*width*/
+      transform: translateX(-50%);
+    }
+
+    .menu-item:hover::after {
+      width: 100%;
+    }
+
+    .line {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #c00e0e;
+      /* 줄의 색상을 원하는 색상으로 변경해주세요. */
+      transition: width 0.3s ease-in-out;
+      transform: translateX(-50%);
+
+
+    }
+
+    .wrap:hover .line {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="menu">
+    <li class="menu-item">메뉴 1</li>
+    <li class="menu-item">메뉴 2</li>
+  </ul>
+
+
+  <div class="wrap">메뉴3 직접라인 요소 추가
+    <div class="line"> </div>
+
+  </div>
+
+</body>
+
+</html>

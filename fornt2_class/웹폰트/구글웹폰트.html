@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    /*  구글 웹 폰트 사용하기 */
+    @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+    
+    /* 
+    웹폰트 설치 되어있지 않아도 어디서든 해당 폰트(글꼴)로 보여진다. */
+
+    body{
+        background: url(https://cdn.pixabay.com/photo/2017/05/24/12/07/blue-2340389__340.jpg);
+    }
+      .container{
+        border: solid 1px lightgray; /*테두리 : 실선 */
+        width: 700px;
+      }
+      h1 {
+        width: 450px;
+        background-color: rgba(104, 65, 15, 0.829);
+        color: rgb(240, 240, 240);
+      }
+      h3 {
+        font-size: 24px;
+      }
+      span{
+        color: blue;
+      }
+      p{
+        font-size: 33px;
+        font-family: 'Dongle', sans-serif; /*글꼴*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>[날씨] 내일 아침 쌀쌀,</h1>
+      <h3>한낮 포근... 내륙 짙은 안개</h3>
+      <p>
+        오늘도 쌀쌀했던 아침과 달리, 낮에는 꽤나 따뜻했는데요. 해가 지고 기온이
+        빠르게 떨어지고 있습니다. 이렇게 <span>15도 안팎으로</span> 크게 나는 일교차에 건강
+      </p>
+    </div>
+  </body>
+</html>

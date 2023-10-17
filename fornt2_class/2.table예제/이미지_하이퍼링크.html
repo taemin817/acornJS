@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 하이퍼텍스트 링크 연습 </title>
+</head>
+<body>
+    <h1>텍스트 링크 만들기</h1>
+    <p>문단태그 내용 안에서 <a href="http://www.naver.com" target="_blank">링크부분 </a>
+        네이버로 이동 </p>
+
+        <!--  
+            a태그의 속성 정리
+            _black : 링크 내용이 새 창이나 새 탭에서 열립니다.
+            _self : targer속성의 기본 값
+            _parent : 프레임을 사용했을 때 링크 내용을 부모 프레임에 표시
+            _top : 프레임에서 벗어나 링크 내용을 전체 화면에 표시            
+                    아이프래임 <iframe> 에 적용해보기. 
+         -->
+
+    확장자가 png인 웹페이지 로고 3가지 파일 다운로드
+    각각 링크 연결 만들어보세요. <br><br>
+    <a href="http://www.google.com"> 구글사이트 이미지저장(상대경로) 
+        <img src="../images/google_logo.png" alt="구글 로고" width="100"> </a>
+    <br><br>
+    <a href="http://www.google.com"> 구글사이트 이미지주소복사 
+        <img src="https://e7.pngegg.com/pngimages/303/475/png-clipart-google-search-google-logo-company-service-google-company-text-thumbnail.png" 
+        alt="구글 로고" width="100"></a>
+
+    <br><br>
+    <iframe src="test01.html" width="600" height="400"></iframe>
+    <p> <a href="http://www.google.com" target="_top">구글</a></p>
+
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> 레이아웃 설계(1)</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+	<!--  footer가 항상 바닥에 있게 하기 !  내용이 많이지는 화면인경우는 높이를 주지 말아야 한다. 내용이 적은 경우의 화면일 경우 적용한다
+	   section :  calc( 100vh  -  200px)     viewport 높이에서 헤더와 풋터의 높이를 뺀다
+	-->
+	<div class="container">
+		<header>Header</header>
+		<section>
+			<article>Article</article>
+			<aside>Aside</aside>
+			<nav>Nav</nav>
+		</section>
+		<footer>Footer</footer>
+	</div>
+
+</body>
+</html>

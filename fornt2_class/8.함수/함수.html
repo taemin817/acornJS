@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        
+        function a(){
+            alert("function a");
+        }
+
+
+        
+        let b = function(){
+            alert("function b");
+        }
+
+        a();
+        b();
+
+
+        function c(){
+            return "function c";
+        }
+        let result = c();
+        alert( result);
+
+        function d(){            
+            
+            return function(){
+                 alert("function d 함수리턴");
+            }
+        }
+
+        let result2 = d();
+        result2();
+
+        // return이 function인 경우
+        function e(){
+
+            return function(){
+                document.write(c())
+            }
+        }
+
+        let result3 = e();
+        result3();
+    </script>
+</body>
+</html>

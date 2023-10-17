@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 객체 전달받기</title>
+</head>
+<body>
+<p id="p1">마우스를 올려 보세요</p>
+
+<button onclick="f(event)">클릭하세요</button>
+
+ 
+<script>
+
+	//이벤트 처리함수 ( 이벤트 핸들러)는   발생한 이벤트 정보를 매개변수로 받게 되어 있다.
+	
+function f(e) { // e는 현재 발생한 이벤트 객체
+	alert(e.type); // 이벤트 종류 출력
+	alert(e.target); // 이벤트 대상 출력
+ 
+	 
+}
+
+//document.getElementById("p1").onmouseover = f;
+ document.getElementById("p1").addEventListener("mouseover",  function(e) {  alert( e.target );});
+//document.getElementById("p1").addEventListener( "mouseover", (e) => {alert( e.target); console.log(e);});
+ 
+ 
+</script>
+</body>
+</html>

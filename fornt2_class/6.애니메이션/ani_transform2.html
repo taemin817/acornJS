@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Transform</title>
+<style>
+	.box {
+		width: 60px;
+		height: 60px;
+		margin: 60px;		 
+		animation: rotate 1.5s infinite, bg 1.5s infinite alternate; 
+                                                                   /* 애니메이션이름, 지속시간, 반복횟수, 애니메이션의 진행 방향*/
+	}
+
+	 
+	
+	@keyframes rotate {
+		from {
+			transform:    rotateX(0deg) rotateY(0deg);
+		}
+		50% {
+			transform:   rotateX(-180deg) rotateY(0deg);
+		}
+		to {
+			transform:  rotateX(-180deg) rotateY(-180deg);
+		}
+	}
+
+	 
+	@keyframes bg {
+		from {
+			background: red;
+		}
+
+		50% {
+			background-color: green
+		}
+
+		to {
+			background-color: blue;
+		}
+	}
+</style>
+</head>
+
+<body>
+	<div class="box">	</div>
+</body>
+</html>

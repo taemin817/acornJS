@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        display: flex;
+        width: 800px;
+        height: 500px;
+     
+        position: relative;
+
+        border:1px solid black;
+      }
+      img {
+        height: 100%;
+        object-fit: cover;
+        /*
+        contain: 대체 콘텐츠가 요소 내에 비율을 유지하면서 완전히 들어가도록 크기를 조절합니다. 비어 있는 공간이 발생할 수 있음
+        cover: 대체 콘텐츠가 요소를 완전히 채우도록 크기를 조절하며, 비율을 유지합니다. 요소의 크기에 따라 일부 콘텐츠가 잘릴 수 있음
+        */
+       
+        width: 800px;
+        animation: slide 8s infinite;
+      }
+      h1{
+        position: absolute;
+        color: aliceblue;
+        z-index: 99;
+        font-size: 100px;
+        position: absolute;
+        left: 105px;
+        top:160px
+      }
+      @keyframes slide {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(-800px, 0);
+        }
+        50% {
+          transform: translate(-1600px, 0);
+        }
+        75% {
+          transform: translate(-2400px, 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        } 
+      }
+    </style>
+
+<script>
+  function  stop(){
+    let imgs  = document.querySelectorAll("img");
+    imgs.forEach( (box) => { box.style.animationPlayState = 'paused'; });
+      
+  }
+
+  function  replay(){
+    let imgs  = document.querySelectorAll("img");
+    imgs.forEach( (box) => { box.style.animationPlayState = 'running'; });
+      
+  }
+
+</script>
+
+
+
+
+ 
+  </head>
+  <body>
+    <section>
+      <div class="box">
+        <h1>ANIMATION</h1>
+        <div  ><img src="../images/badage1.jpg" alt=""></div>
+        <div  ><img src="../images/badage2.jpg" alt=""></div>
+        <div  ><img src="../images/badage1.jpg" alt=""></div>
+        <div  ><img src="../images/badage2.jpg" alt=""></div>
+      </div>
+
+
+      <button onclick="stop()"> 중지</button>
+      <button onclick="replay()"> 다시시작</button>
+      
+    </section>
+  </body>
+</html>

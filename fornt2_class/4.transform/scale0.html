@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 1px solid gray;
+            width: 800px;
+            height: 250px;
+            margin: 20px auto;
+        }
+        .box{
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+            margin:30px;
+            display: inline-block;
+        }
+        .box > div{
+            width: 150px;
+            height: 150px;
+            background-color: green;
+        }
+        .movex:hover{
+            transform: scaleX(2);
+        }
+        .movey:hover{
+            transform: scaleY(2);
+        }
+        .movexy:hover{
+            transform: scale(0.7);
+        }
+    </style>
+</head>
+<body>
+    <div  class="container">
+        <div class="box">
+            <div class="movex"></div>
+        </div>
+        <div class="box">
+            <div class="movey"></div>
+        </div>
+        <div class="box">
+            <div class="movexy"></div>
+        </div>
+    </div>
+</body>
+</html>

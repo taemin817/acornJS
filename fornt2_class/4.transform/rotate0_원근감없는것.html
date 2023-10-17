@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 850px;
+            margin: 20px auto;
+        }
+        .origin{
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+            margin: 30px;
+           
+        }
+        .origin>div{
+            width: 150px;
+            height: 150px;
+            background-color: yellowgreen;
+            transition: 3s; /*3초 동안*/
+        }
+        #rotatex:hover{  /*x축으로 55도 회전*/
+            transform: rotatex(55deg);
+        }
+        #rotatey:hover{  /*y축으로 55도 회전*/
+            transform: rotatey(55deg);
+        }
+        #rotatez:hover{  /*z축으로 55도 회전*/
+            transform: rotatez(55deg);
+        }
+        #rotatexyz:hover{  /*3D (x,y,z)축으로 55도 회전*/
+            transform: rotate3D(2.5,1.2,-1.2,55deg);
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="origin">
+            <div id="rotatex"></div>
+        </div>
+        <div class="origin">
+            <div id="rotatey"></div>
+        </div>
+        <div class="origin">
+            <div id="rotatez"></div>
+        </div>
+        <div class="origin">
+            <div id="rotatexyz"></div>
+        </div>
+    </div>
+</body>
+</html>
