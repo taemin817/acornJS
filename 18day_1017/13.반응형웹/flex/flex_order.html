@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent{  
+            width: 100%;   
+            height: 1000px;       
+            display: flex;         
+            justify-content: center;              
+            border:1px solid black;
+            color:white;
+            font-size: 2em;
+        }
+      
+      .child{         
+        height: 100px;  /* 부모 너비만큼 늘어남 */
+        width: 100px;
+        background-color: cornflowerblue;
+        border: 1px solid black;
+        margin: 5px;
+      }
+
+      .child:nth-child(1){
+        background-color: red;
+        order:1;
+        
+      }
+      .child:nth-child(2){
+        background-color: rgb(0, 255, 170);
+        order:2;
+        
+        
+      }
+      .child:nth-child(3){
+        background-color: rgb(67, 103, 91);        
+        order:0;
+      }
+
+      /*
+플렉스 자식요소의 순서를 강제로 설정하는 속성인
+order속성에 사용하는 숫자는 0,1,2,3 
+기본값이 0이기 때문에 order를 주지 않으면 첫번째에 배치됨
+
+order: 정수값
+
+      */
+ @media (max-width: 767px) {
+  .parent{  
+    flex-direction: column;
+  }
+  .child{
+    width: 100%;
+  }
+  .child:nth-child(1){
+        background-color: red;
+        order:0;
+        
+   }
+   .child:nth-child(2){
+        background-color: rgb(0, 255, 170);
+        order:1;
+        
+        
+      }
+      .child:nth-child(3){
+        background-color: rgb(67, 103, 91);        
+        order:2;
+      }
+}
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        
+    </div>
+    
+</body>
+</html>

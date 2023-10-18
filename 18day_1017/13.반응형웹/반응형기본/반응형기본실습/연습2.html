@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> </title>
+	<style>
+ 
+  .parent{
+    display: flex;   
+    flex-wrap: wrap; 
+  }
+
+  .child{
+     /* width: calc(100% /3);*/
+     flex:1;
+     border:1px solid black; 
+     
+  }
+
+  .child:nth-child(1){
+    background-color:red ;
+  }
+
+  .child:nth-child(2){
+    background-color:green ;
+  }
+
+  .child:nth-child(3){
+    background-color:blue ;
+  }
+
+
+  
+  /**/
+  @media (max-width: 767px) {
+    .parent{
+     flex-direction: column;      
+   }
+   .child:nth-child(1){
+   order:3 ;
+  }
+
+  .child:nth-child(2){
+    order:1 ;;
+  }
+
+  .child:nth-child(3){
+    order:2 ;
+  }
+
+
+}  
+	</style>
+<body>
+
+	<div class="parent">
+		<div class="child">1</div>
+		<div class="child">2</div>
+		<div class="child">3</div>
+	</div>
+
+</body>
+</html>

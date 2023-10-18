@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent{
+            width: 500px;    /*width: 100vw;*/
+            height: 200px;   /* height: 200vh; */
+            display: flex;
+            flex-direction: column;   /* 방향 컬럼 (세로)  */
+            justify-content: center; /*  방향컬럼일 때  수직 가운데맞춤 된다 ( 가로 가운데 반대라고 생각하면 된다)  */
+            align-items: center;  
+            border: 1px solid black;
+        }
+      
+      .child{
+        width: 100px;
+        height: 100px;
+        background-color: cornflowerblue;
+        border: 1px solid black;
+        margin: 10px 0; /* 수정: 자식 요소 간격을 조절합니다. */
+      }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    
+</body>
+</html>

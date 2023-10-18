@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> </title>
+	<style>
+ 
+.parent{
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width:500px){
+  .parent{
+    flex-direction: column;
+  }
+}
+
+.child{
+  border: 1px solid black;
+  flex: 1;
+  text-align: center;
+}
+
+@media (max-width:500px){
+  .child{
+  text-align: left;
+  
+}
+  .child:nth-child(1){
+  order:2;
+}
+.child:nth-child(2){
+  order:3;
+}
+.child:nth-child(3){
+  order:1;
+}
+}
+	</style>
+<body>
+
+	<div class="parent">
+		<div class="child">1</div>
+		<div class="child">2</div>
+		<div class="child">3</div>
+	</div>
+
+</body>
+</html>

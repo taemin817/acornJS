@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flex UI 실전 제작(5) – 반응형 이미지 갤러리</title>
+	<style>
+
+		/* header 영역*/
+		section{
+			width: 950px;
+			margin: 0 auto;
+			border: 1px solid black;
+		}
+		a{
+			text-decoration: none;
+			color: black;
+		}
+		.section-header{
+			text-align: right;
+			padding: 30px 0;
+			border: 1px solid black;
+		}
+
+		/* search 영역 */
+		.search-box{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.search-box .search-bar{
+			border: none;
+			border-bottom: 1px solid black;
+			font-size: 18px;
+			padding-left: 10px;
+			width: 300px;
+			box-sizing: border-box;
+
+			background-image: url(images//search.png);
+			background-repeat: no-repeat;
+			background-size: 22px;
+			background-position: right;
+		}
+		.search-box button{
+			border: none;
+			background-color: crimson;
+			color: #fff;
+			padding: 13px 60px;
+			border-radius: 6px;
+			font-size: 18px;
+			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.452);
+			transition: .3s
+		}
+		.search-box:hover button{
+			background-color: black;
+		}
+
+		/* itmes 영역 */
+		.items{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.item{
+			width: 310px;
+			height: 200px;
+			border: 1px solid black;
+			overflow: hidden;
+			position: relative;
+		}
+		.item img{
+			width: 100%;
+		}
+		.item .desc{
+			position: absolute;
+			background-color: gray;
+			width: 100%;
+			height: 60px;
+			left: 0;
+			bottom: -60px;
+			opacity: 0.5;
+			transition: 1s;
+		}
+		.item:hover .desc{
+			bottom: 0px;
+		}
+
+		@media(max-width:800px){
+			section{
+				width: 100%;
+				padding: 20px;
+				box-sizing: border-box;
+			}
+			.section-header{
+				
+			}
+			.search-box{
+				margin-top: 30px;
+				flex-direction: column;
+			}
+			.search-box .search-bar{
+				width: 100%;
+				margin-bottom: 30px;
+			}
+			.search-box button{
+				margin-bottom: 30px;
+			}
+			.item{
+				width: 100%;
+
+			}
+		}
+	</style>
+<body>
+    <!--freepik  site  무료이미지 다운로드  -->
+	<section>
+		<!-- header -->
+		<div class="section-header">
+				<a href="#none">Photoshop</a>
+				<a href="#none">Illustrator</a>
+				<a href="#none">Publishing</a>
+		</div>
+		<!-- search -->
+		<div class="search-box">
+			<input class="search-bar" type="text" placeholder="Search">
+			<button>Designer Profile</button>
+		</div>
+		<!-- gallery wrap -->
+		<div class="items">
+			<!-- gallery item -->
+			<div class="item">
+				<img src="images/p1.jpg">
+				<!-- 숨겨놓을 영역 -->
+				<div class="desc">
+					<h6>Image Title</h6>
+					<div class="like">
+							<i class="fa fa-heart"></i> 300 Likes			 
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/p2.jpg">
+				<!-- 숨겨놓을 영역 -->
+				<div class="desc">
+					<h6>Image Title</h6>
+					<div class="like">
+						<i class="fa fa-heart"></i> 300 Likes			 
+				</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/p3.jpg">
+				<!-- 숨겨놓을 영역 -->
+				<div class="desc">
+					<h6>Image Title</h6>
+					<div class="like">
+						<i class="fa fa-heart"></i> 300 Likes			 
+				</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/p4.jpg">
+				<!-- 숨겨놓을 영역 -->
+				<div class="desc">
+					<h6>Image Title</h6>
+					<div class="like">
+						<i class="fa fa-heart"></i> 300 Likes			 
+				</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/p5.jpg">
+				<!-- 숨겨놓을 영역 -->
+				<div class="desc">
+					<h6>Image Title</h6>
+					<div class="like">
+						<i class="fa fa-heart"></i> 300 Likes			 
+				</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/p6.jpg">
+				<!-- 숨겨놓을 영역 -->
+				<div class="desc">
+					<h6>Image Title</h6>
+					<div class="like">
+						<i class="fa fa-heart"></i> 300 Likes			 
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>

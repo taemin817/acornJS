@@ -1,0 +1,133 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #222;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Reset CSS */
+a { text-decoration: none; color: #fff; }
+h1,h2,h3,h4,h5,h6 { margin: 0; font-weight: normal; }
+button { cursor: pointer; outline: none; }
+input,textarea,select { outline: none; }
+button,input,textarea,select { font-family: 'Noto Sans KR', sans-serif; }
+
+section {
+  width: 1200px;
+  margin: auto;
+}
+.consulting-header {
+  text-align: center;
+}
+.consulting-header h1 {
+  font-size: 32px;
+}
+.consulting-header h1 span {
+  color: crimson;
+}
+.consulting-header hr {
+  border: none;
+  width: 100px;
+  height: 3px;
+  background-color: skyblue;
+  margin: 25px auto;
+}
+
+/* form */
+.consulting-form form {
+  border-top: 5px solid #ddd;
+  padding: 30px 0;
+}
+.consulting-form form label em {
+  color: red;
+  font-style: normal;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+.row .field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 30px;
+}
+.row .field label {
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+.row .field input,
+.row .field textarea,
+.row .field select {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 7px;
+  transition: 0.3s;
+}
+.row .field input:hover,
+.row .field textarea:hover {
+  border: 1px solid skyblue;
+  box-shadow: 0 0 5px skyblue;
+}
+.row .field input:focus,
+.row .field textarea:focus {
+  background-color: #eee;
+  /* border: 1px solid skyblue;
+  box-shadow: 0 0 5px skyblue; */
+}
+.row .field textarea {
+  /* height: 100px; */
+}
+
+/* Policy */
+.policy h4 {
+  margin-bottom: 15px;
+}
+.policy iframe {
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 100px;
+  border-radius: 3px;
+  padding: 7px;
+  box-sizing: border-box;
+}
+.btn-submit {
+  border: 1px solid #555;
+  background-color: #fff;
+  padding: 7px 50px;
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+}
+.btn-submit:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .consulting-header h1 {
+    font-size: 22px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .row .field {
+    margin: 5px 0;
+  }
+  .btn-submit {
+    width: 100%;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> </title>
+	<style>
+.parent {
+  display: flex;
+  justify-content: center; 
+}
+.child {
+  background-color: greenyellow;
+  text-align: center;
+  border-radius: 5px;
+  height: 200px;
+  margin: 5px;
+  font-size: 3em;
+  line-height: 200px;  
+  flex : 1; 
+}
+
+  
+@media (max-width: 767px) {
+    .parent{
+     flex-direction: column;
+   }
+}  
+	</style>
+<body>
+
+	<div class="parent">
+		<div class="child">1</div>
+		<div class="child">2</div>
+		<div class="child">3</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+
+  /*  큰박스가 가운데 위치하게( parent) */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;   /* 높이 뷰포트 높이로 정한다*/
+}
+.parent {
+  border: 1px solid red;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.child {
+  background-color: rgb(24, 42, 99);
+  color: #fff;
+  margin: 15px;
+  height: 150px;
+  width: calc(50% - 30px);   /*양쪽 마진 더한 값 빼줌*/
+
+  /* child div 안의  글씨를 정 중앙에 위치함 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

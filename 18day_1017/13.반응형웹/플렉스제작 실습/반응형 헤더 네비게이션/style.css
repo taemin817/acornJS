@@ -1,0 +1,164 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+ 
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #eee;
+  font-size: 15px;
+  color: #222;
+  margin: 0;
+}
+
+/* Reset CSS */
+a {
+  text-decoration: none;
+  color: #222;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  font-weight: normal;
+}
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+/* Header */
+header {
+  background-color: #0984e3;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+}
+nav {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {}
+.logo img {
+  filter: invert();
+}
+.gnb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.gnb li {}
+.gnb li a {
+  color: #fff;
+  margin: 10px;
+}
+.sns {
+  text-align: center;
+}
+.sns a {
+  color: #fff;
+  margin: 5px;
+}
+.gnb li a:hover,
+.sns a:hover {
+  color: #000;
+}
+.trigger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* Header */
+  header {
+    height: auto;
+  }
+  nav {
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+  }
+  .logo {
+    padding: 10px;
+  }
+  .gnb {
+    flex-direction: column; 
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+ 
+  .gnb li a {
+    display: block;
+    padding: 8px;
+    margin: 0;
+  }
+  .sns {
+    background-color: #257ed6;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+  }
+  .sns a {
+    color: #222;
+  }
+
+  .gnb,
+  .sns {
+    display: none;
+  }
+  .gnb.on,
+  .sns.on {
+    display: flex;
+  }
+
+  /* Trigger */
+  .trigger {
+    display: block;
+    /* border: 1px solid #000; */
+    width: 25px;
+    height: 15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border:1px solid black;
+  }
+  .trigger span {
+    background-color: #fff;
+    height: 1px;
+    position: absolute;
+    width: 100%;
+    transition: 0.3s;
+  }
+  .trigger span:nth-child(1) {
+    top: 0;
+  }
+  .trigger span:nth-child(2) {
+    top: 50%;
+  }
+  .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  .trigger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+  .trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .trigger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+}
+
+
+
+
+
+
+
+
+

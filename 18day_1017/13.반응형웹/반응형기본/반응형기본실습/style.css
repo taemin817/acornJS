@@ -1,0 +1,21 @@
+.parent {
+  display: flex;
+  justify-content: center; 
+}
+.child {
+  background-color: greenyellow;
+  text-align: center;
+  border-radius: 5px;
+  height: 200px;
+  margin: 5px;
+  font-size: 3em;
+  line-height: 200px;  
+  flex : 1; 
+}
+
+  
+@media (max-width: 767px) {
+    .parent{
+     flex-direction: column;
+   }
+}  

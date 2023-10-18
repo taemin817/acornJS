@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 박스</title>
+    <style>
+        section{
+            display: flex; /*🔴부모요소에서 입력한다*/
+            /*플렉스를 이용: 블록요소를 인라인 요소로 변경 
+            🔴주축
+            justify-content: space-between; 적당한 공백있으면서 정렬
+            justify-content: space-around; (양쪽끝 공백)적당한 공백있으면서 정렬
+            justify-content: center; 가운데 정렬
+            justify-content: flex-end; 전체가 오른쪽 창 끝으로
+            */
+            /*🔴교차축*/
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            /* align-items: center; */
+            flex-direction: column; /*🔴세로로 방향전환 (주축이 됨)*/
+            justify-content: space-between;
+            height: 100vh; /*전체화면(스크롤 포함) 비율 높이*/
+            border: 3px solid brown;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+        }
+        .box1{
+            background-color: pink;
+        }
+        .box2{
+            background-color: lightblue;
+        }
+        .box3{
+            background-color: lightgreen;
+        }
+        .box4{
+            background-color: lightsalmon;
+        }
+        .box5{
+            background-color: rgb(180, 170, 250);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+        <div class="box5">box5</div>
+    </section>
+</body>
+</html>

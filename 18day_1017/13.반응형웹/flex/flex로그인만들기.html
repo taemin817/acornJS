@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbit&display=swap");
+
+      body {
+        /* 로그인 화면을 정 가운데 위치함*/
+        /* 정가운데 배치1 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* viewport  높이*/
+        border: 1px solid black;
+
+        /*
+        정가운데 배치 2
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);  // 요소의 크기의 반만큼 왼쪽, 위쪽으로 이동 , => 정가운데 배치2
+        */
+      }
+
+      .login {
+        width: 400px;
+        border: 1px solid black;
+        padding: 30px;
+        font-family: "Orbit", sans-serif;
+      }
+
+      .login h2 {
+        text-transform: capitalize; /* 첫 글자 대문자*/
+      }
+      .sns-login {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .field {
+        display: flex;
+        margin: 10px 0;
+      }
+
+      .field label {
+        flex: 1;
+      }
+      .field input {
+        flex: 3;
+      }
+
+      .btn {
+        flex: 1;
+        margin-right: 3px;
+        padding: 5px;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+        font-size: 11px;
+        border-radius: 3px;
+        color: #241d1d;
+        padding: 8px;
+      }
+
+      .btn-login {
+        padding: 5px 40px;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+        font-size: 13px;
+        border-radius: 3px;
+        color: #484444;
+        background-color: rgb(203, 214, 236);
+        margin-top: 20px;
+      }
+
+      .btn.kakao {
+        background-color: yellow;
+      }
+
+      @media (max-width: 768px) {
+        .login-form {
+          width: 100%;
+        }
+        .sns-login {
+          flex-direction: column;
+        }
+        .btn {
+          margin: 5px 0;
+        }
+        .field {
+          flex-direction: column;
+        }
+        .btn-login {
+          width: 100%;
+        }
+
+        .btn {
+          padding: 20px;
+        }
+        .btn-login {
+          padding: 20px;
+        }
+        input {
+          padding: 10px;
+        }
+        .login h2 {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login">
+      <h2>reservation</h2>
+      <div class="sns-login">
+        <button class="btn kakao">카카오 로그인</button
+        ><button class="btn kakao">카카오 로그인</button>
+      </div>
+      <div class="field">
+        <label for="id">아이디</label>
+        <input type="text" id="id" />
+      </div>
+      <div class="field">
+        <label for="email">이메일</label>
+        <input type="email" id="email" />
+      </div>
+      <div class="field">
+        <label for="pw">비밀번호</label>
+        <input type="password" id="pw" />
+      </div>
+      <button class="btn-login">로그인</button>
+    </div>
+  </body>
+</html>

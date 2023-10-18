@@ -1,0 +1,143 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+ 
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  color: #222;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/* Reset CSS */
+a { 
+  text-decoration: none; 
+  color: #222; 
+}
+h1,h2,h3,h4,h5,h6 { 
+  margin: 0; 
+  font-weight: normal; 
+}
+button { 
+  cursor: pointer; 
+  outline: none; 
+}
+input,textarea,select { 
+  outline: none; 
+}
+
+/* Section    1200px*/
+section {
+  width: 1200px;
+  margin: auto;
+}
+.class-header {}
+.class-header h1 {
+  font-size: 32px;
+}
+.class-header p {
+  margin-bottom: 30px;
+}
+
+.class-header h1:after {
+  content:">";  
+  margin-left: 10px;
+  color: #555;
+}
+
+/* Items  정렬 */
+.items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 하나의 item의 크기*/
+.item {
+  width: 290px;
+  margin-right: 10px; 
+   
+}
+ 
+/* Item 안의 요소들 스타일 */
+ 
+/* 이미지의 크기는 item너비와 동일하게 */
+.item img {
+  width: 100%;
+}
+.item h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.category {
+  font-weight: bold;
+  color: #0084ff;
+}
+.item p {
+  margin: 5px 0;
+}
+ 
+ 
+.price {
+  font-weight: bold;
+  color: royalblue;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.badge {
+  background-color: #f6d5ea;
+  font-size: 14px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.badge.only {
+  background-color: #d1ebe0;
+}
+
+.item.event h4 {
+  color: red;
+  margin-bottom: 20px;
+}
+.item.event img {
+  border: 1px solid #eee;
+}
+
+
+/* 모바일 */
+@media (max-width: 767px) {
+  section {
+    width: 100vw;    /* 1200px  -> 100% */
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .items {
+    flex-direction: column;
+  }
+  .item {
+    margin: 0;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+
+
+  /* 강의 item 순서를  order 속성으로 변경. !*/
+  .item:nth-child(1) {
+    order: 2;
+  }
+  .item:nth-child(2) {
+    order: 3;
+  }
+  .item:nth-child(3) {
+    order: 4;
+  }
+  .item:nth-child(4) {
+    order: 1;
+  }
+}

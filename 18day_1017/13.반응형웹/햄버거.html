@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>햄버거아이콘 만들기</title>
+ 
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<style>
+nav{
+	height: 200px;
+	background-color: rgb(10, 94, 94);
+	position: relative;
+}
+	 
+ .trigger {
+    display: block;
+    /* border: 1px solid #000; */
+    width: 25px;
+    height: 15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border:1px solid black;
+  }
+  
+  .trigger span {
+    background-color: #fff;
+    height: 1px;
+    position: absolute;
+    width: 100%;
+    transition: 0.3s;
+  }
+  .trigger span:nth-child(1) {
+    top: 0;
+  }
+  .trigger span:nth-child(2) {
+    top: 50%;
+  }
+  .trigger span:nth-child(3) {
+    top: 100%;
+  }
+
+  /* 아이콘 클릭했을 떄 */
+  .trigger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+  .trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .trigger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+ 
+	</style>
+
+<body>
+
+	<header>
+		<nav>		 
+			<div class="trigger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</nav>
+	</header>
+
+	<script>
+		$('.trigger').click(function(){
+			$(this).toggleClass('active')			 
+		})
+	</script>
+
+</body>
+</html>

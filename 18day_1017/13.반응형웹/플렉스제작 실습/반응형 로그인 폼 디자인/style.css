@@ -1,0 +1,125 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  background-color: #eee;
+
+/*로그인폼을 정 가운데 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;   /* viewport 높이 전체*/
+  padding: 20px;
+}
+
+/* Reset CSS */
+a { text-decoration: none; }
+h1,h2,h3,h4,h5,h6 { margin: 0; }
+button { cursor: pointer; outline: none; }
+
+.login-form {
+  width: 600px;
+  background-color: #fff;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #eee;
+}
+.login-form h2 {
+  font-weight: normal;
+  text-transform: capitalize;   /*첫글자 대문자로 변환해줌*/
+  font-size: 28px;
+}
+.sns-login {
+  margin: 20px 0;
+  display: flex;
+}
+.btn {
+  flex: 1;
+  /* margin: 3px; */
+  margin-right: 3px;
+  padding: 5px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  border-radius: 3px;
+  color: #fff;
+  padding: 8px;
+}
+.btn:last-child {
+  margin-right: 0;
+}
+ 
+.btn.naver {
+  background-color: #30e298;
+}
+.btn.kakao {
+  background-color: #d8ca09;
+}
+.field {
+  display: flex;
+  margin: 20px 0;  /* 상하 좌우*/
+}
+.field label {
+  flex: 1;
+  text-transform: capitalize;
+}
+.field input {
+  flex: 4;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 3px;
+}
+.btn-login {
+  padding: 5px 40px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: royalblue;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+
+
+@media (max-width: 768px) {
+  .login-form {
+    width: 100%;
+    padding: 0px;
+  }
+  .sns-login {
+    flex-direction: column;
+  }
+  .btn {
+    margin: 5px 0;
+  }
+  .field {
+    flex-direction: column;
+  }
+  .btn-login {
+    width: 100%;
+  }
+
+   
+.btn {   
+  padding: 20px;
+}
+
+.btn-login {
+   padding: 20px;
+}
+
+ 
+}
+
+

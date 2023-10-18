@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+ /*
+      카드UI만들기
+      display:flex  ;
+      flex-direction: column ;   
+       justify-content: space-between;     // 수직으로 위 아래 끝점에 맞춘다 //
+  */
+
+        h3,p{
+            margin: 0px;
+        }
+
+     body{
+        display: flex;
+        flex-direction: row;       /*가로*/
+        justify-content: center;   /* 가로 가운데  */
+        align-items: center;
+
+     }
+
+        
+        .items{
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border: 1px solid black;
+
+        }
+        .card{
+            height: 400px;
+            width: 300px;
+            border:1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+            padding: 20px;
+            box-sizing: border-box;
+            border:1px solid black;
+        }
+
+        
+
+ 
+    @media (max-width: 768px) {
+    body{
+        display: flex;
+        flex-direction: column;  /* 세로 */
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+
+  .items {
+    width: 80%;
+  }
+   
+ .card{
+    width: 100%;
+ }
+
+ img{
+    width: 100px;
+    height: 100px;
+ }
+ 
+} 
+
+
+        
+    </style>
+</head>
+<body>
+    
+
+<div class="items">
+    <div class="card">
+        <h3>title</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, neque.</p>
+        
+        <img src="http://via.placeholder.com/300x200" alt="">
+    </div>
+    <div class="card">
+        <h3>title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis voluptas itaque quibusdam eligendi explicabo nam debitis perferendis ab dicta iure.</p>
+        
+        <img src="http://via.placeholder.com/300x200" alt="">
+    </div>
+    <div class="card">
+        <h3>title</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, neque.</p>
+        
+        <img src="http://via.placeholder.com/300x200" alt="">
+    </div>
+    <div class="card">
+        <h3>title</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, neque.</p>
+        
+        <img src="http://via.placeholder.com/300x200" alt="">
+    </div>
+    
+</div>
+</body>
+</html>

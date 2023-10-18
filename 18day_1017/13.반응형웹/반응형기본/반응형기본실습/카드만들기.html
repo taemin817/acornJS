@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> </title>
+	<style>
+ 
+  .card{
+    width: 300px;
+    height: 600px;
+    border:1px solid black;
+    display: flex; 
+    flex-direction: column;  
+    justify-content: space-between;  /* 수직 (세로  간격 벌어지게 맞품 )*/
+    padding: 10px;
+    
+  }
+
+  img{
+    width: 100%;
+   
+  }
+ 
+
+  
+  /*  모바일 환경에서 카드 모양*/
+  @media (max-width: 767px) {
+    .card{ 
+      width: 100%;       
+      align-items: center;     /* */
+      justify-content: center;   
+      padding: 0px;
+   }
+
+   /* contents 내용 숨김*/
+   .card p{
+    display: none;
+   }
+
+   .card img{    
+    width: 80%;    
+   }
+  
+
+}  
+	</style>
+<body>
+
+	<div class="card">
+		<h2>title</h2>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, culpa!</p>
+		<img src="cute.jpg">
+	</div>
+
+
+  <div class="card">
+		<h2>title</h2>
+	  <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque velit sit sint corrupti cumque nihil vel aut id nam eos, reiciendis repellat ducimus inventore rerum illo beatae ea. Aperiam, rem!
+    </p>
+		<img src="cute.jpg">
+	</div>
+</body>
+</html>

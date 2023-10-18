@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card-items {
+  /* border: 2px solid #000; */
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  border: 2px solid red;
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card img {
+  width: 100%;
+}

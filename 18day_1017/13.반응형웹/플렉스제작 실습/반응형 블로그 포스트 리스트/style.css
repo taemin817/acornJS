@@ -1,0 +1,88 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #222;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/* Reset CSS */
+a { 
+  text-decoration: none; 
+  color: #222; 
+}
+h1,h2,h3,h4,h5,h6 { 
+  margin: 0; 
+  font-weight: normal; 
+}
+button { 
+  cursor: pointer; 
+  outline: none; 
+}
+input,textarea,select { 
+  outline: none; 
+}
+
+section {
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.post {
+  display: flex;
+}
+.post:nth-child(odd) {
+  flex-direction: column;
+}
+.post:nth-child(even) {
+  flex-direction: column-reverse;
+}
+.image {
+  width: 250px;
+  /* border: 1px solid red; */
+  overflow: hidden;
+}
+.image img {
+  width: 100%;
+  /* border: 1px solid #eee; */
+  display: block;
+  transition: 0.3s;
+}
+.image img:hover {
+  transform: scale(1.05);
+}
+.desc {
+  background-color: #1dd1a1;
+  color: #fff;
+  text-align: center;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+.desc h2 {}
+.desc p {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  section {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  .post:nth-child(even) {
+    flex-direction: column;
+  }
+  .image {
+    width: 100%;
+  }
+}
+
+ 
